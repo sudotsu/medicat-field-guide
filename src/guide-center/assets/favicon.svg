@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MediCat Field Guide">
+  <rect width="64" height="64" rx="8" fill="#081216"/>
+  <path d="M32 4 60 32 32 60 4 32Z" fill="none" stroke="#62e3d2" stroke-width="3"/>
+  <path d="M17 45V19h6l9 15 9-15h6v26h-6V30l-9 14-9-14v15Z" fill="#e8efed"/>
+</svg>

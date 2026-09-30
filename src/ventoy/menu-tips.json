@@ -1,0 +1,53 @@
+{
+  "format": "learn-medicat-menu-tip-draft-v1",
+  "status": "prototype-only-do-not-deploy",
+  "notes": [
+    "These are authored tip records, not a replacement ventoy.json.",
+    "Exact installed image and directory paths must be reconciled before generation.",
+    "Ventoy renders menu tips on one line, so project policy limits each draft to 140 characters."
+  ],
+  "tips": [
+    {
+      "id": "start-here",
+      "matchType": "dir",
+      "pathHint": "Guide Center / Start Here path pending",
+      "tip": "START HERE — Pick the job first. The guide routes you to the safest tool and tells you what can be skipped.",
+      "evidenceStatus": "authored"
+    },
+    {
+      "id": "lockpick",
+      "matchType": "image",
+      "pathHint": "Jayro's Lockpick image path pending",
+      "tip": "PASSWORD ACCESS — Identify local account, Microsoft account, PIN, and encryption before changing a credential.",
+      "evidenceStatus": "installed-path-unverified"
+    },
+    {
+      "id": "boot-repair",
+      "matchType": "dir",
+      "pathHint": "Boot Repair directory path pending",
+      "tip": "BOOT REPAIR — Diagnose firmware, disk detection, boot mode, partition layout, and Windows boot files before writing.",
+      "evidenceStatus": "installed-path-unverified"
+    },
+    {
+      "id": "live-os",
+      "matchType": "dir",
+      "pathHint": "Live Operating Systems directory path pending",
+      "tip": "LIVE SYSTEMS — Run an OS from USB for recovery or testing. A live environment can still modify internal disks.",
+      "evidenceStatus": "installed-path-unverified"
+    },
+    {
+      "id": "backup",
+      "matchType": "dir",
+      "pathHint": "Backup and Recovery directory path pending",
+      "tip": "BACKUP — First decide what must survive. Verified cloud recovery may mean a full disk image is unnecessary.",
+      "evidenceStatus": "installed-path-unverified"
+    },
+    {
+      "id": "windows-installer",
+      "matchType": "dir",
+      "pathHint": "Windows installer directory path pending",
+      "tip": "INSTALL WINDOWS — Confirm the physical target, backup, passkeys, 2FA, recovery keys, boot mode, and accepted erase scope.",
+      "evidenceStatus": "installed-path-unverified"
+    }
+  ]
+}

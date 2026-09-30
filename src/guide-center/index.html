@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#081216">
+  <meta
+    name="description"
+    content="Offline, problem-led guidance for authorized MediCat repair and recovery work."
+  >
+  <title>MediCat Field Guide</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to guide</a>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <button
+        class="brand"
+        type="button"
+        data-route="home"
+        aria-label="Open Start Here"
+      >
+        <span class="brand-mark" aria-hidden="true">
+          <span>M</span>
+        </span>
+        <span class="brand-copy">
+          <strong>MediCat</strong>
+          <span>Field Guide</span>
+        </span>
+      </button>
+
+      <div class="topbar-status" aria-label="Guide status">
+        <span class="status-lamp" aria-hidden="true"></span>
+        <span>Offline-ready prototype</span>
+      </div>
+
+      <button
+        class="icon-button menu-button"
+        id="menu-toggle"
+        type="button"
+        aria-controls="side-panel"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true">☰</span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+    </header>
+
+    <aside class="side-panel" id="side-panel" aria-label="Guide navigation">
+      <section class="intake-panel" aria-labelledby="intake-title">
+        <div class="section-kicker">Current job</div>
+        <div class="intake-heading">
+          <h2 id="intake-title">No brief yet</h2>
+          <span id="intake-count" aria-live="polite">0/6</span>
+        </div>
+        <div class="intake-progress" aria-hidden="true">
+          <span id="intake-progress-bar"></span>
+        </div>
+        <dl class="job-state-list" id="job-state-list">
+          <div><dt>Outcome</dt><dd data-job-summary="job">Pending</dd></div>
+          <div><dt>Target</dt><dd data-job-summary="target">Pending</dd></div>
+          <div><dt>Authority</dt><dd data-job-summary="authority">Pending</dd></div>
+          <div><dt>Data</dt><dd data-job-summary="preservation">Pending</dd></div>
+          <div><dt>Identity</dt><dd data-job-summary="identity">Pending</dd></div>
+        </dl>
+        <button class="sidebar-action" id="intake-sidebar-action" type="button" data-route="intake">
+          Start guided intake
+        </button>
+        <p class="intake-note">
+          Categorical answers stay in this browser session. Do not enter customer names, credentials, keys, or codes.
+        </p>
+      </section>
+
+      <nav class="primary-nav" aria-label="Main sections">
+        <button type="button" data-route="home">
+          <span class="nav-index">00</span>
+          <span>Start Here</span>
+        </button>
+        <button type="button" data-route="intake">
+          <span class="nav-index">01</span>
+          <span>Guided intake</span>
+        </button>
+        <button type="button" data-route="all-guides">
+          <span class="nav-index">02</span>
+          <span>All workflows</span>
+        </button>
+        <button type="button" data-route="tools">
+          <span class="nav-index">03</span>
+          <span>Tool directory</span>
+        </button>
+        <button type="button" data-route="glossary">
+          <span class="nav-index">04</span>
+          <span>Plain-English glossary</span>
+        </button>
+      </nav>
+
+      <section class="legend" aria-labelledby="legend-title">
+        <h2 id="legend-title">Signal key</h2>
+        <div><span class="signal recommended"></span>Recommended</div>
+        <div><span class="signal skip"></span>Safe to skip</div>
+        <div><span class="signal attention"></span>Pay attention</div>
+        <div><span class="signal stop"></span>Stop here</div>
+      </section>
+
+      <footer class="side-footer">
+        <strong>Prototype build</strong>
+        <span>No target drive is modified.</span>
+      </footer>
+    </aside>
+
+    <main id="main-content" tabindex="-1">
+      <section class="search-zone" aria-labelledby="search-label">
+        <label id="search-label" for="guide-search">Search the field guide</label>
+        <div class="search-control">
+          <span aria-hidden="true">⌕</span>
+          <input
+            id="guide-search"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Try “GPT”, “forgot password”, “backup”, or “live OS”"
+          >
+          <kbd>Ctrl K</kbd>
+        </div>
+        <div id="search-results" class="search-results" hidden></div>
+      </section>
+
+      <div id="view" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <noscript>
+    <section class="noscript-warning">
+      This prototype needs JavaScript for local search and navigation. No network
+      connection is used.
+    </section>
+  </noscript>
+
+  <script src="data/guides.js"></script>
+  <script src="data/tools.js"></script>
+  <script src="data/glossary.js"></script>
+  <script src="data/intake.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
