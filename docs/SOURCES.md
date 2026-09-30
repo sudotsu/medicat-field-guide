@@ -19,6 +19,7 @@ Record every source used to support shipped guidance. A URL alone is insufficien
 | Microsoft account recovery code | https://support.microsoft.com/en-us/accounts-billing/manage/how-to-get-a-microsoft-account-recovery-code | 2026-09-29 | Support preserving an account-recovery path before a device is erased |
 | Microsoft account password reset | https://support.microsoft.com/en-us/accounts-billing/security/change-or-reset-your-microsoft-account-password-in-windows | 2026-09-29 | Route Microsoft-account password problems to the official recovery path before offline credential changes |
 | Microsoft Reset this PC | https://support.microsoft.com/en-us/windows/experience/backup-recovery/reset-your-pc | 2026-09-29 | Distinguish reset choices and require backup and encryption-key preparation before reset |
+| GitHub Pages custom workflows | https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages | 2026-09-30 | Current Pages action versions, artifact deployment flow, permissions, and environment requirements for the public prototype |
 
 ## Source-entry template
 
