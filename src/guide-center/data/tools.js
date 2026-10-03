@@ -612,6 +612,44 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "sysinternals-diskmon",
+    "name": "DiskMon",
+    "category": "Disk health",
+    "purpose": "Shows disk read and write activity.",
+    "location": "Programs/Sysinternals/Diskmon.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/Diskmon.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-diskview",
+    "name": "DiskView",
+    "category": "Disk health",
+    "purpose": "Shows where files sit on a disk.",
+    "location": "Programs/Sysinternals/DiskView.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/DiskView.exe"
+    ]
+  },
+  {
     "id": "programs-gsmartcontrol-1-1-3-win64",
     "name": "GSmartControl",
     "category": "Disk health",
@@ -820,6 +858,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/CCleanerPortable"
+    ]
+  },
+  {
+    "id": "sysinternals-contig",
+    "name": "Contig",
+    "category": "Disk maintenance",
+    "purpose": "Defragments individual files on hard disks.",
+    "location": "Programs/Sysinternals/contig.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/contig.exe"
     ]
   },
   {
@@ -1089,6 +1146,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-appaudioconfig",
+    "name": "AppAudioConfig",
+    "category": "Everyday utilities",
+    "purpose": "View/change audio settings of applications.",
+    "location": "Programs/NirLauncher/NirSoft/AppAudioConfig.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/app_audio_config.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/AppAudioConfig.exe"
+    ]
+  },
+  {
     "id": "programs-cherrytree",
     "name": "CherryTree",
     "category": "Everyday utilities",
@@ -1117,6 +1193,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-clipboardic",
+    "name": "Clipboardic",
+    "category": "Everyday utilities",
+    "purpose": "Small and simple clipboard manager.",
+    "location": "Programs/NirLauncher/NirSoft/Clipboardic.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/clipboardic.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/Clipboardic.exe"
+    ]
+  },
+  {
     "id": "portableapps-convert",
     "name": "Convert",
     "category": "Everyday utilities",
@@ -1142,6 +1237,44 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "Programs/Convert Recordings to HTM"
+    ]
+  },
+  {
+    "id": "nirsoft-csvfileview",
+    "name": "CSVFileView",
+    "category": "Everyday utilities",
+    "purpose": "CSV/Tab-delimited file viewer and converter.",
+    "location": "Programs/NirLauncher/NirSoft/CSVFileView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/csv_file_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/CSVFileView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-customexplorertoolbar",
+    "name": "CustomExplorerToolbar",
+    "category": "Everyday utilities",
+    "purpose": "Add Copy/Cut/Paste buttons to the Explorer toolbar of Windows 7.",
+    "location": "Programs/NirLauncher/NirSoft/CustomExplorerToolbar.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/custom_explorer_toolbar.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/CustomExplorerToolbar.exe"
     ]
   },
   {
@@ -1188,6 +1321,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-dotnetresourcesextract",
+    "name": "DotNetResourcesExtract",
+    "category": "Everyday utilities",
+    "purpose": "Extracts embedded resources from .NET applications.",
+    "location": "Programs/NirLauncher/NirSoft/DotNetResourcesExtract.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/dot_net_resources_extract.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DotNetResourcesExtract.exe"
+    ]
+  },
+  {
     "id": "portableapps-easy-translator",
     "name": "Easy Translator",
     "category": "Everyday utilities",
@@ -1199,6 +1351,63 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/Easy Translator"
+    ]
+  },
+  {
+    "id": "nirsoft-esedatabaseview",
+    "name": "ESEDatabaseView",
+    "category": "Everyday utilities",
+    "purpose": "Shows the content of ESE database files (.edb files).",
+    "location": "Programs/NirLauncher/NirSoft/ESEDatabaseView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/ese_database_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ESEDatabaseView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-exifdataview",
+    "name": "ExifDataView",
+    "category": "Everyday utilities",
+    "purpose": "Shows the Exif data stored inside .jpg image files.",
+    "location": "Programs/NirLauncher/NirSoft/ExifDataView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/exif_data_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ExifDataView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-filetypesman",
+    "name": "FileTypesMan",
+    "category": "Everyday utilities",
+    "purpose": "Alternative to the 'File Types' manager of Windows.",
+    "location": "Programs/NirLauncher/NirSoft/FileTypesMan.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/file_types_manager.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FileTypesMan.exe"
     ]
   },
   {
@@ -1258,6 +1467,158 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-guipropview",
+    "name": "GUIPropView",
+    "category": "Everyday utilities",
+    "purpose": "Shows extensive information about all windows currently opened on your system.",
+    "location": "Programs/NirLauncher/NirSoft/GUIPropView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/gui_prop_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/GUIPropView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-hashmyfiles",
+    "name": "HashMyFiles",
+    "category": "Everyday utilities",
+    "purpose": "Calculates the MD5/SHA1 hashes of your files.",
+    "location": "Programs/NirLauncher/NirSoft/HashMyFiles.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/hash_my_files.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/HashMyFiles.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-hex2dec",
+    "name": "Hex2dec",
+    "category": "Everyday utilities",
+    "purpose": "Converts numbers between decimal and hexadecimal.",
+    "location": "Programs/Sysinternals/hex2dec.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/hex2dec.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-hotkeyslist",
+    "name": "HotKeysList",
+    "category": "Everyday utilities",
+    "purpose": "Shows hot keys that are currently registered on your system.",
+    "location": "Programs/NirLauncher/NirSoft/HotKeysList.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/hot_keys_list.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/HotKeysList.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-htmldocedit",
+    "name": "HtmlDocEdit",
+    "category": "Everyday utilities",
+    "purpose": "Simple HTML designer/editor.",
+    "location": "Programs/NirLauncher/NirSoft/HtmlDocEdit.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/html_doc_edit.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/HtmlDocEdit.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-iconsext",
+    "name": "IconsExtract",
+    "category": "Everyday utilities",
+    "purpose": "Copies icons and cursors out of Windows program files.",
+    "location": "Programs/NirLauncher/NirSoft/iconsext.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/iconsext.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/iconsext.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-insideclipboard",
+    "name": "InsideClipboard",
+    "category": "Everyday utilities",
+    "purpose": "Shows the content of all formats stored in the clipboard.",
+    "location": "Programs/NirLauncher/NirSoft/InsideClipboard.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/inside_clipboard.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/InsideClipboard.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-installedcodec",
+    "name": "InstalledCodec",
+    "category": "Everyday utilities",
+    "purpose": "Lists Codec drivers and DirectShow filters installed on your system.",
+    "location": "Programs/NirLauncher/NirSoft/InstalledCodec.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/installed_codec.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/InstalledCodec.exe"
+    ]
+  },
+  {
     "id": "portableapps-irfanviewportable",
     "name": "IrfanView",
     "category": "Everyday utilities",
@@ -1314,6 +1675,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-livecontactsview",
+    "name": "LiveContactsView",
+    "category": "Everyday utilities",
+    "purpose": "Shows the details of all contacts in your Windows Live Messenger.",
+    "location": "Programs/NirLauncher/NirSoft/LiveContactsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/live_messenger_contacts.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/LiveContactsView.exe"
+    ]
+  },
+  {
     "id": "programs-masstube",
     "name": "MassTube",
     "category": "Everyday utilities",
@@ -1328,6 +1708,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-mweather",
+    "name": "MetarWeather",
+    "category": "Everyday utilities",
+    "purpose": "Decode METAR weather reports, and display them in a simple weather report table.",
+    "location": "Programs/NirLauncher/NirSoft/mweather.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/mweather.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/mweather.exe"
+    ]
+  },
+  {
     "id": "portableapps-mines-perfectportable",
     "name": "Mines-Perfect",
     "category": "Everyday utilities",
@@ -1339,6 +1738,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/Mines-PerfectPortable"
+    ]
+  },
+  {
+    "id": "nirsoft-mobilefilesearch",
+    "name": "MobileFileSearch",
+    "category": "Everyday utilities",
+    "purpose": "Search files inside a mobile device plugged to the USB port on your computer.",
+    "location": "Programs/NirLauncher/NirSoft/MobileFileSearch.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/mobile_device_file_search.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MobileFileSearch.exe"
     ]
   },
   {
@@ -1382,6 +1800,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/On-ScreenKeyboardPortable"
+    ]
+  },
+  {
+    "id": "nirsoft-openwithview",
+    "name": "OpenWithView",
+    "category": "Everyday utilities",
+    "purpose": "Disable/enable items in the  'Open With'  dialog-box of Windows.",
+    "location": "Programs/NirLauncher/NirSoft/OpenWithView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/open_with_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OpenWithView.exe"
     ]
   },
   {
@@ -1456,6 +1893,158 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-resourcesextract",
+    "name": "ResourcesExtract",
+    "category": "Everyday utilities",
+    "purpose": "Copies images, icons, and other embedded items out of program files.",
+    "location": "Programs/NirLauncher/NirSoft/ResourcesExtract.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/resources_extract.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ResourcesExtract.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-rtmpdumphelper",
+    "name": "RTMPDumpHelper",
+    "category": "Everyday utilities",
+    "purpose": "Download RTMP streams in conjunction with RTMPDump toolkit.",
+    "location": "Programs/NirLauncher/NirSoft/RTMPDumpHelper.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/rtmp_dump_helper.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/RTMPDumpHelper.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-shman",
+    "name": "ShortcutsMan",
+    "category": "Everyday utilities",
+    "purpose": "Lists all shortcuts on your desktop/start menu.",
+    "location": "Programs/NirLauncher/NirSoft/shman.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/shman.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/shman.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-simplecodegenerator",
+    "name": "SimpleCodeGenerator",
+    "category": "Everyday utilities",
+    "purpose": "QR Code Generator for Windows.",
+    "location": "Programs/NirLauncher/NirSoft/SimpleCodeGenerator.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/qr_code_generator.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SimpleCodeGenerator.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-skypecontactsview",
+    "name": "SkypeContactsView",
+    "category": "Everyday utilities",
+    "purpose": "Shows Skype contacts stored in the local database file of Skype.",
+    "location": "Programs/NirLauncher/NirSoft/SkypeContactsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/skype_contacts_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SkypeContactsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-skypelogview",
+    "name": "SkypeLogView",
+    "category": "Everyday utilities",
+    "purpose": "Shows log files created by Skype.",
+    "location": "Programs/NirLauncher/NirSoft/SkypeLogView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/skype_log_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SkypeLogView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-soundvolumeview",
+    "name": "SoundVolumeView",
+    "category": "Everyday utilities",
+    "purpose": "View/change sound levels & save/load sound level profiles on Windows Vista/7/8.",
+    "location": "Programs/NirLauncher/NirSoft/SoundVolumeView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/sound_volume_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SoundVolumeView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-specialfoldersview",
+    "name": "SpecialFoldersView",
+    "category": "Everyday utilities",
+    "purpose": "Easily jump to special folders in your system.",
+    "location": "Programs/NirLauncher/NirSoft/SpecialFoldersView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/special_folders_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SpecialFoldersView.exe"
+    ]
+  },
+  {
     "id": "portableapps-sudokuportable",
     "name": "Sudoku",
     "category": "Everyday utilities",
@@ -1481,6 +2070,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/SumatraPDFPortable"
+    ]
+  },
+  {
+    "id": "nirsoft-tabletextcompare",
+    "name": "TableTextCompare",
+    "category": "Everyday utilities",
+    "purpose": "Compare tab-delimited or comma-delimited (csv) files.",
+    "location": "Programs/NirLauncher/NirSoft/TableTextCompare.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/csv_file_comparison.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/TableTextCompare.exe"
     ]
   },
   {
@@ -1526,6 +2134,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-videocacheview",
+    "name": "VideoCacheView",
+    "category": "Everyday utilities",
+    "purpose": "Extracts Web site video files from the cache of your Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/VideoCacheView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/video_cache_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/VideoCacheView.exe"
+    ]
+  },
+  {
     "id": "programs-videolan",
     "name": "VLC",
     "category": "Everyday utilities",
@@ -1540,6 +2167,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-volumouse",
+    "name": "Volumouse",
+    "category": "Everyday utilities",
+    "purpose": "Adjust the volume of your speaker with the wheel of your mouse.",
+    "location": "Programs/NirLauncher/NirSoft/volumouse.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/volumouse.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/volumouse.exe"
+    ]
+  },
+  {
     "id": "portableapps-wabbitemuportable",
     "name": "Wabbitemu",
     "category": "Everyday utilities",
@@ -1551,6 +2197,82 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/WabbitemuPortable"
+    ]
+  },
+  {
+    "id": "nirsoft-webcamimagesave",
+    "name": "WebCamImageSave",
+    "category": "Everyday utilities",
+    "purpose": "Capture still images from your WebCam.",
+    "location": "Programs/NirLauncher/NirSoft/WebCamImageSave.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_cam_image_capture.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WebCamImageSave.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-webvideocap",
+    "name": "WebVideoCap",
+    "category": "Everyday utilities",
+    "purpose": "Capture Flash Video files and RTSP streams while watching them in a Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/WebVideoCap.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_video_capture.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WebVideoCap.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-winfontsview",
+    "name": "WinFontsView",
+    "category": "Everyday utilities",
+    "purpose": "Display sample of all fonts installed on your system.",
+    "location": "Programs/NirLauncher/NirSoft/WinFontsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/windows_fonts_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WinFontsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-winlister",
+    "name": "WinLister",
+    "category": "Everyday utilities",
+    "purpose": "This utility displays the list of opened windows on your system.",
+    "location": "Programs/NirLauncher/NirSoft/winlister.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/winlister.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/winlister.exe"
     ]
   },
   {
@@ -1797,6 +2519,63 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-alternatestreamview",
+    "name": "AlternateStreamView",
+    "category": "Files and storage",
+    "purpose": "Find all hidden alternate streams stored in the file system.",
+    "location": "Programs/NirLauncher/NirSoft/AlternateStreamView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/alternate_data_streams.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/AlternateStreamView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-altstreamdump",
+    "name": "AltStreamDump",
+    "category": "Files and storage",
+    "purpose": "Lists extra data streams attached to files on Windows disks.",
+    "location": "Programs/NirLauncher/NirSoft/AltStreamDump.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/alternate_stream_dump.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/AltStreamDump.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-appreadwritecounter",
+    "name": "AppReadWriteCounter",
+    "category": "Files and storage",
+    "purpose": "Shows read/write operations of every application running on your system.",
+    "location": "Programs/NirLauncher/NirSoft/AppReadWriteCounter.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/app_read_write_counter.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/AppReadWriteCounter.exe"
+    ]
+  },
+  {
     "id": "programs-bulk-rename-utility-x64",
     "name": "Bulk Rename Utility",
     "category": "Files and storage",
@@ -1808,6 +2587,82 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "Programs/Bulk Rename Utility_x64"
+    ]
+  },
+  {
+    "id": "sysinternals-du",
+    "name": "Disk Usage",
+    "category": "Files and storage",
+    "purpose": "Counts space used by folders.",
+    "location": "Programs/Sysinternals/du.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/du.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-diskcountersview",
+    "name": "DiskCountersView",
+    "category": "Files and storage",
+    "purpose": "Show disk drive read/write counters.",
+    "location": "Programs/NirLauncher/NirSoft/DiskCountersView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/disk_counters_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DiskCountersView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-disksmartview",
+    "name": "DiskSmartView",
+    "category": "Files and storage",
+    "purpose": "Retrieves S.M.A.R.T information from IDE/SATA disks.",
+    "location": "Programs/NirLauncher/NirSoft/DiskSmartView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/disk_smart_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DiskSmartView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-driveletterview",
+    "name": "DriveLetterView",
+    "category": "Files and storage",
+    "purpose": "Shows and change drive letter assignments.",
+    "location": "Programs/NirLauncher/NirSoft/DriveLetterView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/drive_letter_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DriveLetterView.exe"
     ]
   },
   {
@@ -1882,6 +2737,44 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-fileaccesserrorview",
+    "name": "FileAccessErrorView",
+    "category": "Files and storage",
+    "purpose": "Shows file access error information.",
+    "location": "Programs/NirLauncher/NirSoft/FileAccessErrorView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/file_access_error_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FileAccessErrorView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-fileactivitywatch",
+    "name": "FileActivityWatch",
+    "category": "Files and storage",
+    "purpose": "Shows information about read/write/delete operations on your system.",
+    "location": "Programs/NirLauncher/NirSoft/FileActivityWatch.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/file_activity_watch.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FileActivityWatch.exe"
+    ]
+  },
+  {
     "id": "programs-freecommanderxe",
     "name": "FreeCommander",
     "category": "Files and storage",
@@ -1938,6 +2831,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-nk2edit",
+    "name": "NK2Edit",
+    "category": "Files and storage",
+    "purpose": "Full NK2 (AutoComplete) editor for Microsoft Outlook.",
+    "location": "Programs/NirLauncher/NirSoft/NK2Edit.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/outlook_nk2_edit.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NK2Edit.exe"
+    ]
+  },
+  {
     "id": "portableapps-ntfs-permission-tool",
     "name": "NTFS Permission Tool",
     "category": "Files and storage",
@@ -1949,6 +2861,101 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/NTFS Permission Tool"
+    ]
+  },
+  {
+    "id": "nirsoft-ntfslinksview",
+    "name": "NTFSLinksView",
+    "category": "Files and storage",
+    "purpose": "Shows shortcuts and links that point to other files or folders.",
+    "location": "Programs/NirLauncher/NirSoft/NTFSLinksView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/ntfs_links_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NTFSLinksView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-officeins",
+    "name": "OfficeIns",
+    "category": "Files and storage",
+    "purpose": "Shows the details of all installed Microsoft Office add-ins on your computer.",
+    "location": "Programs/NirLauncher/NirSoft/OfficeIns.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/officeins.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OfficeIns.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-outlookaddressbookview",
+    "name": "OutlookAddressBookView",
+    "category": "Files and storage",
+    "purpose": "Shows the details of all recipients stored in the address books of Outlook.",
+    "location": "Programs/NirLauncher/NirSoft/OutlookAddressBookView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/outlook_address_book_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OutlookAddressBookView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-outlookattachview",
+    "name": "OutlookAttachView",
+    "category": "Files and storage",
+    "purpose": "Extracts multiple attachments from Outlook.",
+    "location": "Programs/NirLauncher/NirSoft/OutlookAttachView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/outlook_attachment.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OutlookAttachView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-outlookstatview",
+    "name": "OutlookStatView",
+    "category": "Files and storage",
+    "purpose": "Display a general statistics of your Outlook emails.",
+    "location": "Programs/NirLauncher/NirSoft/OutlookStatView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/outlook_statistics.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OutlookStatView.exe"
     ]
   },
   {
@@ -1977,6 +2984,44 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/RapidCRCUnicodePortable"
+    ]
+  },
+  {
+    "id": "nirsoft-searchmyfiles",
+    "name": "SearchMyFiles",
+    "category": "Files and storage",
+    "purpose": "Alternative to the standard \"Search For Files And Folders\" module of Windows.",
+    "location": "Programs/NirLauncher/NirSoft/SearchMyFiles.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/search_my_files.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SearchMyFiles.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-sync",
+    "name": "Sync",
+    "category": "Files and storage",
+    "purpose": "Flushes cached file data to disk.",
+    "location": "Programs/Sysinternals/sync.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/sync.exe"
     ]
   },
   {
@@ -2201,6 +3246,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/CDInfo"
+    ]
+  },
+  {
+    "id": "sysinternals-coreinfo",
+    "name": "Coreinfo",
+    "category": "Hardware checks",
+    "purpose": "Shows CPU and processor feature details.",
+    "location": "Programs/Sysinternals/coreinfo.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/coreinfo.exe"
     ]
   },
   {
@@ -2760,6 +3824,44 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "sysinternals-adexplorer",
+    "name": "Active Directory Explorer",
+    "category": "Network and remote access",
+    "purpose": "Browses directory service objects.",
+    "location": "Programs/Sysinternals/AdExplorer.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/AdExplorer.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-awatch",
+    "name": "AdapterWatch",
+    "category": "Network and remote access",
+    "purpose": "Shows useful information about your network adapters.",
+    "location": "Programs/NirLauncher/NirSoft/awatch.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/awatch.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/awatch.exe"
+    ]
+  },
+  {
     "id": "programs-advanced-ip-scanner",
     "name": "Advanced IP Scanner",
     "category": "Network and remote access",
@@ -2802,6 +3904,177 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-appnetworkcounter",
+    "name": "AppNetworkCounter",
+    "category": "Network and remote access",
+    "purpose": "Shows how much network data each program sends and receives.",
+    "location": "Programs/NirLauncher/NirSoft/AppNetworkCounter.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/app_network_counter.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/AppNetworkCounter.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-countrytraceroute",
+    "name": "CountryTraceRoute",
+    "category": "Network and remote access",
+    "purpose": "Fast Traceroute utility with IP country information.",
+    "location": "Programs/NirLauncher/NirSoft/CountryTraceRoute.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/country_traceroute.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/CountryTraceRoute.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-cports",
+    "name": "CurrPorts",
+    "category": "Network and remote access",
+    "purpose": "Shows open network connections and the programs using them.",
+    "location": "Programs/NirLauncher/NirSoft/cports.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/cports.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/cports.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-ctie",
+    "name": "CustomizeIE",
+    "category": "Network and remote access",
+    "purpose": "Add/delete toolbar buttons and menu items in Internet Explorer.",
+    "location": "Programs/NirLauncher/NirSoft/ctie.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/ctie.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ctie.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-dnsdataview",
+    "name": "DNSDataView",
+    "category": "Network and remote access",
+    "purpose": "Retrieve the DNS records (MX, NS, A, SOA) of the specified domains.",
+    "location": "Programs/NirLauncher/NirSoft/DNSDataView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/dns_records_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DNSDataView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-dnsquerysniffer",
+    "name": "DNSQuerySniffer",
+    "category": "Network and remote access",
+    "purpose": "Records website-name lookups made by this computer.",
+    "location": "Programs/NirLauncher/NirSoft/DNSQuerySniffer.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/dns_query_sniffer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DNSQuerySniffer.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-domainhostingview",
+    "name": "DomainHostingView",
+    "category": "Network and remote access",
+    "purpose": "Shows extensive information about a domain.",
+    "location": "Programs/NirLauncher/NirSoft/DomainHostingView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/domain_hosting_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DomainHostingView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-downtester",
+    "name": "DownTester",
+    "category": "Network and remote access",
+    "purpose": "Test your Internet download speed.",
+    "location": "Programs/NirLauncher/NirSoft/DownTester.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/download_speed_tester.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DownTester.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-fastresolver",
+    "name": "FastResolver",
+    "category": "Network and remote access",
+    "purpose": "Resolves multiple host names into IP addresses/MAC Addresses and vice versa.",
+    "location": "Programs/NirLauncher/NirSoft/FastResolver.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/fastresolver.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FastResolver.exe"
+    ]
+  },
+  {
     "id": "programs-filezilla-3-53-0",
     "name": "FileZilla",
     "category": "Network and remote access",
@@ -2816,6 +4089,82 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-hostednetworkstarter",
+    "name": "HostedNetworkStarter",
+    "category": "Network and remote access",
+    "purpose": "Creates a wifi hotspot with your wireless network adapter.",
+    "location": "Programs/NirLauncher/NirSoft/HostedNetworkStarter.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wifi_hotspot_starter.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/HostedNetworkStarter.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-htmlastext",
+    "name": "HTMLAsText",
+    "category": "Network and remote access",
+    "purpose": "Converts HTML documents to simple text files.",
+    "location": "Programs/NirLauncher/NirSoft/HtmlAsText.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/htmlastext.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/HtmlAsText.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-ipinfooffline",
+    "name": "IPInfoOffline",
+    "category": "Network and remote access",
+    "purpose": "Shows country information about IP addresses.",
+    "location": "Programs/NirLauncher/NirSoft/IPInfoOffline.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/ip_country_info_offline.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/IPInfoOffline.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-ipnetinfo",
+    "name": "IPNetInfo",
+    "category": "Network and remote access",
+    "purpose": "Easily find all available information about IP address.",
+    "location": "Programs/NirLauncher/NirSoft/ipnetinfo.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/ipnetinfo.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ipnetinfo.exe"
+    ]
+  },
+  {
     "id": "portableapps-kittyportable",
     "name": "KiTTY",
     "category": "Network and remote access",
@@ -2827,6 +4176,234 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/KiTTYPortable"
+    ]
+  },
+  {
+    "id": "nirsoft-livetcpudpwatch",
+    "name": "LiveTcpUdpWatch",
+    "category": "Network and remote access",
+    "purpose": "Shows live network activity by program.",
+    "location": "Programs/NirLauncher/NirSoft/LiveTcpUdpWatch.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/live_tcp_udp_watch.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/LiveTcpUdpWatch.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-macaddressview",
+    "name": "MACAddressView",
+    "category": "Network and remote access",
+    "purpose": "MAC address lookup tool.",
+    "location": "Programs/NirLauncher/NirSoft/MACAddressView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/mac_address_lookup_find.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MACAddressView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-netbscanner",
+    "name": "NetBScanner",
+    "category": "Network and remote access",
+    "purpose": "Scans all computers in the IP addresses range you choose, using NetBIOS protocol.",
+    "location": "Programs/NirLauncher/NirSoft/NetBScanner.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/netbios_scanner.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetBScanner.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-netconnectchoose",
+    "name": "NetConnectChoose",
+    "category": "Network and remote access",
+    "purpose": "Set default Internet connection and view general connection information.",
+    "location": "Programs/NirLauncher/NirSoft/NetConnectChoose.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/net_connect_choose.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetConnectChoose.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-netresview",
+    "name": "NetResView",
+    "category": "Network and remote access",
+    "purpose": "Shows the list of all network resources  on your LAN.",
+    "location": "Programs/NirLauncher/NirSoft/NetResView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/netresview.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetResView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-netrouteview",
+    "name": "NetRouteView",
+    "category": "Network and remote access",
+    "purpose": "Shows and changes network routes used by Windows.",
+    "location": "Programs/NirLauncher/NirSoft/NetRouteView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/network_route_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetRouteView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-networkconnectlog",
+    "name": "NetworkConnectLog",
+    "category": "Network and remote access",
+    "purpose": "Shows a log of connected/disconnected computers on your network.",
+    "location": "Programs/NirLauncher/NirSoft/NetworkConnectLog.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/network_connect_log.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetworkConnectLog.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-networkcounterswatch",
+    "name": "NetworkCountersWatch",
+    "category": "Network and remote access",
+    "purpose": "Shows system counters for every network interface on your system.",
+    "location": "Programs/NirLauncher/NirSoft/NetworkCountersWatch.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/network_counters_watch.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetworkCountersWatch.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-networklatencyview",
+    "name": "NetworkLatencyView",
+    "category": "Network and remote access",
+    "purpose": "Measures delay when new network connections open.",
+    "location": "Programs/NirLauncher/NirSoft/NetworkLatencyView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/network_latency_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetworkLatencyView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-networkopenedfiles",
+    "name": "NetworkOpenedFiles",
+    "category": "Network and remote access",
+    "purpose": "Shows the files that are currently opened by other computers on your network.",
+    "location": "Programs/NirLauncher/NirSoft/NetworkOpenedFiles.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/network_opened_files.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetworkOpenedFiles.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-networktrafficview",
+    "name": "NetworkTrafficView",
+    "category": "Network and remote access",
+    "purpose": "Shows network traffic statistics on your network adapter.",
+    "location": "Programs/NirLauncher/NirSoft/NetworkTrafficView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/network_traffic_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetworkTrafficView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-networkusageview",
+    "name": "NetworkUsageView",
+    "category": "Network and remote access",
+    "purpose": "Shows network usage information for Windows 8 and Windows 10.",
+    "location": "Programs/NirLauncher/NirSoft/NetworkUsageView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/network_usage_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetworkUsageView.exe"
     ]
   },
   {
@@ -2858,6 +4435,44 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-pinginfoview",
+    "name": "PingInfoView",
+    "category": "Network and remote access",
+    "purpose": "Ping multiple host names and IP addresses.",
+    "location": "Programs/NirLauncher/NirSoft/PingInfoView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/multiple_ping_tool.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/PingInfoView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-processtcpsummary",
+    "name": "ProcessTCPSummary",
+    "category": "Network and remote access",
+    "purpose": "Summarizes network connections by running program.",
+    "location": "Programs/NirLauncher/NirSoft/ProcessTCPSummary.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/process_tcp_summary.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ProcessTCPSummary.exe"
+    ]
+  },
+  {
     "id": "portableapps-puttyportable",
     "name": "PuTTY",
     "category": "Network and remote access",
@@ -2886,6 +4501,44 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-quicksetdns",
+    "name": "QuickSetDNS",
+    "category": "Network and remote access",
+    "purpose": "Change the DNS servers that are used for your Internet connection.",
+    "location": "Programs/NirLauncher/NirSoft/QuickSetDNS.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/quick_set_dns.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/QuickSetDNS.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-seqdownload",
+    "name": "SeqDownload",
+    "category": "Network and remote access",
+    "purpose": "Download sequence of images from the Web, and create animation from them.",
+    "location": "Programs/NirLauncher/NirSoft/SeqDownload.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/seqdownload.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SeqDownload.exe"
+    ]
+  },
+  {
     "id": "programs-simplewall",
     "name": "simplewall",
     "category": "Network and remote access",
@@ -2897,6 +4550,120 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "Programs/Simplewall"
+    ]
+  },
+  {
+    "id": "nirsoft-siteshoter",
+    "name": "SiteShoter",
+    "category": "Network and remote access",
+    "purpose": "Save a screenshot of any Web page into a file.",
+    "location": "Programs/NirLauncher/NirSoft/SiteShoter.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_site_screenshot.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SiteShoter.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-smsniff",
+    "name": "SmartSniff",
+    "category": "Network and remote access",
+    "purpose": "Captures network traffic for troubleshooting.",
+    "location": "Programs/NirLauncher/NirSoft/smsniff.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/smsniff.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/smsniff.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-sniffpass",
+    "name": "SniffPass",
+    "category": "Network and remote access",
+    "purpose": "Capture the passwords that pass through your network adapter.",
+    "location": "Programs/NirLauncher/NirSoft/SniffPass.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/password_sniffer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SniffPass.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-socketsniff",
+    "name": "SocketSniff",
+    "category": "Network and remote access",
+    "purpose": "Watches network activity from one selected program.",
+    "location": "Programs/NirLauncher/NirSoft/SocketSniff.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/socket_sniffer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SocketSniff.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-tcplogview",
+    "name": "TcpLogView",
+    "category": "Network and remote access",
+    "purpose": "Records new network connections.",
+    "location": "Programs/NirLauncher/NirSoft/TcpLogView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/tcp_log_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/TcpLogView.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-tcpview",
+    "name": "TCPView",
+    "category": "Network and remote access",
+    "purpose": "Shows active network connections and their owning processes.",
+    "location": "Programs/Sysinternals/Tcpview.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/Tcpview.exe"
     ]
   },
   {
@@ -2928,6 +4695,82 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-wakemeonlan",
+    "name": "WakeMeOnLan",
+    "category": "Network and remote access",
+    "purpose": "Turn on one or more computers remotely by sending Wake-on-LAN (WOL) packet.",
+    "location": "Programs/NirLauncher/NirSoft/WakeMeOnLan.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wake_on_lan.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WakeMeOnLan.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-websitesniffer",
+    "name": "WebSiteSniffer",
+    "category": "Network and remote access",
+    "purpose": "Capture Web site files and save them on your hard drive.",
+    "location": "Programs/NirLauncher/NirSoft/WebSiteSniffer.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_site_sniffer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WebSiteSniffer.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-whoisconnectedsniffer",
+    "name": "WhoIsConnectedSniffer",
+    "category": "Network and remote access",
+    "purpose": "Shows who connects to your network by listening to network packets.",
+    "location": "Programs/NirLauncher/NirSoft/WhoIsConnectedSniffer.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/who_is_connected_sniffer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WhoIsConnectedSniffer.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-whoistd",
+    "name": "WhoisThisDomain",
+    "category": "Network and remote access",
+    "purpose": "Get information about a registered domain from WHOIS server.",
+    "location": "Programs/NirLauncher/NirSoft/whoistd.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/whois_this_domain.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/whoistd.exe"
+    ]
+  },
+  {
     "id": "programs-wifiscanner",
     "name": "WiFi Scanner",
     "category": "Network and remote access",
@@ -2942,6 +4785,63 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-wifichannelmonitor",
+    "name": "WifiChannelMonitor",
+    "category": "Network and remote access",
+    "purpose": "Captures wifi traffic in monitor mode and displays AP/clients information.",
+    "location": "Programs/NirLauncher/NirSoft/WifiChannelMonitor.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wifi_channel_monitor.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WifiChannelMonitor.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-wifihistoryview",
+    "name": "WifiHistoryView",
+    "category": "Network and remote access",
+    "purpose": "Shows the history of connections to wireless networks on your computer.",
+    "location": "Programs/NirLauncher/NirSoft/WifiHistoryView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wifi_history_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WifiHistoryView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-wifiinfoview",
+    "name": "WifiInfoView",
+    "category": "Network and remote access",
+    "purpose": "Shows extensive information about wireless networks in your area.",
+    "location": "Programs/NirLauncher/NirSoft/WifiInfoView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wifi_information_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WifiInfoView.exe"
+    ]
+  },
+  {
     "id": "portableapps-winscpportable",
     "name": "WinSCP",
     "category": "Network and remote access",
@@ -2953,6 +4853,63 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/WinSCPPortable"
+    ]
+  },
+  {
+    "id": "nirsoft-wnetwatcher",
+    "name": "Wireless Network Watcher",
+    "category": "Network and remote access",
+    "purpose": "Shows who is connected to your wireless network.",
+    "location": "Programs/NirLauncher/NirSoft/WNetWatcher.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wireless_network_watcher.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WNetWatcher.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-wirelessconnectioninfo",
+    "name": "WirelessConnectionInfo",
+    "category": "Network and remote access",
+    "purpose": "Shows general information and statistics about the active wifi connection.",
+    "location": "Programs/NirLauncher/NirSoft/WirelessConnectionInfo.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wireless_connection_information.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WirelessConnectionInfo.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-wirelessnetview",
+    "name": "WirelessNetView",
+    "category": "Network and remote access",
+    "purpose": "Monitor the activity of wireless networks around you.",
+    "location": "Programs/NirLauncher/NirSoft/WirelessNetView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wireless_network_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WirelessNetView.exe"
     ]
   },
   {
@@ -3211,6 +5168,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "sysinternals-diskext",
+    "name": "DiskExt",
+    "category": "Partitions and disks",
+    "purpose": "Maps a drive letter to its physical disk.",
+    "location": "Programs/Sysinternals/diskext.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/diskext.exe"
+    ]
+  },
+  {
     "id": "boot-partition-tools-diskgenius",
     "name": "DiskGenius",
     "category": "Partitions and disks",
@@ -3298,6 +5274,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "sysinternals-ldmdump",
+    "name": "LDMDump",
+    "category": "Partitions and disks",
+    "purpose": "Shows Windows dynamic-disk metadata.",
+    "location": "Programs/Sysinternals/ldmdump.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/ldmdump.exe"
+    ]
+  },
+  {
     "id": "portableapps-macrorit-ntfs-to-fat",
     "name": "Macrorit NTFS to FAT",
     "category": "Partitions and disks",
@@ -3338,6 +5333,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "Partition_Tools/MiniTool_Partition_Wizard"
+    ]
+  },
+  {
+    "id": "sysinternals-ntfsinfo",
+    "name": "NTFSInfo",
+    "category": "Partitions and disks",
+    "purpose": "Shows technical details of an NTFS volume.",
+    "location": "Programs/Sysinternals/ntfsinfo.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/ntfsinfo.exe"
     ]
   },
   {
@@ -3414,6 +5428,158 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-bulletspassview",
+    "name": "BulletsPassView",
+    "category": "Password and access",
+    "purpose": "Reveals the passwords stored behind the bullets.",
+    "location": "Programs/NirLauncher/NirSoft/BulletsPassView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/bullets_password_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/BulletsPassView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-chromepass",
+    "name": "ChromePass",
+    "category": "Password and access",
+    "purpose": "Password recovery tool for Google Chrome Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/ChromePass.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/chromepass.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ChromePass.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-credentialsfileview",
+    "name": "CredentialsFileView",
+    "category": "Password and access",
+    "purpose": "Reads saved Windows credential files where access is authorized.",
+    "location": "Programs/NirLauncher/NirSoft/CredentialsFileView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/credentials_file_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/CredentialsFileView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-dataprotectiondecryptor",
+    "name": "DataProtectionDecryptor",
+    "category": "Password and access",
+    "purpose": "Attempts to open Windows-protected data when the needed account access is available.",
+    "location": "Programs/NirLauncher/NirSoft/DataProtectionDecryptor.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/dpapi_data_decryptor.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DataProtectionDecryptor.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-dialupass",
+    "name": "Dialupass",
+    "category": "Password and access",
+    "purpose": "Finds Dial-Up passwords in all versions of Windows.",
+    "location": "Programs/NirLauncher/NirSoft/Dialupass.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/dialupass.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/Dialupass.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-efsdump",
+    "name": "EFSDump",
+    "category": "Password and access",
+    "purpose": "Lists Windows encrypted files and certificate details.",
+    "location": "Programs/Sysinternals/efsDump.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/efsDump.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-encryptedregview",
+    "name": "EncryptedRegView",
+    "category": "Password and access",
+    "purpose": "Looks for protected data saved in Windows settings.",
+    "location": "Programs/NirLauncher/NirSoft/EncryptedRegView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/encrypted_registry_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/EncryptedRegView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-iepv",
+    "name": "IE PassView",
+    "category": "Password and access",
+    "purpose": "Finds saved passwords stored by Internet Explorer (Versions 4.0 - 8.0).",
+    "location": "Programs/NirLauncher/NirSoft/iepv.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/internet_explorer_password.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/iepv.exe"
+    ]
+  },
+  {
     "id": "boot-password-removal-jayro-s-lockpick",
     "name": "Jayro's Lockpick",
     "category": "Password and access",
@@ -3460,6 +5626,44 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-lsasecretsdump",
+    "name": "LSASecretsDump",
+    "category": "Password and access",
+    "purpose": "Exports private Windows sign-in data for authorized inspection.",
+    "location": "Programs/NirLauncher/NirSoft/LSASecretsDump.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/lsa_secrets_dump.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/LSASecretsDump.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-lsasecretsview",
+    "name": "LSASecretsView",
+    "category": "Password and access",
+    "purpose": "Shows private Windows sign-in data stored on this computer.",
+    "location": "Programs/NirLauncher/NirSoft/LSASecretsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/lsa_secrets_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/LSASecretsView.exe"
+    ]
+  },
+  {
     "id": "programs-magical-jellybean",
     "name": "Magical Jelly Bean Keyfinder",
     "category": "Password and access",
@@ -3471,6 +5675,82 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "Programs/Magical JellyBean"
+    ]
+  },
+  {
+    "id": "nirsoft-mailpv",
+    "name": "Mail PassView",
+    "category": "Password and access",
+    "purpose": "Finds email passwords.",
+    "location": "Programs/NirLauncher/NirSoft/mailpv.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/mailpv.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/mailpv.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-mspass",
+    "name": "MessenPass",
+    "category": "Password and access",
+    "purpose": "Finds the passwords of instant messenger programs.",
+    "location": "Programs/NirLauncher/NirSoft/mspass.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/mspass.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/mspass.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-netpass",
+    "name": "Network Password Recovery",
+    "category": "Password and access",
+    "purpose": "Recover network passwords on Windows XP/2003/Vista.",
+    "location": "Programs/NirLauncher/NirSoft/netpass.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/network_password_recovery.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/netpass.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-operapassview",
+    "name": "OperaPassView",
+    "category": "Password and access",
+    "purpose": "Password recovery tool for Opera Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/OperaPassView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/opera_password_recovery.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OperaPassView.exe"
     ]
   },
   {
@@ -3488,6 +5768,44 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-passwordfox",
+    "name": "PasswordFox",
+    "category": "Password and access",
+    "purpose": "Shows passwords stored in Firefox Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/PasswordFox.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/passwordfox.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/PasswordFox.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-pcanypass",
+    "name": "PCAnywhere PassView",
+    "category": "Password and access",
+    "purpose": "Shows saved pcANYWHERE passwords in supported files.",
+    "location": "Programs/NirLauncher/NirSoft/PCAnyPass.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/pcanypass.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/PCAnyPass.exe"
+    ]
+  },
+  {
     "id": "programs-produkey-x64",
     "name": "ProduKey",
     "category": "Password and access",
@@ -3499,6 +5817,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "Programs/Produkey_x64"
+    ]
+  },
+  {
+    "id": "nirsoft-pstpassword",
+    "name": "PstPassword",
+    "category": "Password and access",
+    "purpose": "Recover lost password of Outlook PST file.",
+    "location": "Programs/NirLauncher/NirSoft/PstPassword.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/pst_password.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/PstPassword.exe"
     ]
   },
   {
@@ -3516,6 +5853,63 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-rdpv",
+    "name": "Remote Desktop PassView",
+    "category": "Password and access",
+    "purpose": "Reveals the password stored by Microsoft Remote Desktop utility.",
+    "location": "Programs/NirLauncher/NirSoft/rdpv.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/remote_desktop_password.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/rdpv.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-routerpassview",
+    "name": "RouterPassView",
+    "category": "Password and access",
+    "purpose": "Finds saved passwords from router config file.",
+    "location": "Programs/NirLauncher/NirSoft/RouterPassView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/router_password_recovery.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/RouterPassView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-securityquestionsview",
+    "name": "SecurityQuestionsView",
+    "category": "Password and access",
+    "purpose": "Shows Windows 10 security questions.",
+    "location": "Programs/NirLauncher/NirSoft/SecurityQuestionsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/security_questions_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SecurityQuestionsView.exe"
+    ]
+  },
+  {
     "id": "programs-showkeyplus",
     "name": "ShowKeyPlus",
     "category": "Password and access",
@@ -3527,6 +5921,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "Programs/ShowKeyPlus"
+    ]
+  },
+  {
+    "id": "nirsoft-vaultpasswordview",
+    "name": "VaultPasswordView",
+    "category": "Password and access",
+    "purpose": "Shows passwords saved in Windows Credential Manager.",
+    "location": "Programs/NirLauncher/NirSoft/VaultPasswordView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/vault_password_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/VaultPasswordView.exe"
     ]
   },
   {
@@ -3544,6 +5957,44 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-vncpassview",
+    "name": "VNCPassView",
+    "category": "Password and access",
+    "purpose": "Recover the passwords stored by the VNC tool.",
+    "location": "Programs/NirLauncher/NirSoft/VNCPassView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/vnc_password.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/VNCPassView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-webbrowserpassview",
+    "name": "WebBrowserPassView",
+    "category": "Password and access",
+    "purpose": "Recover lost passwords from your Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/WebBrowserPassView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_browser_password.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WebBrowserPassView.exe"
+    ]
+  },
+  {
     "id": "portableapps-wireless-key-view",
     "name": "WirelessKeyView",
     "category": "Password and access",
@@ -3554,7 +6005,932 @@ window.LEARN_MEDICAT_TOOLS = [
     "versionEvidence": "Folder name and files on this F: copy; installed app behavior not tested.",
     "sources": [],
     "locations": [
-      "PortableApps/Wireless Key View"
+      "PortableApps/Wireless Key View",
+      "Programs/NirLauncher/NirSoft/WirelessKeyView.exe"
+    ]
+  },
+  {
+    "id": "ransomware-alphadecrypter",
+    "name": "Alpha Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/AlphaDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/AlphaDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-auroradecrypter",
+    "name": "Aurora Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/AuroraDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/AuroraDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-aes-ni",
+    "name": "Avast decryptor: aes ni",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_aes_ni.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_aes_ni.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-alcatrazlocker",
+    "name": "Avast decryptor: alcatrazlocker",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_alcatrazlocker.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_alcatrazlocker.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-apocalypse",
+    "name": "Avast decryptor: apocalypse",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_apocalypse.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_apocalypse.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-badblock",
+    "name": "Avast decryptor: badblock",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_badblock.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_badblock.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-bart",
+    "name": "Avast decryptor: bart",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_bart.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_bart.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-bigbobross",
+    "name": "Avast decryptor: bigbobross",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_bigbobross.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_bigbobross.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-btcware",
+    "name": "Avast decryptor: btcware",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_btcware.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_btcware.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-crypt888",
+    "name": "Avast decryptor: crypt888",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_crypt888.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_crypt888.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-cryptomix",
+    "name": "Avast decryptor: cryptomix",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_cryptomix.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_cryptomix.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-crysis",
+    "name": "Avast decryptor: crysis",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_crysis.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_crysis.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-encryptile",
+    "name": "Avast decryptor: encryptile",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_encryptile.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_encryptile.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-findzip",
+    "name": "Avast decryptor: findzip",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_findzip.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_findzip.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-gandcrab",
+    "name": "Avast decryptor: gandcrab",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_gandcrab.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_gandcrab.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-globe",
+    "name": "Avast decryptor: globe",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_globe.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_globe.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-hiddentear",
+    "name": "Avast decryptor: hiddentear",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_hiddentear.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_hiddentear.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-jigsaw",
+    "name": "Avast decryptor: jigsaw",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_jigsaw.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_jigsaw.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-lambdalocker",
+    "name": "Avast decryptor: lambdalocker",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_lambdalocker.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_lambdalocker.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-legion",
+    "name": "Avast decryptor: legion",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_legion.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_legion.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-noobcrypt",
+    "name": "Avast decryptor: noobcrypt",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_noobcrypt.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_noobcrypt.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-stampado",
+    "name": "Avast decryptor: stampado",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_stampado.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_stampado.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-szflocker",
+    "name": "Avast decryptor: szflocker",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_szflocker.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_szflocker.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-teslacrypt3",
+    "name": "Avast decryptor: teslacrypt3",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_teslacrypt3.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_teslacrypt3.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-troldesh",
+    "name": "Avast decryptor: troldesh",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_troldesh.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_troldesh.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avast-decryptor-xdata",
+    "name": "Avast decryptor: xdata",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avast_decryptor_xdata.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avast_decryptor_xdata.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avg-decryptor-apocalypse",
+    "name": "AVG decryptor: Apocalypse",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avg_decryptor_Apocalypse.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avg_decryptor_Apocalypse.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avg-decryptor-badblock64",
+    "name": "AVG decryptor: Bad Block64",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avg_decryptor_BadBlock64.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avg_decryptor_BadBlock64.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avg-decryptor-bart",
+    "name": "AVG decryptor: Bart",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avg_decryptor_Bart.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avg_decryptor_Bart.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avg-decryptor-crypt888",
+    "name": "AVG decryptor: Crypt888",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avg_decryptor_Crypt888.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avg_decryptor_Crypt888.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avg-decryptor-legion",
+    "name": "AVG decryptor: Legion",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avg_decryptor_Legion.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avg_decryptor_Legion.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avg-decryptor-szflocker",
+    "name": "AVG decryptor: Szf Locker",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avg_decryptor_SzfLocker.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avg_decryptor_SzfLocker.exe"
+    ]
+  },
+  {
+    "id": "ransomware-avg-decryptor-teslacrypt3",
+    "name": "AVG decryptor: Tesla Crypt3",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/avg_decryptor_TeslaCrypt3.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/avg_decryptor_TeslaCrypt3.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bitkangaroodecrypter",
+    "name": "Bit Kangaroo Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BitKangarooDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BitKangarooDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bitstakdecrypter",
+    "name": "Bit Stak Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BitStakDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BitStakDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bdannabelledecrypttool",
+    "name": "Bitdefender Annabelle Decrypt Tool",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BDAnnabelleDecryptTool.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BDAnnabelleDecryptTool.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bdgandcrabdecrypttool",
+    "name": "Bitdefender Gand Crab Decrypt Tool",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BDGandCrabDecryptTool.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BDGandCrabDecryptTool.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bdgogoogledecryptor",
+    "name": "Bitdefender Go Google Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BDGoGoogleDecryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BDGoGoogleDecryptor.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bdlockcryptdecryptor",
+    "name": "Bitdefender Lock Crypt Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BDLockCryptDecryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BDLockCryptDecryptor.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bdouroborosdecrypttool",
+    "name": "Bitdefender Ouroboros Decrypt Tool",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BDOuroborosDecryptTool.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BDOuroborosDecryptTool.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bdparadisedecrypttool",
+    "name": "Bitdefender Paradise Decrypt Tool",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BDParadiseDecryptTool.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BDParadiseDecryptTool.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bdransomrecognitiontool",
+    "name": "Bitdefender Ransom Recognition",
+    "category": "Ransomware recovery",
+    "purpose": "Helps identify a ransomware family before choosing a decryptor.",
+    "location": "PortableApps/Ransomware Decryption Tools/BDRansomRecognitionTool.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BDRansomRecognitionTool.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bdshadedecryptor",
+    "name": "Bitdefender Shade Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BDShadeDecryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BDShadeDecryptor.exe"
+    ]
+  },
+  {
+    "id": "ransomware-bdwannarendecrypttool",
+    "name": "Bitdefender Wanna Ren Decrypt Tool",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BDWannaRenDecryptTool.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BDWannaRenDecryptTool.exe"
+    ]
+  },
+  {
+    "id": "ransomware-btcwaredecrypt",
+    "name": "BTCWare Decrypt",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BTCWareDecrypt.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BTCWareDecrypt.exe"
+    ]
+  },
+  {
+    "id": "ransomware-btcwaredecrypter",
+    "name": "BTCWare Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/BTCWareDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/BTCWareDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-coinvaultdecryptor",
+    "name": "Coin Vault Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/CoinVaultDecryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/CoinVaultDecryptor.exe"
+    ]
+  },
+  {
+    "id": "ransomware-crypt38decrypter",
+    "name": "Crypt38Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/Crypt38Decrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/Crypt38Decrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-dcrydecrypter",
+    "name": "DCry Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/DCryDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/DCryDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-decrypt-crypton",
+    "name": "decrypt Crypt ON",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/decrypt_CryptON.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/decrypt_CryptON.exe"
+    ]
+  },
+  {
+    "id": "ransomware-decrypt-jigsaw",
+    "name": "decrypt Jigsaw",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/decrypt_Jigsaw.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/decrypt_Jigsaw.exe"
+    ]
+  },
+  {
+    "id": "ransomware-decrypt-stopdjvu",
+    "name": "decrypt STOPDjvu",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/decrypt_STOPDjvu.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/decrypt_STOPDjvu.exe"
+    ]
+  },
+  {
+    "id": "ransomware-fileslockerdecrypter",
+    "name": "Files Locker Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/FilesLockerDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/FilesLockerDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-hiddentear-bruteforcer",
+    "name": "HiddenTear Bruteforcer",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to recover a key for HiddenTear-related ransomware.",
+    "location": "PortableApps/Ransomware Decryption Tools/HiddenTear Bruteforcer.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/HiddenTear Bruteforcer.exe"
+    ]
+  },
+  {
+    "id": "ransomware-setup-mfedecrypt-x64",
+    "name": "McAfee decryption tool installer",
+    "category": "Ransomware recovery",
+    "purpose": "Installs a ransomware decryptor; exact supported families unverified.",
+    "location": "PortableApps/Ransomware Decryption Tools/setup_mfedecrypt_x64.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/setup_mfedecrypt_x64.exe"
+    ]
+  },
+  {
+    "id": "ransomware-mircopdecrypter",
+    "name": "Mir Cop Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/MirCopDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/MirCopDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-mole02decryptor",
+    "name": "Mole02Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/Mole02Decryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/Mole02Decryptor.exe"
+    ]
+  },
+  {
+    "id": "ransomware-powerlockydecrypter",
+    "name": "Power Locky Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/PowerLockyDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/PowerLockyDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-rakhnidecryptor",
+    "name": "Rakhni Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/RakhniDecryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/RakhniDecryptor.exe"
+    ]
+  },
+  {
+    "id": "ransomware-rannohdecryptor",
+    "name": "Rannoh Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/RannohDecryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/RannohDecryptor.exe"
+    ]
+  },
+  {
+    "id": "ransomware-ransomwarefiledecryptor-1-0-1668-mui",
+    "name": "Ransomware File Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts decryption for supported ransomware families; identify the infection first.",
+    "location": "PortableApps/Ransomware Decryption Tools/RansomwareFileDecryptor 1.0.1668 MUI.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/RansomwareFileDecryptor 1.0.1668 MUI.exe"
+    ]
+  },
+  {
+    "id": "ransomware-shadedecryptor",
+    "name": "Shade Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/ShadeDecryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/ShadeDecryptor.exe"
+    ]
+  },
+  {
+    "id": "ransomware-stupiddecrypter",
+    "name": "Stupid Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/StupidDecrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/StupidDecrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-unlock92decrypter",
+    "name": "Unlock92Decrypter",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/Unlock92Decrypter.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/Unlock92Decrypter.exe"
+    ]
+  },
+  {
+    "id": "ransomware-wildfiredecryptor",
+    "name": "Wildfire Decryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/WildfireDecryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/WildfireDecryptor.exe"
+    ]
+  },
+  {
+    "id": "ransomware-xoristdecryptor",
+    "name": "xoristdecryptor",
+    "category": "Ransomware recovery",
+    "purpose": "Attempts to decrypt files from a specific ransomware family. Identify the infection before trying it.",
+    "location": "PortableApps/Ransomware Decryption Tools/xoristdecryptor.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Filename establishes presence only; supported ransomware variants and behavior unverified.",
+    "sources": [],
+    "locations": [
+      "PortableApps/Ransomware Decryption Tools/xoristdecryptor.exe"
     ]
   },
   {
@@ -3614,6 +6990,595 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-browseraddonsview",
+    "name": "BrowserAddonsView",
+    "category": "Web and browser",
+    "purpose": "Shows the details of all Web browser addons/plugins installed in your system.",
+    "location": "Programs/NirLauncher/NirSoft/BrowserAddonsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_browser_addons_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/BrowserAddonsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-browserdownloadsview",
+    "name": "BrowserDownloadsView",
+    "category": "Web and browser",
+    "purpose": "Shows the details of downloaded files of Chrome and Firefox Web browsers.",
+    "location": "Programs/NirLauncher/NirSoft/BrowserDownloadsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_browser_downloads_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/BrowserDownloadsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-browsinghistoryview",
+    "name": "BrowsingHistoryView",
+    "category": "Web and browser",
+    "purpose": "Shows browsing history of popular Web browsers.",
+    "location": "Programs/NirLauncher/NirSoft/BrowsingHistoryView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/browsing_history_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/BrowsingHistoryView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-chromecacheview",
+    "name": "ChromeCacheView",
+    "category": "Web and browser",
+    "purpose": "Chrome Browser Cache Viewer.",
+    "location": "Programs/NirLauncher/NirSoft/ChromeCacheView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/chrome_cache_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ChromeCacheView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-chromecookiesview",
+    "name": "ChromeCookiesView",
+    "category": "Web and browser",
+    "purpose": "Shows website cookies saved by Chrome.",
+    "location": "Programs/NirLauncher/NirSoft/ChromeCookiesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/chrome_cookies_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ChromeCookiesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-chromehistoryview",
+    "name": "ChromeHistoryView",
+    "category": "Web and browser",
+    "purpose": "Shows the browsing history of Chrome Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/ChromeHistoryView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/chrome_history_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ChromeHistoryView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-edgecookiesview",
+    "name": "EdgeCookiesView",
+    "category": "Web and browser",
+    "purpose": "Shows website cookies saved by Edge.",
+    "location": "Programs/NirLauncher/NirSoft/EdgeCookiesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/edge_cookies_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/EdgeCookiesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-faview",
+    "name": "FavoritesView",
+    "category": "Web and browser",
+    "purpose": "Shows the list of all your Favorties/bookmarks in a single page.",
+    "location": "Programs/NirLauncher/NirSoft/faview.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/faview.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/faview.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-fbcacheview",
+    "name": "FBCacheView",
+    "category": "Web and browser",
+    "purpose": "Shows Facebook images stored in the cache of your Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/FBCacheView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/facebook_cache_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FBCacheView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-firefoxdownloadsview",
+    "name": "FirefoxDownloadsView",
+    "category": "Web and browser",
+    "purpose": "Displayed the list of downloaded files in Firefox.",
+    "location": "Programs/NirLauncher/NirSoft/FirefoxDownloadsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/firefox_downloads_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FirefoxDownloadsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-flashcookiesview",
+    "name": "FlashCookiesView",
+    "category": "Web and browser",
+    "purpose": "Shows old Flash website cookies.",
+    "location": "Programs/NirLauncher/NirSoft/FlashCookiesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/flash_cookies_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FlashCookiesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-iecacheview",
+    "name": "IECacheView",
+    "category": "Web and browser",
+    "purpose": "Lists files currently stored in the cache of Internet Explorer.",
+    "location": "Programs/NirLauncher/NirSoft/IECacheView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/ie_cache_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/IECacheView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-iecv",
+    "name": "IECookiesView",
+    "category": "Web and browser",
+    "purpose": "Shows website cookies saved by Internet Explorer.",
+    "location": "Programs/NirLauncher/NirSoft/iecv.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/iecookies.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/iecv.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-iehv",
+    "name": "IEHistoryView",
+    "category": "Web and browser",
+    "purpose": "Shows Web sites that you visited with IE Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/iehv.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/iehv.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/iehv.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-imagecacheviewer",
+    "name": "ImageCacheViewer",
+    "category": "Web and browser",
+    "purpose": "Shows images stored in the cache of your Web browsers.",
+    "location": "Programs/NirLauncher/NirSoft/ImageCacheViewer.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/image_cache_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ImageCacheViewer.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-mylastsearch",
+    "name": "MyLastSearch",
+    "category": "Web and browser",
+    "purpose": "Shows your latest searches with Google, Yahoo, and MSN.",
+    "location": "Programs/NirLauncher/NirSoft/MyLastSearch.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/my_last_search.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MyLastSearch.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-mzcacheview",
+    "name": "MZCacheView",
+    "category": "Web and browser",
+    "purpose": "Lists files currently stored in the cache of Firefox/Mozilla browser.",
+    "location": "Programs/NirLauncher/NirSoft/MZCacheView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/mozilla_cache_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MZCacheView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-mzcv",
+    "name": "MZCookiesView",
+    "category": "Web and browser",
+    "purpose": "Alternative to the standard 'Cookie Manager' provided by Netscape and Mozilla.",
+    "location": "Programs/NirLauncher/NirSoft/mzcv.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/mzcv.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/mzcv.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-mozillahistoryview",
+    "name": "MZHistoryView",
+    "category": "Web and browser",
+    "purpose": "Shows visited Web sites in Firefox/Mozilla/Netscape Web browsers.",
+    "location": "Programs/NirLauncher/NirSoft/MozillaHistoryView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/mozilla_history_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MozillaHistoryView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-operacacheview",
+    "name": "OperaCacheView",
+    "category": "Web and browser",
+    "purpose": "Cache viewer for Opera Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/OperaCacheView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/opera_cache_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OperaCacheView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-safaricacheview",
+    "name": "SafariCacheView",
+    "category": "Web and browser",
+    "purpose": "Cache viewer/extractor for Safari Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/SafariCacheView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/safari_cache_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SafariCacheView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-safarihistoryview",
+    "name": "SafariHistoryView",
+    "category": "Web and browser",
+    "purpose": "History viewer for Safari Web browser.",
+    "location": "Programs/NirLauncher/NirSoft/SafariHistoryView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/safari_history_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SafariHistoryView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-urlstringgrabber",
+    "name": "URLStringGrabber",
+    "category": "Web and browser",
+    "purpose": "Grab URL strings of Web sites from Internet Explorer.",
+    "location": "Programs/NirLauncher/NirSoft/URLStringGrabber.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/url_string_grabber.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/URLStringGrabber.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-webbrowserbookmarksview",
+    "name": "WebBrowserBookmarksView",
+    "category": "Web and browser",
+    "purpose": "Shows all bookmarks of Chrome and Firefox Web browsers.",
+    "location": "Programs/NirLauncher/NirSoft/WebBrowserBookmarksView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_browser_bookmarks_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WebBrowserBookmarksView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-webcacheimageinfo",
+    "name": "WebCacheImageInfo",
+    "category": "Web and browser",
+    "purpose": "Shows EXIF information of the images stored in Web browser cache.",
+    "location": "Programs/NirLauncher/NirSoft/WebCacheImageInfo.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_cache_image_info.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WebCacheImageInfo.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-webcookiessniffer",
+    "name": "WebCookiesSniffer",
+    "category": "Web and browser",
+    "purpose": "Captures website cookies from network traffic.",
+    "location": "Programs/NirLauncher/NirSoft/WebCookiesSniffer.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/web_cookies_sniffer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WebCookiesSniffer.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-axhelper",
+    "name": "ActiveXHelper",
+    "category": "Windows diagnosis",
+    "purpose": "Shows essential information about ActiveX components installed on your computer.",
+    "location": "Programs/NirLauncher/NirSoft/axhelper.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/axhelper.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/axhelper.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-advancedrun",
+    "name": "AdvancedRun",
+    "category": "Windows diagnosis",
+    "purpose": "Run a program with different settings that you choose.",
+    "location": "Programs/NirLauncher/NirSoft/AdvancedRun.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/advanced_run.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/AdvancedRun.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-allthreadsview",
+    "name": "AllThreadsView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows all running threads in Windows.",
+    "location": "Programs/NirLauncher/NirSoft/AllThreadsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/all_threads_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/AllThreadsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-appcompatibilityview",
+    "name": "AppCompatibilityView",
+    "category": "Windows diagnosis",
+    "purpose": "Lists of all programs that run with different compatibility setting.",
+    "location": "Programs/NirLauncher/NirSoft/AppCompatibilityView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/app_compatibility_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/AppCompatibilityView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-appcrashview",
+    "name": "AppCrashView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the details of all application crashes occurred in your system.",
+    "location": "Programs/NirLauncher/NirSoft/AppCrashView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/app_crash_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/AppCrashView.exe"
+    ]
+  },
+  {
     "id": "portableapps-autorunsportable",
     "name": "Autoruns",
     "category": "Windows diagnosis",
@@ -3624,7 +7589,46 @@ window.LEARN_MEDICAT_TOOLS = [
     "versionEvidence": "Folder name and files on this F: copy; installed app behavior not tested.",
     "sources": [],
     "locations": [
-      "PortableApps/AutorunsPortable"
+      "PortableApps/AutorunsPortable",
+      "Programs/Sysinternals/autoruns.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-autorunsc",
+    "name": "Autoruns command line",
+    "category": "Windows diagnosis",
+    "purpose": "Lists Windows startup entries in a command window.",
+    "location": "Programs/Sysinternals/autorunsc.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/autorunsc.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-batteryinfoview",
+    "name": "BatteryInfoView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows battery information on laptops and netbooks.",
+    "location": "Programs/NirLauncher/NirSoft/BatteryInfoView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/battery_information_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/BatteryInfoView.exe"
     ]
   },
   {
@@ -3639,7 +7643,122 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "Programs/BlueScreenView",
-      "PortableApps/BlueScreen View"
+      "PortableApps/BlueScreen View",
+      "Programs/NirLauncher/NirSoft/BlueScreenView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-bluetoothcl",
+    "name": "BluetoothCL",
+    "category": "Windows diagnosis",
+    "purpose": "Show bluetooth devices  list.",
+    "location": "Programs/NirLauncher/NirSoft/BluetoothCL.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/bluetoothcl.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/BluetoothCL.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-bluetoothlogview",
+    "name": "BluetoothLogView",
+    "category": "Windows diagnosis",
+    "purpose": "Creates a log of Bluetooth activity in your area.",
+    "location": "Programs/NirLauncher/NirSoft/BluetoothLogView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/bluetooth_log_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/BluetoothLogView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-bluetoothview",
+    "name": "BluetoothView",
+    "category": "Windows diagnosis",
+    "purpose": "Monitors the activity of Bluetooth devices around you.",
+    "location": "Programs/NirLauncher/NirSoft/BluetoothView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/bluetooth_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/BluetoothView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-bulkfilechanger",
+    "name": "BulkFileChanger",
+    "category": "Windows diagnosis",
+    "purpose": "Change date/time/attributes of multiple files.",
+    "location": "Programs/NirLauncher/NirSoft/BulkFileChanger.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/bulk_file_changer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/BulkFileChanger.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-cacheset",
+    "name": "CacheSet",
+    "category": "Windows diagnosis",
+    "purpose": "Adjusts Windows file cache limits.",
+    "location": "Programs/Sysinternals/Cacheset.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/Cacheset.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-cleanafterme",
+    "name": "CleanAfterMe",
+    "category": "Windows diagnosis",
+    "purpose": "Deletes selected temporary files and Windows settings.",
+    "location": "Programs/NirLauncher/NirSoft/CleanAfterMe.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/clean_after_me.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/CleanAfterMe.exe"
     ]
   },
   {
@@ -3657,6 +7776,139 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-controlmymonitor",
+    "name": "ControlMyMonitor",
+    "category": "Windows diagnosis",
+    "purpose": "Shows and modify the settings of your monitor.",
+    "location": "Programs/NirLauncher/NirSoft/ControlMyMonitor.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/control_my_monitor.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ControlMyMonitor.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-cprocess",
+    "name": "CurrProcess",
+    "category": "Windows diagnosis",
+    "purpose": "Shows all processes currently running on your system.",
+    "location": "Programs/NirLauncher/NirSoft/CProcess.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/cprocess.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/CProcess.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-dbgview",
+    "name": "DebugView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows debugging messages from Windows and applications.",
+    "location": "Programs/Sysinternals/dbgview.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/dbgview.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-deviceioview",
+    "name": "DeviceIOView",
+    "category": "Windows diagnosis",
+    "purpose": "Watch the data transfer between a software or service and a device driver.",
+    "location": "Programs/NirLauncher/NirSoft/DeviceIOView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/device_io_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DeviceIOView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-devmanview",
+    "name": "DevManView",
+    "category": "Windows diagnosis",
+    "purpose": "Alternative to the standard Device Manager of Windows.",
+    "location": "Programs/NirLauncher/NirSoft/DevManView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/device_manager_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DevManView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-dllexp",
+    "name": "DLL Export Viewer",
+    "category": "Windows diagnosis",
+    "purpose": "Shows functions inside program support files; for advanced debugging.",
+    "location": "Programs/NirLauncher/NirSoft/dllexp.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/dll_export_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/dllexp.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-driverview",
+    "name": "DriverView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows all device drivers currently loaded on your system.",
+    "location": "Programs/NirLauncher/NirSoft/DriverView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/driverview.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DriverView.exe"
+    ]
+  },
+  {
     "id": "portableapps-dtaskmanagerportable",
     "name": "DTaskManager",
     "category": "Windows diagnosis",
@@ -3668,6 +7920,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/DTaskManagerPortable"
+    ]
+  },
+  {
+    "id": "nirsoft-dumpedid",
+    "name": "DumpEDID",
+    "category": "Windows diagnosis",
+    "purpose": "Dump EDID information into the console window.",
+    "location": "Programs/NirLauncher/NirSoft/DumpEDID.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/dump_edid.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/DumpEDID.exe"
     ]
   },
   {
@@ -3685,6 +7956,63 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-eventlogchannelsview",
+    "name": "EventLogChannelsView",
+    "category": "Windows diagnosis",
+    "purpose": "View,Disable,Enable Event Log Channels.",
+    "location": "Programs/NirLauncher/NirSoft/EventLogChannelsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/event_log_channels_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/EventLogChannelsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-eventlogsourcesview",
+    "name": "EventLogSourcesView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows all event log sources installed on your system.",
+    "location": "Programs/NirLauncher/NirSoft/EventLogSourcesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/event_log_sources_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/EventLogSourcesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-executedprogramslist",
+    "name": "ExecutedProgramsList",
+    "category": "Windows diagnosis",
+    "purpose": "Shows programs and batch files that you previously executed on your system.",
+    "location": "Programs/NirLauncher/NirSoft/ExecutedProgramsList.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/executed_programs_list.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ExecutedProgramsList.exe"
+    ]
+  },
+  {
     "id": "programs-file-types-manager-x64",
     "name": "FileTypesMan",
     "category": "Windows diagnosis",
@@ -3699,6 +8027,63 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-firmwaretablesview",
+    "name": "FirmwareTablesView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows firmware tables (ACPI, SMBIOS) stored on your system.",
+    "location": "Programs/NirLauncher/NirSoft/FirmwareTablesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/firmware_tables_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FirmwareTablesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-folderchangesview",
+    "name": "FolderChangesView",
+    "category": "Windows diagnosis",
+    "purpose": "Monitor folder/drive changes.",
+    "location": "Programs/NirLauncher/NirSoft/FolderChangesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/folder_changes_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FolderChangesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-foldertimeupdate",
+    "name": "FolderTimeUpdate",
+    "category": "Windows diagnosis",
+    "purpose": "Updates the 'Modified Time' of folders.",
+    "location": "Programs/NirLauncher/NirSoft/FolderTimeUpdate.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/folder_time_update.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/FolderTimeUpdate.exe"
+    ]
+  },
+  {
     "id": "programs-fulleventlogview",
     "name": "FullEventLogView",
     "category": "Windows diagnosis",
@@ -3709,7 +8094,103 @@ window.LEARN_MEDICAT_TOOLS = [
     "versionEvidence": "Folder name and files on this F: copy; installed app behavior not tested.",
     "sources": [],
     "locations": [
-      "Programs/FullEventlogView"
+      "Programs/FullEventlogView",
+      "Programs/NirLauncher/NirSoft/FullEventLogView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-gdiview",
+    "name": "GDIView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows graphics-related Windows resources used by programs.",
+    "location": "Programs/NirLauncher/NirSoft/GDIView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/gdi_handles.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/GDIView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-getnir",
+    "name": "GetNir",
+    "category": "Windows diagnosis",
+    "purpose": "Command line tool to extract values from tab-delimited and comma-delimited data.",
+    "location": "Programs/NirLauncher/NirSoft/GetNir.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/get_nir_command_line_tool.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/GetNir.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-handle",
+    "name": "Handle",
+    "category": "Windows diagnosis",
+    "purpose": "Shows which process has a file open.",
+    "location": "Programs/Sysinternals/handle.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/handle.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-handlecountersview",
+    "name": "HandleCountersView",
+    "category": "Windows diagnosis",
+    "purpose": "Counts Windows resources used by each program.",
+    "location": "Programs/NirLauncher/NirSoft/HandleCountersView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/handle_counters_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/HandleCountersView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-heapmemview",
+    "name": "HeapMemView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the content of all memory blocks allocated in the heap.",
+    "location": "Programs/NirLauncher/NirSoft/HeapMemView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/heap_memory_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/HeapMemView.exe"
     ]
   },
   {
@@ -3724,6 +8205,311 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/HxD Hex Editor"
+    ]
+  },
+  {
+    "id": "nirsoft-installedappview",
+    "name": "InstalledAppView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows installed Windows 10 apps.",
+    "location": "Programs/NirLauncher/NirSoft/InstalledAppView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/installed_app_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/InstalledAppView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-installeddriverslist",
+    "name": "InstalledDriversList",
+    "category": "Windows diagnosis",
+    "purpose": "Lists all device drivers that are currently installed on your system.",
+    "location": "Programs/NirLauncher/NirSoft/InstalledDriversList.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/installed_drivers_list.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/InstalledDriversList.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-installedpackagesview",
+    "name": "InstalledPackagesView",
+    "category": "Windows diagnosis",
+    "purpose": "Lists software installed using Windows Installer.",
+    "location": "Programs/NirLauncher/NirSoft/InstalledPackagesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/installed_packages_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/InstalledPackagesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-jumplistsview",
+    "name": "JumpListsView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the information stored by the 'Jump Lists' feature of Windows 7.",
+    "location": "Programs/NirLauncher/NirSoft/JumpListsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/jump_lists_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/JumpListsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-keyboardstateview",
+    "name": "KeyboardStateView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the  current state and virtual key code of every key you press.",
+    "location": "Programs/NirLauncher/NirSoft/KeyboardStateView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/keyboard_state_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/KeyboardStateView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-lastactivityview",
+    "name": "LastActivityView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the latest computer activity.",
+    "location": "Programs/NirLauncher/NirSoft/LastActivityView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/computer_activity_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/LastActivityView.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-listdlls",
+    "name": "ListDLLs",
+    "category": "Windows diagnosis",
+    "purpose": "Lists software libraries loaded by running processes.",
+    "location": "Programs/Sysinternals/listdlls.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/listdlls.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-loadeddllsview",
+    "name": "LoadedDllsView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows program support files currently loaded by Windows.",
+    "location": "Programs/NirLauncher/NirSoft/LoadedDllsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/loaded_dll_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/LoadedDllsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-managewirelessnetworks",
+    "name": "ManageWirelessNetworks",
+    "category": "Windows diagnosis",
+    "purpose": "Alternative tool to the standard 'Manage Wireless Networks' of Windows.",
+    "location": "Programs/NirLauncher/NirSoft/ManageWirelessNetworks.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/manage_wireless_networks.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ManageWirelessNetworks.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-mmcsnapinsview",
+    "name": "MMCSnapInsView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the details of all MMC snap-ins installed on your system.",
+    "location": "Programs/NirLauncher/NirSoft/MMCSnapInsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/mmc_snapins_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MMCSnapInsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-monitorinfoview",
+    "name": "MonitorInfoView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows essential information about your monitor.",
+    "location": "Programs/NirLauncher/NirSoft/MonitorInfoView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/monitor_info_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MonitorInfoView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-muicacheview",
+    "name": "MUICacheView",
+    "category": "Windows diagnosis",
+    "purpose": "Edits or deletes MUICache items in your system.",
+    "location": "Programs/NirLauncher/NirSoft/MUICacheView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/muicache_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MUICacheView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-multimonitortool",
+    "name": "MultiMonitorTool",
+    "category": "Windows diagnosis",
+    "purpose": "Enable,disable,and set the primary monitor in Multi-Monitor system.",
+    "location": "Programs/NirLauncher/NirSoft/MultiMonitorTool.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/multi_monitor_tool.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MultiMonitorTool.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-myeventviewer",
+    "name": "MyEventViewer",
+    "category": "Windows diagnosis",
+    "purpose": "MyEventViewer is a simple alternative to the standard event viewer of Windows.",
+    "location": "Programs/NirLauncher/NirSoft/MyEventViewer.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/my_event_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/MyEventViewer.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-networkinterfacesview",
+    "name": "NetworkInterfacesView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows all network adapters/interfaces installed on your system.",
+    "location": "Programs/NirLauncher/NirSoft/NetworkInterfacesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/network_interfaces.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/NetworkInterfacesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-nircmdc",
+    "name": "NirCmd",
+    "category": "Windows diagnosis",
+    "purpose": "Runs small Windows system tasks from a command line, including display and shutdown controls.",
+    "location": "Programs/NirLauncher/NirSoft/nircmdc.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/nircmd.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/nircmdc.exe",
+      "Programs/NirLauncher/NirSoft/nircmd.exe"
     ]
   },
   {
@@ -3755,6 +8541,139 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-offlineregistryfinder",
+    "name": "OfflineRegistryFinder",
+    "category": "Windows diagnosis",
+    "purpose": "Searches Windows settings files from a computer that is not running.",
+    "location": "Programs/NirLauncher/NirSoft/OfflineRegistryFinder.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/offline_registry_finder.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OfflineRegistryFinder.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-offlineregistryview",
+    "name": "OfflineRegistryView",
+    "category": "Windows diagnosis",
+    "purpose": "Opens Windows settings files from a computer that is not running.",
+    "location": "Programs/NirLauncher/NirSoft/OfflineRegistryView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/offline_registry_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OfflineRegistryView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-openedfilesview",
+    "name": "OpenedFilesView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows all opened files on your system.",
+    "location": "Programs/NirLauncher/NirSoft/OpenedFilesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/opened_files_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OpenedFilesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-opensavefilesview",
+    "name": "OpenSaveFilesView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows list of files that you previously opened.",
+    "location": "Programs/NirLauncher/NirSoft/OpenSaveFilesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/open_save_files_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/OpenSaveFilesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-passwordscan",
+    "name": "Password Security Scanner",
+    "category": "Windows diagnosis",
+    "purpose": "Shows security information about passwords stored in your system.",
+    "location": "Programs/NirLauncher/NirSoft/PasswordScan.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/password_security_scanner.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/PasswordScan.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-pipelist",
+    "name": "PipeList",
+    "category": "Windows diagnosis",
+    "purpose": "Lists Windows named pipes used by processes.",
+    "location": "Programs/Sysinternals/pipelist.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/pipelist.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-previousfilesrecovery",
+    "name": "PreviousFilesRecovery",
+    "category": "Windows diagnosis",
+    "purpose": "Find and recovery files from Windows shadow copies.",
+    "location": "Programs/NirLauncher/NirSoft/PreviousFilesRecovery.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/previous_files_recovery.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/PreviousFilesRecovery.exe"
+    ]
+  },
+  {
     "id": "portableapps-processexplorerportable",
     "name": "Process Explorer",
     "category": "Windows diagnosis",
@@ -3765,7 +8684,8 @@ window.LEARN_MEDICAT_TOOLS = [
     "versionEvidence": "Folder name and files on this F: copy; installed app behavior not tested.",
     "sources": [],
     "locations": [
-      "PortableApps/ProcessExplorerPortable"
+      "PortableApps/ProcessExplorerPortable",
+      "Programs/Sysinternals/procexp.exe"
     ]
   },
   {
@@ -3793,7 +8713,160 @@ window.LEARN_MEDICAT_TOOLS = [
     "versionEvidence": "Folder name and files on this F: copy; installed app behavior not tested.",
     "sources": [],
     "locations": [
-      "Programs/ProcessMonitor"
+      "Programs/ProcessMonitor",
+      "Programs/Sysinternals/procmon.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-processactivityview",
+    "name": "ProcessActivityView",
+    "category": "Windows diagnosis",
+    "purpose": "Show the file activity for selected process.",
+    "location": "Programs/NirLauncher/NirSoft/ProcessActivityView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/process_activity_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ProcessActivityView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-processthreadsview",
+    "name": "ProcessThreadsView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows extensive information about all threads of the process that you choose.",
+    "location": "Programs/NirLauncher/NirSoft/ProcessThreadsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/process_threads_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ProcessThreadsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-produkey",
+    "name": "ProduKey",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the CD-Keys of MS-Office/Windows installed on your computer.",
+    "location": "Programs/NirLauncher/NirSoft/ProduKey.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/product_cd_key_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ProduKey.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-propertysystemview",
+    "name": "PropertySystemView",
+    "category": "Windows diagnosis",
+    "purpose": "View/edit file properties.",
+    "location": "Programs/NirLauncher/NirSoft/PropertySystemView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/windows_property_system_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/PropertySystemView.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-pskill",
+    "name": "PsKill",
+    "category": "Windows diagnosis",
+    "purpose": "Stops a local or remote Windows process.",
+    "location": "Programs/Sysinternals/pskill.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/pskill.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-pslist",
+    "name": "PsList",
+    "category": "Windows diagnosis",
+    "purpose": "Lists running processes locally or remotely.",
+    "location": "Programs/Sysinternals/pslist.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/pslist.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-psservice",
+    "name": "PsService",
+    "category": "Windows diagnosis",
+    "purpose": "Views and manages Windows services.",
+    "location": "Programs/Sysinternals/psservice.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/psservice.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-pssuspend",
+    "name": "PsSuspend",
+    "category": "Windows diagnosis",
+    "purpose": "Pauses or resumes a Windows process.",
+    "location": "Programs/Sysinternals/pssuspend.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/pssuspend.exe"
     ]
   },
   {
@@ -3807,7 +8880,27 @@ window.LEARN_MEDICAT_TOOLS = [
     "versionEvidence": "Folder name and files on this F: copy; installed app behavior not tested.",
     "sources": [],
     "locations": [
-      "PortableApps/RAMMapPortable"
+      "PortableApps/RAMMapPortable",
+      "Programs/Sysinternals/RamMap.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-recentfilesview",
+    "name": "RecentFilesView",
+    "category": "Windows diagnosis",
+    "purpose": "Display the list of recently opened files.",
+    "location": "Programs/NirLauncher/NirSoft/RecentFilesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/recent_files_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/RecentFilesView.exe"
     ]
   },
   {
@@ -3825,6 +8918,44 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-regdllview",
+    "name": "RegDllView",
+    "category": "Windows diagnosis",
+    "purpose": "Lists registered Windows program components.",
+    "location": "Programs/NirLauncher/NirSoft/RegDllView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/registered_dll_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/RegDllView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-regfileexport",
+    "name": "RegFileExport",
+    "category": "Windows diagnosis",
+    "purpose": "Exports settings from an offline Windows settings file.",
+    "location": "Programs/NirLauncher/NirSoft/RegFileExport.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/registry_file_offline_export.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/RegFileExport.exe"
+    ]
+  },
+  {
     "id": "programs-regfromapp",
     "name": "RegFromApp",
     "category": "Windows diagnosis",
@@ -3835,7 +8966,8 @@ window.LEARN_MEDICAT_TOOLS = [
     "versionEvidence": "Folder name and files on this F: copy; installed app behavior not tested.",
     "sources": [],
     "locations": [
-      "Programs/RegFromApp"
+      "Programs/RegFromApp",
+      "Programs/NirLauncher/NirSoft/RegFromApp.exe"
     ]
   },
   {
@@ -3867,6 +8999,25 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-registrychangesview",
+    "name": "RegistryChangesView",
+    "category": "Windows diagnosis",
+    "purpose": "Compares Windows settings before and after a change.",
+    "location": "Programs/NirLauncher/NirSoft/RegistryChangesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/registry_changes_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/RegistryChangesView.exe"
+    ]
+  },
+  {
     "id": "portableapps-registryloaderpe",
     "name": "RegistryLoaderPE",
     "category": "Windows diagnosis",
@@ -3892,6 +9043,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/RegOwnershipEx"
+    ]
+  },
+  {
+    "id": "nirsoft-regscanner",
+    "name": "RegScanner",
+    "category": "Windows diagnosis",
+    "purpose": "Searches Windows settings for a name or value.",
+    "location": "Programs/NirLauncher/NirSoft/RegScanner.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/regscanner.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/RegScanner.exe"
     ]
   },
   {
@@ -3925,6 +9095,82 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-runasdate",
+    "name": "RunAsDate",
+    "category": "Windows diagnosis",
+    "purpose": "Run a program with the specified date.",
+    "location": "Programs/NirLauncher/NirSoft/RunAsDate.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/run_as_date.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/RunAsDate.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-runfromprocess",
+    "name": "RunFromProcess",
+    "category": "Windows diagnosis",
+    "purpose": "Run a program from another process that you choose.",
+    "location": "Programs/NirLauncher/NirSoft/RunFromProcess.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/run_from_process.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/RunFromProcess.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-searchfilterview",
+    "name": "SearchFilterView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the search filters installed on your system.",
+    "location": "Programs/NirLauncher/NirSoft/SearchFilterView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/search_filter_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SearchFilterView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-securitysoftview",
+    "name": "SecuritySoftView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows AntiVirus/AntiSpyware/ Firewall programs on your system.",
+    "location": "Programs/NirLauncher/NirSoft/SecuritySoftView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/security_software_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SecuritySoftView.exe"
+    ]
+  },
+  {
     "id": "programs-serviwin-x64",
     "name": "ServiWin",
     "category": "Windows diagnosis",
@@ -3935,7 +9181,179 @@ window.LEARN_MEDICAT_TOOLS = [
     "versionEvidence": "Folder name and files on this F: copy; installed app behavior not tested.",
     "sources": [],
     "locations": [
-      "Programs/ServiWin_x64"
+      "Programs/ServiWin_x64",
+      "Programs/NirLauncher/NirSoft/serviwin.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-shadowcopyview",
+    "name": "ShadowCopyView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows shadow copies on your system.",
+    "location": "Programs/NirLauncher/NirSoft/ShadowCopyView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/shadow_copy_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ShadowCopyView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-shellbagsview",
+    "name": "ShellBagsView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows all folder settings saved by Windows.",
+    "location": "Programs/NirLauncher/NirSoft/ShellBagsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/shell_bags_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ShellBagsView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-shexview",
+    "name": "ShellExView",
+    "category": "Windows diagnosis",
+    "purpose": "Lists add-ons attached to Windows File Explorer.",
+    "location": "Programs/NirLauncher/NirSoft/shexview.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/shexview.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/shexview.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-shellmenunew",
+    "name": "ShellMenuNew",
+    "category": "Windows diagnosis",
+    "purpose": "Disable/Enable items in the New submenu of Explorer.",
+    "location": "Programs/NirLauncher/NirSoft/ShellMenuNew.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/shell_menu_new.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/ShellMenuNew.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-shmnview",
+    "name": "ShellMenuView",
+    "category": "Windows diagnosis",
+    "purpose": "Disable/enable static menu items in context menu of Explorer.",
+    "location": "Programs/NirLauncher/NirSoft/shmnview.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/shell_menu_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/shmnview.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-simpleprogramdebugger",
+    "name": "SimpleProgramDebugger",
+    "category": "Windows diagnosis",
+    "purpose": "Shows debugging events of a running program.",
+    "location": "Programs/NirLauncher/NirSoft/SimpleProgramDebugger.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/simple_program_debugger.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SimpleProgramDebugger.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-simplewmiview",
+    "name": "SimpleWMIView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows Windows system information from a saved query.",
+    "location": "Programs/NirLauncher/NirSoft/SimpleWMIView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/simple_wmi_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/SimpleWMIView.exe"
+    ]
+  },
+  {
+    "id": "sysinternals-strings",
+    "name": "Strings",
+    "category": "Windows diagnosis",
+    "purpose": "Finds readable text inside a binary file.",
+    "location": "Programs/Sysinternals/strings.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/strings.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-sysexp",
+    "name": "SysExporter",
+    "category": "Windows diagnosis",
+    "purpose": "Grab the data stored in list-views, tree-views, list boxes, and combo boxes.",
+    "location": "Programs/NirLauncher/NirSoft/sysexp.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/sysexp.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/sysexp.exe"
     ]
   },
   {
@@ -3950,6 +9368,196 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/SystemExplorerPortable"
+    ]
+  },
+  {
+    "id": "nirsoft-taskschedulerview",
+    "name": "TaskSchedulerView",
+    "category": "Windows diagnosis",
+    "purpose": "View/Disable/Enable tasks from the Task Scheduler of Windows.",
+    "location": "Programs/NirLauncher/NirSoft/TaskSchedulerView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/task_scheduler_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/TaskSchedulerView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-timezonesview",
+    "name": "TimeZonesView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows all world time zones.",
+    "location": "Programs/NirLauncher/NirSoft/TimeZonesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/time_zones_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/TimeZonesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-turnedontimesview",
+    "name": "TurnedOnTimesView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the time/date ranges that your computer was turned on.",
+    "location": "Programs/NirLauncher/NirSoft/TurnedOnTimesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/computer_turned_on_times.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/TurnedOnTimesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-uninstallview",
+    "name": "UninstallView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows installed programs on your system and allows you to uninstall them.",
+    "location": "Programs/NirLauncher/NirSoft/UninstallView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/uninstall_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/UninstallView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-urlprotocolview",
+    "name": "URLProtocolView",
+    "category": "Windows diagnosis",
+    "purpose": "View/disable/enable the URL protocols installed on your system.",
+    "location": "Programs/NirLauncher/NirSoft/URLProtocolView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/url_protocol_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/URLProtocolView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-usbdeview",
+    "name": "USBDeview",
+    "category": "Windows diagnosis",
+    "purpose": "Lists all installed USB devices that you previously used.",
+    "location": "Programs/NirLauncher/NirSoft/USBDeview.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/usb_devices_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/USBDeview.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-usbdrivelog",
+    "name": "USBDriveLog",
+    "category": "Windows diagnosis",
+    "purpose": "USB Drive Log For Windows 10.",
+    "location": "Programs/NirLauncher/NirSoft/USBDriveLog.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/usb_drive_log.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/USBDriveLog.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-usblogview",
+    "name": "USBLogView",
+    "category": "Windows diagnosis",
+    "purpose": "Records the details of any USB device that is plugged/unplugged into your system.",
+    "location": "Programs/NirLauncher/NirSoft/USBLogView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/usb_log_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/USBLogView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-userassistview",
+    "name": "UserAssistView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows some Windows records of programs opened by an account.",
+    "location": "Programs/NirLauncher/NirSoft/UserAssistView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/userassist_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/UserAssistView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-userprofilesview",
+    "name": "UserProfilesView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows user profiles information on your system.",
+    "location": "Programs/NirLauncher/NirSoft/UserProfilesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/user_profiles_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/UserProfilesView.exe"
     ]
   },
   {
@@ -3981,6 +9589,120 @@ window.LEARN_MEDICAT_TOOLS = [
     ]
   },
   {
+    "id": "nirsoft-whatinstartup",
+    "name": "WhatInStartup",
+    "category": "Windows diagnosis",
+    "purpose": "Disable/enable/delete programs that are loaded at Windows startup.",
+    "location": "Programs/NirLauncher/NirSoft/WhatInStartup.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/what_run_in_startup.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WhatInStartup.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-whatishang",
+    "name": "WhatIsHang",
+    "category": "Windows diagnosis",
+    "purpose": "Get information about Windows software that hangs.",
+    "location": "Programs/NirLauncher/NirSoft/WhatIsHang.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/what_is_hang.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WhatIsHang.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-whoiscl",
+    "name": "WhoisCL",
+    "category": "Windows diagnosis",
+    "purpose": "Get WHOIS information about a registered domain from command-line.",
+    "location": "Programs/NirLauncher/NirSoft/WhoisCL.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/whoiscl.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WhoisCL.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-whosip",
+    "name": "WhosIP",
+    "category": "Windows diagnosis",
+    "purpose": "Find all available information about an IP address from command-line.",
+    "location": "Programs/NirLauncher/NirSoft/whosip.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/whosip.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/whosip.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-wincrashreport",
+    "name": "WinCrashReport",
+    "category": "Windows diagnosis",
+    "purpose": "Shows a report about crashed Windows application.",
+    "location": "Programs/NirLauncher/NirSoft/WinCrashReport.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/application_crash_report.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WinCrashReport.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-windefthreatsview",
+    "name": "WinDefThreatsView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows Windows Defender threats of local and remote computer.",
+    "location": "Programs/NirLauncher/NirSoft/WinDefThreatsView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/windows_defender_threats_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WinDefThreatsView.exe"
+    ]
+  },
+  {
     "id": "portableapps-windows-11-fixer",
     "name": "Windows 11 Fixer",
     "category": "Windows diagnosis",
@@ -4006,6 +9728,120 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "PortableApps/WindowsErrorLookupToolPortable"
+    ]
+  },
+  {
+    "id": "nirsoft-winupdatesview",
+    "name": "Windows Updates History Viewer",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the history of Windows updates for your system.",
+    "location": "Programs/NirLauncher/NirSoft/WinUpdatesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/windows_updates_history_viewer.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WinUpdatesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-winlogonview",
+    "name": "WinLogOnView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows logon/logoff times on Windows Vista/7/8/2008.",
+    "location": "Programs/NirLauncher/NirSoft/WinLogOnView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/windows_log_on_times_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WinLogOnView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-winprefetchview",
+    "name": "WinPrefetchView",
+    "category": "Windows diagnosis",
+    "purpose": "Shows the Prefetch files (.pf) stored in your system.",
+    "location": "Programs/NirLauncher/NirSoft/WinPrefetchView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/win_prefetch_view.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WinPrefetchView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-winsockservicesview",
+    "name": "WinsockServicesView",
+    "category": "Windows diagnosis",
+    "purpose": "Lists and changes network service components used by Windows.",
+    "location": "Programs/NirLauncher/NirSoft/WinsockServicesView.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/winsock_service_providers.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WinsockServicesView.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-wul",
+    "name": "WinUpdatesList",
+    "category": "Windows diagnosis",
+    "purpose": "Shows all Windows updates (Service Packs and Hotfixes).",
+    "location": "Programs/NirLauncher/NirSoft/wul.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wul.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/wul.exe"
+    ]
+  },
+  {
+    "id": "nirsoft-wirelessnetconsole",
+    "name": "WirelessNetConsole",
+    "category": "Windows diagnosis",
+    "purpose": "Shows wireless networks information (console application).",
+    "location": "Programs/NirLauncher/NirSoft/WirelessNetConsole.exe",
+    "kind": "Windows program",
+    "status": "Launcher entry and executable found on F:; program not run",
+    "versionEvidence": "Purpose follows the bundled NirLauncher menu; installed executable version and behavior unverified.",
+    "sources": [
+      {
+        "label": "NirSoft program page",
+        "url": "https://www.nirsoft.net/utils/wireless_net_console.html"
+      }
+    ],
+    "locations": [
+      "Programs/NirLauncher/NirSoft/WirelessNetConsole.exe"
     ]
   },
   {
@@ -4149,6 +9985,25 @@ window.LEARN_MEDICAT_TOOLS = [
     "sources": [],
     "locations": [
       "Programs/KillDisk (Certified Wipe)"
+    ]
+  },
+  {
+    "id": "sysinternals-sdelete",
+    "name": "SDelete",
+    "category": "Wipe and privacy",
+    "purpose": "Overwrites selected files or free space; destructive.",
+    "location": "Programs/Sysinternals/sdelete.exe",
+    "kind": "Windows program",
+    "status": "Executable found on F:; program not run",
+    "versionEvidence": "Bundled executable found; version and behavior unverified.",
+    "sources": [
+      {
+        "label": "Microsoft Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/"
+      }
+    ],
+    "locations": [
+      "Programs/Sysinternals/sdelete.exe"
     ]
   },
   {

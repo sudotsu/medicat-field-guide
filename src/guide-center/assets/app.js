@@ -765,7 +765,7 @@
         return "<option value=\"" + escapeHtml(category) + "\"" + (category === toolCategory ? " selected" : "") + ">" + escapeHtml(category) + "</option>";
       }).join("") + "</select>",
       "  </div>",
-      "  <p class=\"tool-directory-note\">The list comes from program folders and boot images found on this F: copy. Repeated copies are combined. A file being present does not prove it boots or works.</p>",
+      "  <p class=\"tool-directory-note\">The list comes from program folders and boot images found on this F: copy, including the individual utilities in NirLauncher, Sysinternals, and the ransomware collection. Repeated copies are combined. A file being present does not prove it boots or works.</p>",
       "  <p id=\"tool-result-count\" class=\"section-kicker\" aria-live=\"polite\"></p>",
       "  <div id=\"tool-results\" class=\"tool-results\"></div>",
       "</section>"

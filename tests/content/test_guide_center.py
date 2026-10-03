@@ -278,10 +278,14 @@ class GuideCenterTests(unittest.TestCase):
         terms = [entry["term"].casefold() for entry in self.glossary]
         self.assertEqual(len(tool_ids), len(set(tool_ids)))
         self.assertEqual(len(terms), len(set(terms)))
-        self.assertEqual(len(self.tools), 282)
-        self.assertEqual(sum(len(tool["locations"]) for tool in self.tools), 295)
+        self.assertEqual(len(self.tools), 607)
+        self.assertEqual(sum(len(tool["locations"]) for tool in self.tools), 630)
         self.assertEqual(sum(bool(tool.get("lesson")) for tool in self.tools), 12)
         self.assertEqual(sum(tool["kind"] == "Boot menu image" for tool in self.tools), 38)
+        locations = [location for tool in self.tools for location in tool["locations"]]
+        self.assertEqual(sum(path.startswith("Programs/NirLauncher/NirSoft/") for path in locations), 240)
+        self.assertEqual(sum(path.startswith("Programs/Sysinternals/") for path in locations), 29)
+        self.assertEqual(sum(path.startswith("PortableApps/Ransomware Decryption Tools/") for path in locations), 66)
         for tool in self.tools:
             self.assertTrue(tool["name"])
             self.assertTrue(tool["purpose"])

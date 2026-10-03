@@ -21,7 +21,7 @@ The prototype is also designed to open directly from `index.html` without a web 
 ## Data files
 
 - `data/guides.js` — problem-led workflows
-- `data/tools.js` — 282 named programs and boot tools at 295 observed locations, with 12 short lessons
+- `data/tools.js` — 607 named programs and boot tools at 630 observed locations, with 12 short lessons
 - `data/glossary.js` — plain-English terms
 - `data/intake.js` — problem-first job routing, relevant follow-up questions, readiness findings, and brief content
 - `data/password.js` — password and access paths, photographed Lockpick launcher inventory, live-environment orientation, and evidence-labeled program lessons
