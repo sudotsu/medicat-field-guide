@@ -21,7 +21,7 @@ It is designed to prevent common wrong-path decisions such as treating a Windows
 - One recommended next action, unresolved conditions, actions to avoid, and details safe to ignore.
 - Eleven searchable workflows covering access, boot, unstable systems, file recovery, backup, Windows installation, wiping, disk layout, MediCat failures, live environments, and first diagnosis.
 - Dedicated password and access module with eight prompt-specific paths.
-- Jayro's Lockpick index with lessons for all 14 entries visible in a user-supplied launcher photo, plus orientation to the photographed live recovery desktop. Some tool pages are inspection lessons while exact behavior remains unverified.
+- Jayro's Lockpick guide that starts with the reader's problem, recommends a first tool for the common local-password case, and keeps all 14 launcher entries in a compact list. Each tool page explains when it fits; steps appear where product guidance supports them. Version notes and further reading are optional.
 - Search, related workflows, evidence-aware tool cards, and a plain-English glossary.
 - Responsive, keyboard-usable, printable interface with reduced-motion support.
 - Static HTML, CSS, and classic JavaScript with no package manager, CDN, external font, analytics, account, or runtime network request.

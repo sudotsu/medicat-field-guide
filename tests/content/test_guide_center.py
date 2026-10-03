@@ -171,7 +171,7 @@ class GuideCenterTests(unittest.TestCase):
         self.assertIn('data-route="password"', index)
         self.assertIn('route.indexOf("password=")', app)
 
-    def test_lockpick_lessons_are_source_labeled_and_routed(self):
+    def test_lockpick_lessons_are_plain_language_and_routed(self):
         programs = self.password["programs"]
         self.assertEqual([program["name"] for program in programs], [
             "FastBoot Detect", "Reset Hibernation (Hybrid Sleep)",
@@ -186,15 +186,29 @@ class GuideCenterTests(unittest.TestCase):
         self.assertTrue(programs[6]["version"].startswith("9.3.0"))
         for program in programs:
             with self.subTest(program=program["id"]):
-                for field in ("name", "version", "group", "evidence", "bestFor", "changes", "walkthrough", "stop"):
+                for field in ("name", "version", "group", "summary", "useWhen", "evidence"):
                     self.assertTrue(program[field], f"{program['id']} missing {field}")
+                if program.get("steps"):
+                    self.assertTrue(program.get("stopPlain"))
+                    self.assertTrue(program.get("check"))
+                else:
+                    self.assertTrue(program.get("next"))
                 if program.get("source"):
                     self.assertTrue(program["source"].startswith("https://"))
+                reader_copy = " ".join(
+                    str(program.get(field, ""))
+                    for field in ("name", "summary", "useWhen", "steps", "next", "stopPlain", "check")
+                ).lower()
+                for term in ("photo", "write effect", "sam database", "dpapi", "efs"):
+                    self.assertNotIn(term, reader_copy, f"{program['id']} exposes {term}")
         self.assertEqual(len(self.password["environment"]), 3)
         index = (GUIDE_ROOT / "index.html").read_text(encoding="utf-8")
         app = (GUIDE_ROOT / "assets" / "app.js").read_text(encoding="utf-8")
         self.assertIn('data-route="lockpick"', index)
         self.assertIn('route.indexOf("lockpick=")', app)
+        self.assertIn('lockpick-choices', app)
+        self.assertNotIn('Know the write effect', app)
+        self.assertNotIn('program.evidence', app)
 
     def test_intake_is_session_only_and_has_explicit_reset(self):
         app = (GUIDE_ROOT / "assets" / "app.js").read_text(encoding="utf-8")

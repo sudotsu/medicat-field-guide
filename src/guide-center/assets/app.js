@@ -346,7 +346,7 @@
 
     if (jobState.answers.preservation === "must-preserve" && guideId === "identify-password-problem") {
       result.status = strongerStatus(result.status, "caution");
-      addUnique(result.actions, "Confirm whether BitLocker, EFS, or another encrypted-data dependency changes which credential action can preserve access.");
+      addUnique(result.actions, "Check whether the drive asks for a BitLocker recovery key or needed files are encrypted. A password reset may not make those files open.");
     }
 
     if (asked.indexOf("identity") !== -1 && jobState.answers.identity !== "safe") {
@@ -516,53 +516,72 @@
       return;
     }
 
-    updateDocumentTitle(program ? program.name : "Jayro's Lockpick programs");
+    updateDocumentTitle(program ? program.name : "Jayro's Lockpick");
     if (!program) {
-      var groups = ["Preparation", "Windows account tools", "SQL Server account tool"];
-      var cards = groups.map(function (group) {
-        var items = (passwordModule.programs || []).filter(function (item) { return item.group === group; });
-        return "<section class=\"content-section\"><div class=\"section-heading\"><div><h2>" + escapeHtml(group) + "</h2><p>" + (group === "Preparation" ? "Check the target state before choosing a credential tool." : group === "SQL Server account tool" ? "For database logins, not Windows sign-in." : "Choose a program for a specific local-account need; these are not equal defaults.") + "</p></div></div><div class=\"catalog-grid\">" + items.map(function (item) {
-        return [
-          "<button class=\"catalog-card\" type=\"button\" data-route=\"lockpick=" + escapeHtml(item.id) + "\">",
-          "<span class=\"evidence-badge\">Shown in launcher · v" + escapeHtml(item.version) + "</span>",
-          "<h2>" + escapeHtml(item.name) + "</h2>",
-          "<p>" + escapeHtml(item.bestFor) + "</p>",
-          "<div class=\"card-footer\">Open program lesson →</div>",
-          "</button>"
-        ].join("");
-        }).join("") + "</div></section>";
+      var groups = [
+        { key: "Preparation", label: "Before a password reset" },
+        { key: "Windows account tools", label: "Windows sign-in tools" },
+        { key: "SQL Server account tool", label: "Database login" }
+      ];
+      var listings = groups.map(function (group) {
+        var rows = (passwordModule.programs || []).filter(function (item) {
+          return item.group === group.key;
+        }).map(function (item) {
+          return [
+            "<button class=\"lockpick-row\" type=\"button\" data-route=\"lockpick=" + escapeHtml(item.id) + "\">",
+            "<span><strong>" + escapeHtml(item.name) + "</strong><span>" + escapeHtml(item.summary) + "</span></span>",
+            "<span class=\"lockpick-row-arrow\" aria-hidden=\"true\">→</span></button>"
+          ].join("");
+        }).join("");
+        return "<div class=\"lockpick-group\"><h3>" + escapeHtml(group.label) + "</h3>" + rows + "</div>";
       }).join("");
       var environment = (passwordModule.environment || []).map(function (item) {
-        return "<section class=\"guide-block\" data-kind=\"advanced\"><h3>" + escapeHtml(item.title) + "</h3><p>" + escapeHtml(item.text) + "</p></section>";
+        return "<div><strong>" + escapeHtml(item.title) + "</strong><p>" + escapeHtml(item.text) + "</p></div>";
       }).join("");
+
       view.innerHTML = [
-        pageHeader("Jayro's Lockpick programs", "MediCat-specific tool lessons",
-          "The supplied Lockpick photos show a live recovery desktop and 14 entries in its MInstAll launcher. Start with the situation and target, then choose a program for a defined reason.",
-          [{ label: "14 photo-visible launcher entries", className: "evidence-badge" }]),
-        "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">Version note</div><h2>Follow the screen in front of you</h2><p>The photographed launcher title says Windows 10 x64. MediCat's v21.12 changelog describes a Windows 11 based Lockpick. The exact boot image has not been identified, so this mismatch remains unresolved. Versions below are launcher labels only, and truncated labels are shown as such.</p></section>",
-        "<section class=\"content-section\"><div class=\"section-heading\"><div><h2>Find your way around the live environment</h2><p>MInstAll is one window within Lockpick. Start-menu tools help inspect disks and drivers, but this photographed menu is only a partial inventory.</p></div></div>" + environment + "</section>",
-        "<section class=\"guide-block\" data-kind=\"stop\"><div class=\"block-label\">Before using a reset tool</div><h2>Confirm the exact Windows installation and account</h2><p>A local-account reset changes account data on the selected disk. Confirm owner authorization, BitLocker access, EFS and saved-credential needs, and a recoverable backup before any write.</p></section>",
-        cards,
-        "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">Coverage boundary</div><h2>Photo inventory, not a tested repair manual</h2><p>All 14 entries visible in the supplied launcher photo have pages here. Some lack a primary manual or their own program screen; those pages explain what to inspect before use. The full scrollable Start menu, bundled binaries, licensing, and real-device results still need verification.</p></section>"
+        "<div class=\"lockpick-page\">",
+        pageHeader("Jayro's Lockpick", "MediCat password tools",
+          "Lockpick is a temporary Windows-like desktop on the MediCat USB. Pick the problem you are trying to solve, then open the matching tool lesson."),
+        "<section class=\"lockpick-choices\" aria-labelledby=\"lockpick-choose-title\"><h2 id=\"lockpick-choose-title\">What do you need to do?</h2><div class=\"lockpick-choice-grid\">",
+        "<button type=\"button\" data-route=\"lockpick=pcunlocker\"><strong>Forgot the Windows password</strong><span>For a user on this computer who does not sign in with a Microsoft or work email. Start with PCUnlocker.</span><b aria-hidden=\"true\">→</b></button>",
+        "<button type=\"button\" data-route=\"password\"><strong>PIN, Microsoft sign-in, or recovery key</strong><span>First identify what is asking for access. A password tool may not help.</span><b aria-hidden=\"true\">→</b></button>",
+        "<button type=\"button\" data-route=\"lockpick=sql-server-password-changer\"><strong>SQL Server database login</strong><span>This is separate from signing in to Windows.</span><b aria-hidden=\"true\">→</b></button>",
+        "</div></section>",
+        "<p class=\"lockpick-safety\"><strong>Before clearing a password:</strong> make sure you have the right computer and user. If the drive asks for a BitLocker recovery key, or the owner needs encrypted files, pause and use the access guide first.</p>",
+        "<section class=\"lockpick-listing\" aria-labelledby=\"lockpick-all-title\"><h2 id=\"lockpick-all-title\">All 14 tools in the launcher</h2><p>The menu has several tools for similar jobs. You can ignore the others when one route above fits your problem.</p>" + listings + "</section>",
+        "<details class=\"lockpick-more\"><summary>Using the Lockpick desktop</summary><div class=\"lockpick-more-body\">" + environment + "</div></details>",
+        "</div>"
       ].join("");
       return;
     }
 
+    var hasSteps = Boolean(program.steps && program.steps.length);
+    var guidance = hasSteps ? [
+      "<section class=\"lockpick-steps\"><h2>How to use it</h2>",
+      "<p>These steps come from product guidance. If the Lockpick screen does not match, stop rather than guessing.</p>",
+      textList(program.steps, true),
+      "<div class=\"lockpick-outcome\"><p><strong>Stop if:</strong> " + escapeHtml(program.stopPlain) + "</p><p><strong>Check afterward:</strong> " + escapeHtml(program.check) + "</p></div></section>"
+    ].join("") : [
+      "<section class=\"lockpick-steps\"><h2>What to do next</h2><p>" + escapeHtml(program.next) + "</p>",
+      program.id === "pcunlocker" ? "" : "<button class=\"secondary-action\" type=\"button\" data-route=\"lockpick=pcunlocker\">Open PCUnlocker lesson →</button>",
+      "</section>"
+    ].join("");
+    var reference = [
+      "<details class=\"lockpick-more\"><summary>Version and further reading</summary><div class=\"lockpick-more-body\">",
+      "<p>Lockpick lists this tool as version " + escapeHtml(program.version) + ". " + (hasSteps ? "The linked instructions may describe a different release." : "We do not yet have reliable step-by-step instructions for this copy.") + "</p>",
+      program.source ? "<p><a href=\"" + escapeHtml(program.source) + "\" target=\"_blank\" rel=\"noopener noreferrer\">Read more about this tool →</a></p>" : "",
+      "</div></details>"
+    ].join("");
+
     view.innerHTML = [
-      pageHeader(program.name, "Jayro's Lockpick / program lesson", program.bestFor,
-        [{ label: "Launcher label: v" + program.version, className: "evidence-badge" }]),
-      "<div class=\"action-row\"><button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">← All Lockpick programs</button></div>",
-      "<div class=\"guide-layout\"><article class=\"guide-content\">",
-      "<section class=\"guide-block\" data-kind=\"advanced\"><div class=\"block-label\">MediCat evidence</div><h2>Why this program is listed</h2><p>" + escapeHtml(program.evidence) + "</p></section>",
-      "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">What it changes</div><h2>Know the write effect</h2><p>" + escapeHtml(program.changes) + "</p></section>",
-      "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">Program lesson</div><h2>How to approach this entry</h2>" + textList(program.walkthrough, true) + "</section>",
-      "<section class=\"guide-block\" data-kind=\"stop\"><div class=\"block-label\">Stop here</div><h2>When this program does not fit</h2><p>" + escapeHtml(program.stop) + "</p></section>",
-      "<section class=\"guide-block\" data-kind=\"advanced\"><div class=\"block-label\">Evidence</div><h2>Check the source</h2><p>The launcher name and version come from the user's photo of this build. " + (program.source ? "The linked reference documents the product or a related release, not this exact bundled executable." : "No product-specific primary manual has been verified for this entry yet.") + "</p>" + (program.source ? "<p><a href=\"" + escapeHtml(program.source) + "\" target=\"_blank\" rel=\"noopener noreferrer\">Open product reference →</a></p>" : "") + "<p>Compare the actual program screen before following any control name.</p></section>",
-      "</article><nav class=\"guide-rail\" aria-label=\"Other Lockpick programs\"><strong>Other programs</strong>",
-      (passwordModule.programs || []).filter(function (item) { return item.id !== program.id; }).map(function (item) {
-        return "<a href=\"#lockpick=" + escapeHtml(item.id) + "\">" + escapeHtml(item.name) + "</a>";
-      }).join(""),
-      "</nav></div>"
+      "<div class=\"lockpick-page\">",
+      pageHeader(program.name, "Jayro's Lockpick / tool guide", program.summary),
+      "<div class=\"action-row\"><button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">← All Lockpick tools</button></div>",
+      "<div class=\"lockpick-lesson\"><section class=\"lockpick-fit\"><span>Use it when</span><p>" + escapeHtml(program.useWhen) + "</p></section>",
+      guidance,
+      reference,
+      "</div></div>"
     ].join("");
   }
 
@@ -575,23 +594,19 @@
 
     updateDocumentTitle(path ? path.label : passwordModule.title);
     if (!path) {
-      var cards = (passwordModule.paths || []).map(function (item, index) {
+      var cards = (passwordModule.paths || []).map(function (item) {
         return [
           "<button class=\"goal-card\" type=\"button\" data-route=\"password=" + escapeHtml(item.id) + "\">",
-          "  <span class=\"goal-index\">ACCESS " + twoDigit(index + 1) + "</span>",
-          "  <h3>" + escapeHtml(item.label) + "</h3>",
-          "  <p>" + escapeHtml(item.clue) + "</p>",
+          "<h3>" + escapeHtml(item.label) + "</h3>",
+          "<p>" + escapeHtml(item.clue) + "</p>",
           "</button>"
         ].join("");
       }).join("");
       view.innerHTML = [
-        pageHeader(passwordModule.title, "Dedicated access module", passwordModule.summary,
-          [{ label: "Choose the screen you see", className: "evidence-badge" }]),
-        "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">Before any credential change</div>",
-        "<h2>Confirm the owner, target, and requested outcome</h2><p>Ask what must still work afterward: Windows sign-in, files, encrypted data, saved credentials, and online accounts. This module records no password, PIN, or recovery key.</p></section>",
-        "<section class=\"workflow-section\" aria-labelledby=\"password-paths-title\"><div class=\"section-heading\"><span class=\"number\">01</span><div><h2 id=\"password-paths-title\">What is asking for access?</h2><p>Choose the closest screen. Each path gives a first action, MediCat's role, a stop condition, and a success check.</p></div></div>",
+        pageHeader(passwordModule.title, "Find the right access route", passwordModule.summary),
+        "<section class=\"workflow-section\" aria-labelledby=\"password-paths-title\"><div class=\"section-heading\"><div><h2 id=\"password-paths-title\">What does the screen ask for?</h2><p>Choose the closest match. You can return here if it turns out to be a different kind of lock.</p></div></div>",
         "<div class=\"goal-grid\">" + cards + "</div></section>",
-        "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">MediCat tool lessons</div><h2>Jayro's Lockpick programs</h2><p>For a confirmed local-account job, compare the programs MediCat has documented and the effect each one has on the selected account.</p><button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">Explore Lockpick programs →</button></section>"
+        "<p class=\"lockpick-safety\">Already know this is a forgotten password for an account on this computer? <button class=\"text-action\" type=\"button\" data-route=\"lockpick=pcunlocker\">Open the PCUnlocker lesson →</button></p>"
       ].join("");
       return;
     }
@@ -600,22 +615,16 @@
       return "<li><a href=\"" + escapeHtml(source.url) + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + escapeHtml(source.label) + "</a></li>";
     }).join("");
     view.innerHTML = [
-      pageHeader(path.label, "Password and access / selected path", path.clue,
-        [{ label: "Official recovery first", className: "evidence-badge" }]),
-      "<div class=\"action-row\"><button class=\"secondary-action\" type=\"button\" data-route=\"password\">← Choose a different prompt</button></div>",
-      "<div class=\"guide-layout\"><article class=\"guide-content\">",
-      "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">Do this first</div><h2>" + escapeHtml(path.first) + "</h2></section>",
-      "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">Walkthrough</div><h2>Work through this path</h2>" + textList(path.steps, true) + "</section>",
-      "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">Where MediCat fits</div><h2>Use the right layer</h2><p>" + escapeHtml(path.medicat) + "</p></section>",
-      path.id === "local-password" ? "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">MediCat tool lesson</div><h2>Compare the Lockpick programs</h2><p>Start with the historically documented PCUnlocker 5.6 path, then use a different program only for a specific reason.</p><button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">Open Lockpick programs →</button></section>" : "",
-      "<section class=\"guide-block\" data-kind=\"stop\"><div class=\"block-label\">Stop here</div><h2>Pause before changing access</h2><p>" + escapeHtml(path.stop) + "</p></section>",
-      "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">How to know it worked</div><h2>Check the requested outcome</h2><p>" + escapeHtml(path.verify) + "</p></section>",
-      "<section class=\"guide-block\" data-kind=\"advanced\"><div class=\"block-label\">Primary references</div><h2>Source instructions</h2><ul>" + sources + "</ul><p>Links need a network connection. The steps above remain available offline.</p></section>",
-      "</article><nav class=\"guide-rail\" aria-label=\"Other access paths\"><strong>Other prompts</strong>",
-      (passwordModule.paths || []).filter(function (item) { return item.id !== path.id; }).map(function (item) {
-        return "<a href=\"#password=" + escapeHtml(item.id) + "\">" + escapeHtml(item.label) + "</a>";
-      }).join(""),
-      "</nav></div>"
+      pageHeader(path.label, "Password and access", path.first),
+      "<div class=\"action-row\"><button class=\"secondary-action\" type=\"button\" data-route=\"password\">← Choose a different screen</button></div>",
+      "<div class=\"lockpick-lesson\">",
+      "<section class=\"lockpick-steps\"><h2>What to do</h2>" + textList(path.steps, true) + "</section>",
+      "<section class=\"lockpick-fit\"><span>Where Lockpick fits</span><p>" + escapeHtml(path.medicat) + "</p>",
+      path.id === "local-password" ? "<button class=\"secondary-action\" type=\"button\" data-route=\"lockpick=pcunlocker\">Open PCUnlocker lesson →</button>" : "",
+      "</section>",
+      "<div class=\"lockpick-outcome lockpick-path-outcome\"><p><strong>Pause if:</strong> " + escapeHtml(path.stop) + "</p><p><strong>Check afterward:</strong> " + escapeHtml(path.verify) + "</p></div>",
+      "<details class=\"lockpick-more\"><summary>Further reading</summary><div class=\"lockpick-more-body\"><ul>" + sources + "</ul><p>These links need an internet connection; the steps above are available offline.</p></div></details>",
+      "</div>"
     ].join("");
   }
 
@@ -868,7 +877,7 @@
     index.push({
       type: "Module",
       title: "Jayro's Lockpick programs",
-      summary: "MediCat-specific program lessons and installed-version evidence status.",
+      summary: "Choose the right Lockpick tool for your sign-in problem.",
       text: "jayro lockpick medicat password pcunlocker passcape active wbg",
       route: "lockpick"
     });
@@ -877,8 +886,8 @@
       index.push({
         type: "Lockpick program",
         title: program.name,
-        summary: program.bestFor,
-        text: [program.name, program.bestFor, program.changes, program.evidence].join(" ").toLowerCase(),
+        summary: program.summary,
+        text: [program.name, program.summary, program.useWhen].join(" ").toLowerCase(),
         route: "lockpick=" + encodeURIComponent(program.id)
       });
     });

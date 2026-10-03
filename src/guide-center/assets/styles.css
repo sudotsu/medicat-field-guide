@@ -1458,6 +1458,256 @@ button.catalog-card:hover {
   text-transform: uppercase;
 }
 
+.lockpick-page .page-header {
+  padding-bottom: 1.3rem;
+}
+
+.lockpick-page .breadcrumbs {
+  margin-bottom: 1rem;
+}
+
+.lockpick-page .page-header h1 {
+  font-size: clamp(2.5rem, 4.8vw, 4.8rem);
+}
+
+.lockpick-page .page-deck {
+  margin-top: 1rem;
+}
+
+.lockpick-choices,
+.lockpick-listing {
+  margin-top: 2.5rem;
+}
+
+.lockpick-choices h2,
+.lockpick-listing h2,
+.lockpick-steps h2 {
+  margin: 0 0 1rem;
+  font: 780 clamp(1.5rem, 2.6vw, 2.1rem)/1.1 var(--display);
+  text-transform: uppercase;
+}
+
+.lockpick-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 0.7rem;
+}
+
+.lockpick-choice-grid button {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start;
+  gap: 0.55rem;
+  min-height: 9rem;
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--panel);
+  text-align: left;
+  cursor: pointer;
+}
+
+.lockpick-choice-grid button:first-child {
+  border-color: var(--cyan-dark);
+}
+
+.lockpick-choice-grid button:hover,
+.lockpick-row:hover {
+  border-color: var(--cyan);
+  background: var(--panel-2);
+}
+
+.lockpick-choice-grid strong {
+  font: 750 1.12rem/1.2 var(--display);
+}
+
+.lockpick-choice-grid span {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.lockpick-choice-grid b {
+  color: var(--cyan);
+}
+
+.lockpick-safety {
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--amber);
+  color: var(--muted);
+  background: rgba(243, 185, 95, 0.06);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.lockpick-safety strong {
+  color: var(--paper);
+}
+
+.lockpick-listing > p {
+  margin: -0.35rem 0 1.4rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.lockpick-group {
+  margin-top: 1.35rem;
+}
+
+.lockpick-group h3 {
+  margin: 0 0 0.45rem;
+  color: var(--dim);
+  font: 750 0.72rem/1.4 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lockpick-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line-soft);
+  color: var(--ink);
+  background: rgba(14, 29, 33, 0.62);
+  text-align: left;
+  cursor: pointer;
+}
+
+.lockpick-row + .lockpick-row {
+  border-top: 0;
+}
+
+.lockpick-row strong,
+.lockpick-row span span {
+  display: block;
+}
+
+.lockpick-row strong {
+  font-size: 0.92rem;
+}
+
+.lockpick-row span span {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.79rem;
+  line-height: 1.45;
+}
+
+.lockpick-row-arrow {
+  color: var(--cyan);
+  font-size: 1.2rem;
+}
+
+.lockpick-lesson {
+  max-width: 49rem;
+  margin-top: 1.5rem;
+}
+
+.lockpick-fit,
+.lockpick-steps {
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--line);
+  background: rgba(14, 29, 33, 0.8);
+}
+
+.lockpick-fit {
+  border-left: 3px solid var(--cyan);
+}
+
+.lockpick-fit > span {
+  color: var(--cyan);
+  font: 750 0.68rem/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lockpick-fit p,
+.lockpick-steps p,
+.lockpick-steps li {
+  color: #bdcac8;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.lockpick-fit p:last-child,
+.lockpick-steps p:last-child {
+  margin-bottom: 0;
+}
+
+.lockpick-steps {
+  margin-top: 0.7rem;
+}
+
+.lockpick-steps + .lockpick-fit {
+  margin-top: 0.7rem;
+}
+
+.lockpick-steps ol {
+  padding-left: 1.3rem;
+}
+
+.lockpick-steps li + li {
+  margin-top: 0.55rem;
+}
+
+.lockpick-outcome {
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--line-soft);
+}
+
+.lockpick-outcome strong {
+  color: var(--paper);
+}
+
+.lockpick-path-outcome {
+  margin-top: 0.7rem;
+  padding: 0.35rem 1.4rem;
+  border-top: 0;
+  border-left: 3px solid var(--amber);
+  background: rgba(243, 185, 95, 0.06);
+}
+
+.lockpick-path-outcome p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.lockpick-more {
+  max-width: 49rem;
+  margin-top: 0.8rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: rgba(9, 19, 22, 0.72);
+}
+
+.lockpick-more summary {
+  padding: 0.9rem 1.1rem;
+  color: var(--ink);
+  font-size: 0.84rem;
+  cursor: pointer;
+}
+
+.lockpick-more-body {
+  padding: 0 1.1rem 1rem;
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+
+.lockpick-more-body div + div {
+  margin-top: 1rem;
+}
+
+.lockpick-more-body p {
+  margin: 0.3rem 0 0;
+}
+
 .glossary-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -8,6 +8,8 @@ The initial implementation is a dependency-free static application. Content is s
 
 The Lockpick module now maps the 14 entries visible in a user-supplied MInstAll photo and introduces the photographed live desktop. Launcher labels are evidence of presence on that photographed build; individual program behavior, full executable versions, and the scrollable Start menu still need direct inspection.
 
+The reader-facing Lockpick route leads with the task, recommends a starting program for the common confirmed local-account case, and keeps the complete launcher list compact. Version and reference information is available on demand. A program without verified instructions receives a plain explanation and a link to a documented route instead of guessed controls.
+
 ## Proposed MediCat layers
 
 1. **Ventoy menu tips:** one-line purpose, dominant risk, and route into the guide.
