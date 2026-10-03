@@ -16,16 +16,12 @@ It is designed to prevent common wrong-path decisions such as treating a Windows
 
 ## Current prototype
 
-- Six-question guided intake covering outcome, target, authorization, preservation, identity recovery, and one problem-specific fact.
+- Ten problem-first intake choices with follow-up questions relevant to the selected job.
 - Generated job brief with `Route ready`, `Proceed with checks`, or `Hold before writing`.
 - One recommended next action, unresolved conditions, actions to avoid, and details safe to ignore.
-- Six starting workflows:
-  - Windows sign-in and password-problem classification;
-  - Windows boot diagnosis;
-  - live-environment selection;
-  - backup decision-making;
-  - preparation before wiping, flashing, or resetting;
-  - clean Windows installation, including UEFI/Legacy and GPT/MBR routing.
+- Eleven searchable workflows covering access, boot, unstable systems, file recovery, backup, Windows installation, wiping, disk layout, MediCat failures, live environments, and first diagnosis.
+- Dedicated password and access module with eight prompt-specific paths.
+- Jayro's Lockpick index with lessons for all 14 entries visible in a user-supplied launcher photo, plus orientation to the photographed live recovery desktop. Some tool pages are inspection lessons while exact behavior remains unverified.
 - Search, related workflows, evidence-aware tool cards, and a plain-English glossary.
 - Responsive, keyboard-usable, printable interface with reduced-motion support.
 - Static HTML, CSS, and classic JavaScript with no package manager, CDN, external font, analytics, account, or runtime network request.
@@ -40,6 +36,8 @@ python3 -m http.server 4173 --directory src/guide-center
 ```
 
 Then visit `http://127.0.0.1:4173/`.
+
+Open the Lockpick inventory directly at `http://127.0.0.1:4173/#lockpick`.
 
 Try two routes:
 
@@ -60,15 +58,19 @@ The checks validate the local asset boundary, workflow structure, intake coverag
 
 The current prototype has been exercised in a normal Chrome environment and its focused checks pass. That does **not** establish compatibility with the browser or startup environment bundled in MediCat's Mini Windows build.
 
-The following remain intentionally unresolved until the maintainers identify the intended release and integration path:
+The following remain unresolved until the intended release and integration path are verified:
 
 - installed Mini Windows browser/runtime and direct-file behavior;
 - supported external startup hook;
 - exact MediCat and Ventoy paths;
-- exact Jayro's Lockpick components, versions, and procedures;
+- Lockpick executable builds and several program-specific procedures; the photo confirms launcher labels only, and the title's Windows 10 x64 label conflicts with a historical Windows 11 based changelog description;
 - production packaging, boot testing, update ownership, and rollback.
 
 Version-dependent procedures must be supported by installed-build evidence and current primary sources. See [`docs/SOURCES.md`](docs/SOURCES.md).
+
+## Deploy with Vercel
+
+Import [`sudotsu/medicat-field-guide`](https://github.com/sudotsu/medicat-field-guide) into Vercel. The checked-in `vercel.json` selects the static Guide Center folder as the output directory; no build command or environment variables are needed. Use **Other** as the framework preset if Vercel asks. The site should open at `/`, and `/#lockpick` should open the Lockpick index. The GitHub Pages demo remains available separately.
 
 ## Repository map
 

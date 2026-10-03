@@ -66,6 +66,9 @@ class GuideCenterTests(unittest.TestCase):
         cls.intake = load_window_json(
             GUIDE_ROOT / "data" / "intake.js", "LEARN_MEDICAT_INTAKE"
         )
+        cls.password = load_window_json(
+            GUIDE_ROOT / "data" / "password.js", "LEARN_MEDICAT_PASSWORD"
+        )
 
     def test_index_has_local_assets_and_accessibility_landmarks(self):
         index = (GUIDE_ROOT / "index.html").read_text(encoding="utf-8")
@@ -80,7 +83,7 @@ class GuideCenterTests(unittest.TestCase):
 
         for asset in parser.assets:
             self.assertFalse(re.match(r"^[a-z]+://", asset), f"network asset: {asset}")
-            self.assertTrue((GUIDE_ROOT / asset).is_file(), f"missing asset: {asset}")
+            self.assertTrue((GUIDE_ROOT / asset.split("?", 1)[0]).is_file(), f"missing asset: {asset}")
 
     def test_css_has_no_network_assets(self):
         css = (GUIDE_ROOT / "assets" / "styles.css").read_text(encoding="utf-8")
@@ -96,12 +99,17 @@ class GuideCenterTests(unittest.TestCase):
             "decide-backup",
             "prepare-wipe",
             "clean-install-windows",
+            "diagnose-unstable",
+            "recover-files",
+            "disk-layout",
+            "medicat-not-working",
+            "not-sure",
         }
         ids = {guide["id"] for guide in self.guides}
         self.assertTrue(required.issubset(ids))
         self.assertEqual(len(ids), len(self.guides), "duplicate guide IDs")
 
-    def test_guided_intake_routes_to_every_workflow(self):
+    def test_guided_intake_covers_jobs_without_promoting_helper_pages(self):
         guide_ids = {guide["id"] for guide in self.guides}
         questions = {question["id"]: question for question in self.intake["questions"]}
         self.assertEqual(
@@ -111,8 +119,18 @@ class GuideCenterTests(unittest.TestCase):
         self.assertTrue(set(self.intake["coreQuestionIds"]).issubset(questions))
 
         routed_guides = {option["guide"] for option in questions["job"]["options"]}
-        self.assertEqual(routed_guides, guide_ids)
+        self.assertEqual(routed_guides, guide_ids - {"choose-live-environment"})
         self.assertEqual(set(self.intake["branchQuestions"]), guide_ids)
+        self.assertEqual(len(questions["job"]["options"]), 10)
+        self.assertEqual(
+            {option["id"] for option in questions["job"]["options"]},
+            {"sign-in", "boot", "unstable", "files", "backup", "install", "wipe", "disk", "medicat", "unsure"},
+        )
+        for option in questions["job"]["options"]:
+            self.assertEqual(option.get("questionIds", ["job"])[0], "job")
+            self.assertTrue(set(option.get("questionIds", self.intake["coreQuestionIds"])).issubset(questions))
+        app = (GUIDE_ROOT / "assets" / "app.js").read_text(encoding="utf-8")
+        self.assertIn("data-start-job", app)
 
     def test_each_intake_branch_has_actionable_outputs(self):
         valid_statuses = {"ready", "caution", "stop"}
@@ -130,7 +148,53 @@ class GuideCenterTests(unittest.TestCase):
                     self.assertTrue(option["next"])
                     self.assertTrue(option["avoid"])
                     self.assertTrue(option["ignore"])
+                    if option.get("nextGuide"):
+                        self.assertIn(option["nextGuide"], {guide["id"] for guide in self.guides})
         self.assertEqual(len(branch_ids), len(set(branch_ids)), "duplicate branch IDs")
+
+    def test_password_module_routes_every_sign_in_branch(self):
+        paths = self.password["paths"]
+        ids = {path["id"] for path in paths}
+        sign_in = self.intake["branchQuestions"]["identify-password-problem"]
+        branch_ids = {option["id"] for option in sign_in["options"]}
+        self.assertEqual(len(ids), len(paths), "duplicate password paths")
+        self.assertTrue(branch_ids.issubset(ids))
+        self.assertIn("protected-data", ids)
+        for path in paths:
+            with self.subTest(path=path["id"]):
+                for field in ("label", "clue", "first", "steps", "medicat", "stop", "verify", "sources"):
+                    self.assertTrue(path[field], f"{path['id']} missing {field}")
+                self.assertTrue(all(source["url"].startswith("https://") for source in path["sources"]))
+        index = (GUIDE_ROOT / "index.html").read_text(encoding="utf-8")
+        app = (GUIDE_ROOT / "assets" / "app.js").read_text(encoding="utf-8")
+        self.assertIn('src="data/password.js?', index)
+        self.assertIn('data-route="password"', index)
+        self.assertIn('route.indexOf("password=")', app)
+
+    def test_lockpick_lessons_are_source_labeled_and_routed(self):
+        programs = self.password["programs"]
+        self.assertEqual([program["name"] for program in programs], [
+            "FastBoot Detect", "Reset Hibernation (Hybrid Sleep)",
+            "Windows Login Unlocker", "Bypass Windows Password", "PCUnlocker",
+            "Windows Password Reset", "Reset Windows Password", "Active@ Password Changer",
+            "O&O BlueCon UserManager", "ntpwedit", "PEPassPass",
+            "LazeSoft Windows Password Recovery", "WBG Password Recovery",
+            "SQL Server Password Changer",
+        ])
+        self.assertEqual(len({program["id"] for program in programs}), len(programs))
+        self.assertEqual(programs[5]["version"], "5.1")
+        self.assertTrue(programs[6]["version"].startswith("9.3.0"))
+        for program in programs:
+            with self.subTest(program=program["id"]):
+                for field in ("name", "version", "group", "evidence", "bestFor", "changes", "walkthrough", "stop"):
+                    self.assertTrue(program[field], f"{program['id']} missing {field}")
+                if program.get("source"):
+                    self.assertTrue(program["source"].startswith("https://"))
+        self.assertEqual(len(self.password["environment"]), 3)
+        index = (GUIDE_ROOT / "index.html").read_text(encoding="utf-8")
+        app = (GUIDE_ROOT / "assets" / "app.js").read_text(encoding="utf-8")
+        self.assertIn('data-route="lockpick"', index)
+        self.assertIn('route.indexOf("lockpick=")', app)
 
     def test_intake_is_session_only_and_has_explicit_reset(self):
         app = (GUIDE_ROOT / "assets" / "app.js").read_text(encoding="utf-8")
@@ -140,7 +204,7 @@ class GuideCenterTests(unittest.TestCase):
         self.assertNotIn("window.localStorage", app)
         self.assertIn("data-intake-reset", app)
         self.assertIn('data-route="intake"', index)
-        self.assertIn('src="data/intake.js"', index)
+        self.assertIn('src="data/intake.js?', index)
         self.assertNotIn('data-intake="', index)
 
     def test_each_workflow_has_required_teaching_sections(self):
@@ -176,6 +240,8 @@ class GuideCenterTests(unittest.TestCase):
             "windows-will-not-boot",
             "prepare-wipe",
             "clean-install-windows",
+            "recover-files",
+            "disk-layout",
         }
         for guide in self.guides:
             if guide["id"] not in destructive:
@@ -212,6 +278,7 @@ class GuideCenterTests(unittest.TestCase):
                 (GUIDE_ROOT / "data" / "guides.js").read_text(encoding="utf-8"),
                 (GUIDE_ROOT / "data" / "tools.js").read_text(encoding="utf-8"),
                 (GUIDE_ROOT / "data" / "intake.js").read_text(encoding="utf-8"),
+                (GUIDE_ROOT / "data" / "password.js").read_text(encoding="utf-8"),
             ]
         )
         self.assertNotIn("Microsoft Defender", runtime_content)

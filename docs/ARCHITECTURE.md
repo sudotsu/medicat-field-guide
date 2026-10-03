@@ -6,6 +6,8 @@ The Field Guide is a decision layer in front of MediCat's tool collection. It do
 
 The initial implementation is a dependency-free static application. Content is stored in classic JavaScript data files so it can operate without module loading or `fetch()` when opened from a local file. Direct-file behavior still has to be verified in the browser actually included with Mini Windows.
 
+The Lockpick module now maps the 14 entries visible in a user-supplied MInstAll photo and introduces the photographed live desktop. Launcher labels are evidence of presence on that photographed build; individual program behavior, full executable versions, and the scrollable Start menu still need direct inspection.
+
 ## Proposed MediCat layers
 
 1. **Ventoy menu tips:** one-line purpose, dominant risk, and route into the guide.

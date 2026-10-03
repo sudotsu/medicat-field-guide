@@ -23,7 +23,8 @@ The prototype is also designed to open directly from `index.html` without a web 
 - `data/guides.js` — problem-led workflows
 - `data/tools.js` — evidence-aware tool cards
 - `data/glossary.js` — plain-English terms
-- `data/intake.js` — six-question job routing, readiness findings, and brief content
+- `data/intake.js` — problem-first job routing, relevant follow-up questions, readiness findings, and brief content
+- `data/password.js` — password and access paths, photographed Lockpick launcher inventory, live-environment orientation, and evidence-labeled program lessons
 
 The files use classic scripts and assign data to `window` so the prototype does not rely on module loading or `fetch()` from a `file://` URL.
 

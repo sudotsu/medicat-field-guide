@@ -5,6 +5,7 @@
   var tools = Array.isArray(window.LEARN_MEDICAT_TOOLS) ? window.LEARN_MEDICAT_TOOLS : [];
   var glossary = Array.isArray(window.LEARN_MEDICAT_GLOSSARY) ? window.LEARN_MEDICAT_GLOSSARY : [];
   var intake = window.LEARN_MEDICAT_INTAKE && typeof window.LEARN_MEDICAT_INTAKE === "object" ? window.LEARN_MEDICAT_INTAKE : {};
+  var passwordModule = window.LEARN_MEDICAT_PASSWORD && typeof window.LEARN_MEDICAT_PASSWORD === "object" ? window.LEARN_MEDICAT_PASSWORD : {};
 
   var view = document.getElementById("view");
   var main = document.getElementById("main-content");
@@ -112,7 +113,9 @@
   }
 
   function getIntakeQuestions() {
-    var questions = (intake.coreQuestionIds || []).map(findQuestion).filter(Boolean);
+    var job = selectedJobOption();
+    var questionIds = job ? (job.questionIds || intake.coreQuestionIds || []) : ["job"];
+    var questions = questionIds.map(findQuestion).filter(Boolean);
     var guideId = selectedGuideId();
     var branch = guideId && intake.branchQuestions ? intake.branchQuestions[guideId] : null;
     if (branch) {
@@ -122,7 +125,7 @@
   }
 
   function expectedIntakeQuestionCount() {
-    return (intake.coreQuestionIds || []).length + 1;
+    return getIntakeQuestions().length;
   }
 
   function answeredQuestionCount(questions) {
@@ -161,7 +164,10 @@
   function setCurrentNavigation(route) {
     Array.prototype.forEach.call(document.querySelectorAll("[data-route]"), function (button) {
       var buttonRoute = button.getAttribute("data-route");
-      var active = buttonRoute === route || (route.indexOf("guide=") === 0 && buttonRoute === "all-guides");
+      var active = buttonRoute === route ||
+        (route.indexOf("guide=") === 0 && buttonRoute === "all-guides") ||
+        (route.indexOf("password=") === 0 && buttonRoute === "password") ||
+        (route.indexOf("lockpick=") === 0 && buttonRoute === "lockpick");
       if (active) {
         button.setAttribute("aria-current", "page");
       } else {
@@ -219,12 +225,13 @@
   function renderHome() {
     updateDocumentTitle("Start Here");
     var intakeAction = intakeIsComplete() ? "View current job brief" : (hasJobAnswers() ? "Resume guided intake" : "Start guided intake");
-    var cards = guides.map(function (guide, index) {
+    var jobs = (findQuestion("job") || {}).options || [];
+    var cards = jobs.map(function (job, index) {
       return [
-        "<button class=\"goal-card\" type=\"button\" data-guide=\"" + escapeHtml(guide.id) + "\">",
+        "<button class=\"goal-card\" type=\"button\" data-start-job=\"" + escapeHtml(job.id) + "\">",
         "  <span class=\"goal-index\">ROUTE " + twoDigit(index + 1) + "</span>",
-        "  <h3>" + escapeHtml(guide.title) + "</h3>",
-        "  <p>" + escapeHtml(guide.summary) + "</p>",
+        "  <h3>" + escapeHtml(job.label) + "</h3>",
+        "  <p>" + escapeHtml(job.detail) + "</p>",
         "</button>"
       ].join("");
     }).join("");
@@ -236,15 +243,15 @@
       "    <h1>Find the fault. <em>Protect the outcome.</em></h1>",
       "  </div>",
       "  <div class=\"hero-summary\">",
-      "    <p><strong>Start with the job, not the tool.</strong> Choose the closest outcome below. The guide will tell you what matters, what can wait, and when to stop.</p>",
+      "    <p><strong>Start with what is happening.</strong> Choose the closest problem or goal below. A few questions will narrow the next step, what can wait, and when to stop.</p>",
       "    <p>This prototype never changes a disk by itself.</p>",
-      "    <div class=\"action-row\"><button class=\"primary-action\" type=\"button\" data-route=\"intake\">" + escapeHtml(intakeAction) + " <span aria-hidden=\"true\">→</span></button></div>",
+      "    <div class=\"action-row\"><button class=\"primary-action\" type=\"button\" data-route=\"intake\">" + escapeHtml(intakeAction) + " <span aria-hidden=\"true\">→</span></button><button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">Jayro's Lockpick programs</button></div>",
       "  </div>",
       "</section>",
       "<section class=\"workflow-section\" aria-labelledby=\"goal-heading\">",
       "  <div class=\"section-heading\">",
       "    <span class=\"number\">01</span>",
-      "    <div><h2 id=\"goal-heading\">What are you trying to do?</h2><p>Use a direct route if the problem is already classified. Use guided intake when the category, preservation requirement, or safe next action is still unclear.</p></div>",
+      "    <div><h2 id=\"goal-heading\">What is happening, or what do you need to do?</h2><p>Choose the closest answer. You can change it later, or browse all workflows without answering.</p></div>",
       "  </div>",
       "  <div class=\"goal-grid\">" + cards + "</div>",
       "</section>",
@@ -294,12 +301,15 @@
 
   function evaluateJobBrief(questions) {
     var guideId = selectedGuideId();
+    var job = selectedJobOption();
+    var asked = questions.map(function (question) { return question.id; });
     var branchQuestion = questions[questions.length - 1];
     var branchOption = findOption(branchQuestion, jobState.answers[branchQuestion.id]);
-    var destructive = guideId === "prepare-wipe" || guideId === "clean-install-windows";
+    var destructive = Boolean((job && job.destructive) || (branchOption && branchOption.destructive));
     var result = {
       status: branchOption && branchOption.status ? branchOption.status : "caution",
       finding: branchOption ? branchOption.finding : "The branch-specific finding is incomplete.",
+      routeGuideId: branchOption && branchOption.nextGuide ? branchOption.nextGuide : guideId,
       actions: [],
       holds: [],
       avoid: [],
@@ -312,23 +322,23 @@
       addManyUnique(result.ignore, branchOption.ignore);
     }
 
-    if (jobState.answers.target !== "confirmed") {
-      result.status = "stop";
+    if (asked.indexOf("target") !== -1 && jobState.answers.target !== "confirmed") {
+      result.status = strongerStatus(result.status, destructive ? "stop" : "caution");
       addUnique(result.holds, "Identify the intended device and physical disk by model, capacity, and layout before any write.");
       addUnique(result.avoid, "Do not rely on a drive letter or disk number as the device identity.");
     }
 
-    if (jobState.answers.authority !== "confirmed") {
-      result.status = "stop";
+    if (asked.indexOf("authority") !== -1 && jobState.answers.authority !== "confirmed") {
+      result.status = strongerStatus(result.status, destructive || guideId === "identify-password-problem" ? "stop" : "caution");
       addUnique(result.holds, "Confirm who controls the device and the exact authorized outcome before changing credentials or data.");
     }
 
-    if (jobState.answers.preservation === "undecided") {
+    if (asked.indexOf("preservation") !== -1 && jobState.answers.preservation === "undecided") {
       result.status = strongerStatus(result.status, destructive ? "stop" : "caution");
       addUnique(result.holds, "Decide what must survive before choosing a method that can change the disk, account, or installation.");
     }
 
-    if (jobState.answers.preservation === "must-preserve" && destructive) {
+    if (asked.indexOf("preservation") !== -1 && jobState.answers.preservation === "must-preserve" && destructive) {
       result.status = "stop";
       addUnique(result.holds, "Complete and verify the preservation plan before the authorized workflow becomes destructive.");
       addUnique(result.avoid, "Do not let a clean-install or wipe route silently replace a preservation requirement.");
@@ -339,7 +349,7 @@
       addUnique(result.actions, "Confirm whether BitLocker, EFS, or another encrypted-data dependency changes which credential action can preserve access.");
     }
 
-    if (jobState.answers.identity !== "safe") {
+    if (asked.indexOf("identity") !== -1 && jobState.answers.identity !== "safe") {
       result.status = strongerStatus(result.status, destructive ? "stop" : "caution");
       if (jobState.answers.identity === "at-risk") {
         addUnique(result.holds, "Create and verify replacement passkeys, authenticator access, recovery codes, password-vault access, and required encryption keys before erasing this environment.");
@@ -367,8 +377,9 @@
 
   function renderJobBrief(questions) {
     var job = selectedJobOption();
-    var guide = findGuide(selectedGuideId());
     var result = evaluateJobBrief(questions);
+    var guide = findGuide(result.routeGuideId);
+    var passwordPath = selectedGuideId() === "identify-password-problem" ? jobState.answers[branchQuestionId(questions)] : "unknown";
     var statusLabels = {
       ready: "Route ready",
       caution: "Proceed with checks",
@@ -399,11 +410,16 @@
       "  <aside class=\"brief-answers\" aria-labelledby=\"brief-answers-title\"><div class=\"section-kicker\">Session answers</div><h2 id=\"brief-answers-title\">What this brief used</h2>" + renderAnswerSummary(questions) + "</aside>",
       "</section>",
       "<section class=\"brief-actions\" aria-label=\"Job brief actions\">",
-      guide ? "  <button class=\"primary-action\" type=\"button\" data-guide=\"" + escapeHtml(guide.id) + "\">Open the full workflow <span aria-hidden=\"true\">→</span></button>" : "",
+      guide && guide.id === "identify-password-problem" ? "  <button class=\"primary-action\" type=\"button\" data-route=\"password=" + escapeHtml(findPasswordPath(passwordPath) ? passwordPath : "unknown") + "\">Open password and access module <span aria-hidden=\"true\">→</span></button>" :
+        (guide ? "  <button class=\"primary-action\" type=\"button\" data-guide=\"" + escapeHtml(guide.id) + "\">Open " + escapeHtml(guide.title) + " <span aria-hidden=\"true\">→</span></button>" : ""),
       "  <button class=\"secondary-action\" type=\"button\" data-intake-edit=\"0\">Revise answers</button>",
       "  <button class=\"text-action danger-action\" type=\"button\" data-intake-reset>Clear session answers</button>",
       "</section>"
     ].join("");
+  }
+
+  function branchQuestionId(questions) {
+    return questions[questions.length - 1].id;
   }
 
   function normalizeIntakePosition(questions) {
@@ -446,7 +462,7 @@
       pageHeader(
         "Build the job brief",
         "Guided intake",
-        "Six categorical answers narrow the repair route without collecting a customer name, credential, recovery key, or device serial number.",
+        "A few categorical answers narrow the repair route without collecting a customer name, credential, recovery key, or device serial number.",
         [{ label: "Session only", className: "evidence-badge" }]
       ),
       "<section class=\"intake-workspace\" aria-labelledby=\"intake-question-title\">",
@@ -476,9 +492,131 @@
     view.innerHTML = pageHeader(
       "All workflows",
       "Guide index",
-      "Problem-led routes for the highest-priority repair jobs. Exact tool procedures remain gated by installed-version evidence.",
+      "Problem-led routes and supporting guides. Exact tool procedures remain gated by installed-version evidence.",
       [{ label: guides.length + " prototype workflows", className: "evidence-badge" }]
     ) + "<section class=\"content-section\"><div class=\"catalog-grid\">" + cards + "</div></section>";
+  }
+
+  function findPasswordPath(id) {
+    return (passwordModule.paths || []).filter(function (path) {
+      return path.id === id;
+    })[0] || null;
+  }
+
+  function findLockpickProgram(id) {
+    return (passwordModule.programs || []).filter(function (program) {
+      return program.id === id;
+    })[0] || null;
+  }
+
+  function renderLockpickProgram(id) {
+    var program = id ? findLockpickProgram(id) : null;
+    if (id && !program) {
+      renderNotFound();
+      return;
+    }
+
+    updateDocumentTitle(program ? program.name : "Jayro's Lockpick programs");
+    if (!program) {
+      var groups = ["Preparation", "Windows account tools", "SQL Server account tool"];
+      var cards = groups.map(function (group) {
+        var items = (passwordModule.programs || []).filter(function (item) { return item.group === group; });
+        return "<section class=\"content-section\"><div class=\"section-heading\"><div><h2>" + escapeHtml(group) + "</h2><p>" + (group === "Preparation" ? "Check the target state before choosing a credential tool." : group === "SQL Server account tool" ? "For database logins, not Windows sign-in." : "Choose a program for a specific local-account need; these are not equal defaults.") + "</p></div></div><div class=\"catalog-grid\">" + items.map(function (item) {
+        return [
+          "<button class=\"catalog-card\" type=\"button\" data-route=\"lockpick=" + escapeHtml(item.id) + "\">",
+          "<span class=\"evidence-badge\">Shown in launcher · v" + escapeHtml(item.version) + "</span>",
+          "<h2>" + escapeHtml(item.name) + "</h2>",
+          "<p>" + escapeHtml(item.bestFor) + "</p>",
+          "<div class=\"card-footer\">Open program lesson →</div>",
+          "</button>"
+        ].join("");
+        }).join("") + "</div></section>";
+      }).join("");
+      var environment = (passwordModule.environment || []).map(function (item) {
+        return "<section class=\"guide-block\" data-kind=\"advanced\"><h3>" + escapeHtml(item.title) + "</h3><p>" + escapeHtml(item.text) + "</p></section>";
+      }).join("");
+      view.innerHTML = [
+        pageHeader("Jayro's Lockpick programs", "MediCat-specific tool lessons",
+          "The supplied Lockpick photos show a live recovery desktop and 14 entries in its MInstAll launcher. Start with the situation and target, then choose a program for a defined reason.",
+          [{ label: "14 photo-visible launcher entries", className: "evidence-badge" }]),
+        "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">Version note</div><h2>Follow the screen in front of you</h2><p>The photographed launcher title says Windows 10 x64. MediCat's v21.12 changelog describes a Windows 11 based Lockpick. The exact boot image has not been identified, so this mismatch remains unresolved. Versions below are launcher labels only, and truncated labels are shown as such.</p></section>",
+        "<section class=\"content-section\"><div class=\"section-heading\"><div><h2>Find your way around the live environment</h2><p>MInstAll is one window within Lockpick. Start-menu tools help inspect disks and drivers, but this photographed menu is only a partial inventory.</p></div></div>" + environment + "</section>",
+        "<section class=\"guide-block\" data-kind=\"stop\"><div class=\"block-label\">Before using a reset tool</div><h2>Confirm the exact Windows installation and account</h2><p>A local-account reset changes account data on the selected disk. Confirm owner authorization, BitLocker access, EFS and saved-credential needs, and a recoverable backup before any write.</p></section>",
+        cards,
+        "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">Coverage boundary</div><h2>Photo inventory, not a tested repair manual</h2><p>All 14 entries visible in the supplied launcher photo have pages here. Some lack a primary manual or their own program screen; those pages explain what to inspect before use. The full scrollable Start menu, bundled binaries, licensing, and real-device results still need verification.</p></section>"
+      ].join("");
+      return;
+    }
+
+    view.innerHTML = [
+      pageHeader(program.name, "Jayro's Lockpick / program lesson", program.bestFor,
+        [{ label: "Launcher label: v" + program.version, className: "evidence-badge" }]),
+      "<div class=\"action-row\"><button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">← All Lockpick programs</button></div>",
+      "<div class=\"guide-layout\"><article class=\"guide-content\">",
+      "<section class=\"guide-block\" data-kind=\"advanced\"><div class=\"block-label\">MediCat evidence</div><h2>Why this program is listed</h2><p>" + escapeHtml(program.evidence) + "</p></section>",
+      "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">What it changes</div><h2>Know the write effect</h2><p>" + escapeHtml(program.changes) + "</p></section>",
+      "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">Program lesson</div><h2>How to approach this entry</h2>" + textList(program.walkthrough, true) + "</section>",
+      "<section class=\"guide-block\" data-kind=\"stop\"><div class=\"block-label\">Stop here</div><h2>When this program does not fit</h2><p>" + escapeHtml(program.stop) + "</p></section>",
+      "<section class=\"guide-block\" data-kind=\"advanced\"><div class=\"block-label\">Evidence</div><h2>Check the source</h2><p>The launcher name and version come from the user's photo of this build. " + (program.source ? "The linked reference documents the product or a related release, not this exact bundled executable." : "No product-specific primary manual has been verified for this entry yet.") + "</p>" + (program.source ? "<p><a href=\"" + escapeHtml(program.source) + "\" target=\"_blank\" rel=\"noopener noreferrer\">Open product reference →</a></p>" : "") + "<p>Compare the actual program screen before following any control name.</p></section>",
+      "</article><nav class=\"guide-rail\" aria-label=\"Other Lockpick programs\"><strong>Other programs</strong>",
+      (passwordModule.programs || []).filter(function (item) { return item.id !== program.id; }).map(function (item) {
+        return "<a href=\"#lockpick=" + escapeHtml(item.id) + "\">" + escapeHtml(item.name) + "</a>";
+      }).join(""),
+      "</nav></div>"
+    ].join("");
+  }
+
+  function renderPasswordModule(pathId) {
+    var path = pathId ? findPasswordPath(pathId) : null;
+    if (pathId && !path) {
+      renderNotFound();
+      return;
+    }
+
+    updateDocumentTitle(path ? path.label : passwordModule.title);
+    if (!path) {
+      var cards = (passwordModule.paths || []).map(function (item, index) {
+        return [
+          "<button class=\"goal-card\" type=\"button\" data-route=\"password=" + escapeHtml(item.id) + "\">",
+          "  <span class=\"goal-index\">ACCESS " + twoDigit(index + 1) + "</span>",
+          "  <h3>" + escapeHtml(item.label) + "</h3>",
+          "  <p>" + escapeHtml(item.clue) + "</p>",
+          "</button>"
+        ].join("");
+      }).join("");
+      view.innerHTML = [
+        pageHeader(passwordModule.title, "Dedicated access module", passwordModule.summary,
+          [{ label: "Choose the screen you see", className: "evidence-badge" }]),
+        "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">Before any credential change</div>",
+        "<h2>Confirm the owner, target, and requested outcome</h2><p>Ask what must still work afterward: Windows sign-in, files, encrypted data, saved credentials, and online accounts. This module records no password, PIN, or recovery key.</p></section>",
+        "<section class=\"workflow-section\" aria-labelledby=\"password-paths-title\"><div class=\"section-heading\"><span class=\"number\">01</span><div><h2 id=\"password-paths-title\">What is asking for access?</h2><p>Choose the closest screen. Each path gives a first action, MediCat's role, a stop condition, and a success check.</p></div></div>",
+        "<div class=\"goal-grid\">" + cards + "</div></section>",
+        "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">MediCat tool lessons</div><h2>Jayro's Lockpick programs</h2><p>For a confirmed local-account job, compare the programs MediCat has documented and the effect each one has on the selected account.</p><button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">Explore Lockpick programs →</button></section>"
+      ].join("");
+      return;
+    }
+
+    var sources = (path.sources || []).map(function (source) {
+      return "<li><a href=\"" + escapeHtml(source.url) + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + escapeHtml(source.label) + "</a></li>";
+    }).join("");
+    view.innerHTML = [
+      pageHeader(path.label, "Password and access / selected path", path.clue,
+        [{ label: "Official recovery first", className: "evidence-badge" }]),
+      "<div class=\"action-row\"><button class=\"secondary-action\" type=\"button\" data-route=\"password\">← Choose a different prompt</button></div>",
+      "<div class=\"guide-layout\"><article class=\"guide-content\">",
+      "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">Do this first</div><h2>" + escapeHtml(path.first) + "</h2></section>",
+      "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">Walkthrough</div><h2>Work through this path</h2>" + textList(path.steps, true) + "</section>",
+      "<section class=\"guide-block\" data-kind=\"attention\"><div class=\"block-label\">Where MediCat fits</div><h2>Use the right layer</h2><p>" + escapeHtml(path.medicat) + "</p></section>",
+      path.id === "local-password" ? "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">MediCat tool lesson</div><h2>Compare the Lockpick programs</h2><p>Start with the historically documented PCUnlocker 5.6 path, then use a different program only for a specific reason.</p><button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">Open Lockpick programs →</button></section>" : "",
+      "<section class=\"guide-block\" data-kind=\"stop\"><div class=\"block-label\">Stop here</div><h2>Pause before changing access</h2><p>" + escapeHtml(path.stop) + "</p></section>",
+      "<section class=\"guide-block\" data-kind=\"recommended\"><div class=\"block-label\">How to know it worked</div><h2>Check the requested outcome</h2><p>" + escapeHtml(path.verify) + "</p></section>",
+      "<section class=\"guide-block\" data-kind=\"advanced\"><div class=\"block-label\">Primary references</div><h2>Source instructions</h2><ul>" + sources + "</ul><p>Links need a network connection. The steps above remain available offline.</p></section>",
+      "</article><nav class=\"guide-rail\" aria-label=\"Other access paths\"><strong>Other prompts</strong>",
+      (passwordModule.paths || []).filter(function (item) { return item.id !== path.id; }).map(function (item) {
+        return "<a href=\"#password=" + escapeHtml(item.id) + "\">" + escapeHtml(item.label) + "</a>";
+      }).join(""),
+      "</nav></div>"
+    ].join("");
   }
 
   function renderSection(section) {
@@ -580,6 +718,7 @@
 
     view.innerHTML = [
       pageHeader(guide.title, guide.eyebrow, guide.summary, meta),
+      id === "identify-password-problem" ? "<div class=\"action-row\"><button class=\"primary-action\" type=\"button\" data-route=\"password\">Open password and access module <span aria-hidden=\"true\">→</span></button></div>" : "",
       "<div class=\"guide-layout\">",
       "  <article class=\"guide-content\">",
       "    <section class=\"guide-block\" data-kind=\"recommended\">",
@@ -605,6 +744,7 @@
         "  <span class=\"evidence-badge\">" + escapeHtml(tool.status) + "</span>",
         "  <h2>" + escapeHtml(tool.name) + "</h2>",
         "  <p>" + escapeHtml(tool.purpose) + "</p>",
+        tool.id === "jayros-lockpick" ? "  <button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">Open Lockpick program lessons →</button>" : "",
         "  <div class=\"evidence-note\"><strong>Version evidence:</strong> " + escapeHtml(tool.versionEvidence) + "</div>",
         "  <h3>Recommended for</h3>",
         textList(tool.recommendedFor, false),
@@ -665,6 +805,10 @@
       renderIntake();
     } else if (route === "all-guides") {
       renderAllGuides();
+    } else if (route === "password" || route.indexOf("password=") === 0) {
+      renderPasswordModule(route === "password" ? "" : decodeURIComponent(route.substring(9)));
+    } else if (route === "lockpick" || route.indexOf("lockpick=") === 0) {
+      renderLockpickProgram(route === "lockpick" ? "" : decodeURIComponent(route.substring(9)));
     } else if (route === "tools") {
       renderTools();
     } else if (route === "glossary") {
@@ -702,6 +846,42 @@
 
   function buildSearchIndex() {
     var index = [];
+
+    index.push({
+      type: "Module",
+      title: passwordModule.title,
+      summary: passwordModule.summary,
+      text: [passwordModule.title, passwordModule.summary, "Lockpick", "PIN", "BitLocker", "Microsoft account", "local password", "sign in"].join(" ").toLowerCase(),
+      route: "password"
+    });
+
+    (passwordModule.paths || []).forEach(function (path) {
+      index.push({
+        type: "Access path",
+        title: path.label,
+        summary: path.clue,
+        text: [path.label, path.clue, path.first, path.medicat].join(" ").toLowerCase(),
+        route: "password=" + encodeURIComponent(path.id)
+      });
+    });
+
+    index.push({
+      type: "Module",
+      title: "Jayro's Lockpick programs",
+      summary: "MediCat-specific program lessons and installed-version evidence status.",
+      text: "jayro lockpick medicat password pcunlocker passcape active wbg",
+      route: "lockpick"
+    });
+
+    (passwordModule.programs || []).forEach(function (program) {
+      index.push({
+        type: "Lockpick program",
+        title: program.name,
+        summary: program.bestFor,
+        text: [program.name, program.bestFor, program.changes, program.evidence].join(" ").toLowerCase(),
+        route: "lockpick=" + encodeURIComponent(program.id)
+      });
+    });
 
     guides.forEach(function (guide) {
       index.push({
@@ -855,8 +1035,9 @@
     jobSummaryFields.forEach(function (field) {
       var question = findQuestion(field.getAttribute("data-job-summary"));
       var option = question ? findOption(question, jobState.answers[question.id]) : null;
-      field.textContent = option ? option.label : "Pending";
-      if (option) {
+      var relevant = !selectedJobOption() || questions.some(function (item) { return item.id === question.id; });
+      field.textContent = relevant ? (option ? option.label : "Pending") : "Not needed";
+      if (relevant && option) {
         field.setAttribute("data-complete", "true");
       } else {
         field.removeAttribute("data-complete");
@@ -867,6 +1048,7 @@
   document.addEventListener("click", function (event) {
     var routeTarget = event.target.closest("[data-route]");
     var guideTarget = event.target.closest("[data-guide]");
+    var startJobTarget = event.target.closest("[data-start-job]");
     var anchorTarget = event.target.closest("[data-anchor]");
     var intakeOptionTarget = event.target.closest("[data-intake-option]");
     var intakeBackTarget = event.target.closest("[data-intake-back]");
@@ -879,9 +1061,7 @@
       var optionId = intakeOptionTarget.getAttribute("data-intake-option");
       if (findOption(question, optionId)) {
         if (questionId === "job" && jobState.answers.job !== optionId) {
-          Object.keys(intake.branchQuestions || {}).forEach(function (guideId) {
-            delete jobState.answers[intake.branchQuestions[guideId].id];
-          });
+          jobState.answers = {};
         }
         jobState.answers[questionId] = optionId;
         var questionsAfterAnswer = getIntakeQuestions();
@@ -943,6 +1123,20 @@
 
     if (guideTarget) {
       routeTo("guide=" + encodeURIComponent(guideTarget.getAttribute("data-guide")));
+      return;
+    }
+
+    if (startJobTarget) {
+      var chosenJob = startJobTarget.getAttribute("data-start-job");
+      if (findOption(findQuestion("job"), chosenJob)) {
+        if (jobState.answers.job !== chosenJob) {
+          jobState.answers = { job: chosenJob };
+        }
+        jobState.position = 1;
+        saveJobState();
+        renderJobStatus();
+        routeTo("intake");
+      }
       return;
     }
 

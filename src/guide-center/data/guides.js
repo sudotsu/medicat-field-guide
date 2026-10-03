@@ -7,7 +7,15 @@ window.LEARN_MEDICAT_GUIDES = [
     "summary": "Work out whether the problem is a local password, Microsoft account, PIN, encryption, firmware lock, or managed account before opening a reset tool.",
     "risk": "high",
     "evidenceStatus": "procedure-pending-installed-version-verification",
-    "tags": ["password", "PIN", "Microsoft account", "local account", "Lockpick", "BitLocker", "EFS"],
+    "tags": [
+      "password",
+      "PIN",
+      "Microsoft account",
+      "local account",
+      "Lockpick",
+      "BitLocker",
+      "EFS"
+    ],
     "goalPrompt": "Regain authorized access while preserving the existing installation and protected data whenever that is still possible.",
     "sections": [
       {
@@ -146,7 +154,10 @@ window.LEARN_MEDICAT_GUIDES = [
         "note": "Historical evidence for the v21.12 Lockpick image and listed component state; current target still requires inventory."
       }
     ],
-    "related": ["decide-backup", "prepare-wipe"]
+    "related": [
+      "decide-backup",
+      "prepare-wipe"
+    ]
   },
   {
     "id": "windows-will-not-boot",
@@ -156,7 +167,17 @@ window.LEARN_MEDICAT_GUIDES = [
     "summary": "Separate power, firmware, disk detection, boot mode, partition layout, boot files, and Windows failures before using a repair command.",
     "risk": "high",
     "evidenceStatus": "concept-verified-procedures-pending",
-    "tags": ["boot", "BCD", "UEFI", "Legacy", "GPT", "MBR", "EFI", "GRUB", "automatic repair"],
+    "tags": [
+      "boot",
+      "BCD",
+      "UEFI",
+      "Legacy",
+      "GPT",
+      "MBR",
+      "EFI",
+      "GRUB",
+      "automatic repair"
+    ],
     "goalPrompt": "Return the authorized installation to a bootable state without converting, formatting, or rewriting the wrong layer.",
     "sections": [
       {
@@ -302,7 +323,10 @@ window.LEARN_MEDICAT_GUIDES = [
         "note": "Primary reference for navigating the file tree."
       }
     ],
-    "related": ["choose-live-environment", "clean-install-windows"]
+    "related": [
+      "choose-live-environment",
+      "clean-install-windows"
+    ]
   },
   {
     "id": "choose-live-environment",
@@ -312,7 +336,16 @@ window.LEARN_MEDICAT_GUIDES = [
     "summary": "Decide whether you need Mini Windows, a Linux live/rescue system, an installer, or a dedicated diagnostic image.",
     "risk": "low",
     "evidenceStatus": "routing-principles-verified-images-pending",
-    "tags": ["live OS", "WinPE", "Mini Windows", "Linux", "installer", "ISO", "WIM", "VHD"],
+    "tags": [
+      "live OS",
+      "WinPE",
+      "Mini Windows",
+      "Linux",
+      "installer",
+      "ISO",
+      "WIM",
+      "VHD"
+    ],
     "goalPrompt": "Boot the smallest environment that can safely complete the current job without accidentally installing or writing to the internal disk.",
     "sections": [
       {
@@ -451,32 +484,46 @@ window.LEARN_MEDICAT_GUIDES = [
         "note": "Primary source for F3 tree navigation behavior."
       }
     ],
-    "related": ["windows-will-not-boot", "clean-install-windows"]
+    "related": [
+      "windows-will-not-boot",
+      "clean-install-windows"
+    ]
   },
   {
     "id": "decide-backup",
     "category": "Backup and recovery",
-    "title": "Do I even need a backup?",
+    "title": "Back up, clone, or restore a computer",
     "eyebrow": "Protect the outcome, not every byte by default",
-    "summary": "Verify what exists only on this device, what is genuinely recoverable elsewhere, and whether a file copy, image, or no extra backup is appropriate.",
+    "summary": "Choose between a verified file copy, disk image, clone, restore, or no extra copy, then prove the chosen result works.",
     "risk": "medium",
     "evidenceStatus": "workflow-prototype",
-    "tags": ["backup", "cloud", "OneDrive", "Google Drive", "iCloud", "clone", "image", "files", "recovery"],
-    "goalPrompt": "Spend only the time and storage needed to protect what the owner actually cares about.",
+    "tags": [
+      "backup",
+      "cloud",
+      "OneDrive",
+      "Google Drive",
+      "iCloud",
+      "clone",
+      "image",
+      "files",
+      "recovery"
+    ],
+    "goalPrompt": "Protect the required files or system state with a confirmed source, separate destination, and tested recovery path.",
     "sections": [
       {
         "id": "recommended",
         "kind": "recommended",
         "label": "Recommended",
-        "title": "Check what would be gone if this device vanished",
+        "title": "Choose the copy that matches the requested result",
         "paragraphs": [
-          "Ask the owner what must survive. From another trusted device or the provider's website, verify that current important files and recovery information are actually accessible."
+          "Ask the owner what must survive. Verify any existing cloud or separate backup from another device. Then identify the physical source and destination before opening a copy or restore tool."
         ],
         "bullets": [
-          "Check Desktop, Documents, Pictures, Downloads, local email, browser data, application projects, game saves, and non-obvious folders.",
-          "Check password-manager access, passkeys, authenticator accounts, trusted-device prompts, recovery codes, and disk/device recovery keys.",
-          "Confirm cloud coverage, recency, exclusions, and the ability to open or download representative files.",
-          "Check source-disk health before choosing repeated ordinary copy operations."
+          "For selected files on a healthy source: copy only required folders to a separate device, then open representative files from that copy.",
+          "For whole-system rollback or migration: choose an image or clone only after confirming destination capacity and whether the current system state is worth preserving.",
+          "For a restore: open the backup first, confirm the physical overwrite target and accepted loss, and verify the restored system and files afterward.",
+          "If the source has read errors or disconnects: stop routine copying and open the file-recovery route before repair writes.",
+          "Check password-manager access, passkeys, authenticator accounts, trusted-device prompts, recovery codes, and disk/device recovery keys before replacing an environment."
         ]
       },
       {
@@ -593,17 +640,32 @@ window.LEARN_MEDICAT_GUIDES = [
       }
     ],
     "sources": [],
-    "related": ["prepare-wipe", "identify-password-problem"]
+    "related": [
+      "prepare-wipe",
+      "identify-password-problem",
+      "recover-files",
+      "disk-layout"
+    ]
   },
   {
     "id": "prepare-wipe",
     "category": "Before destructive work",
-    "title": "Prepare to wipe, flash, or reset",
+    "title": "Before you wipe, reset, or hand off a device",
     "eyebrow": "Identity continuity checkpoint",
-    "summary": "Confirm the target, accepted data loss, account recovery, passkeys, 2FA, recovery codes, password managers, and encryption keys before the old environment disappears.",
+    "summary": "Confirm the exact device, accepted loss, required files, account recovery, and the next environment before erasing anything.",
     "risk": "high",
     "evidenceStatus": "workflow-prototype",
-    "tags": ["wipe", "flash", "reset", "passkey", "2FA", "authenticator", "recovery codes", "password manager", "BitLocker"],
+    "tags": [
+      "wipe",
+      "flash",
+      "reset",
+      "passkey",
+      "2FA",
+      "authenticator",
+      "recovery codes",
+      "password manager",
+      "BitLocker"
+    ],
     "goalPrompt": "Make the authorized destructive change without unintentionally locking the owner out of important accounts or protected data.",
     "sections": [
       {
@@ -620,7 +682,8 @@ window.LEARN_MEDICAT_GUIDES = [
           "Push approvals/trusted devices: add and test another device or alternate method.",
           "Recovery codes: retain them somewhere that survives the wipe and generate a fresh set when appropriate.",
           "Password managers: prove the vault opens elsewhere with the required password, recovery key, or emergency kit.",
-          "Disk/device encryption: retain and verify BitLocker, FileVault, or device-recovery keys."
+          "Disk/device encryption: retain and verify BitLocker, FileVault, or device-recovery keys.",
+          "After those checks, choose the documented reset, reinstall, or erase path that matches the handoff goal; verify the device reaches the agreed new-owner or disposal state."
         ]
       },
       {
@@ -729,7 +792,10 @@ window.LEARN_MEDICAT_GUIDES = [
       }
     ],
     "sources": [],
-    "related": ["decide-backup", "clean-install-windows"]
+    "related": [
+      "decide-backup",
+      "clean-install-windows"
+    ]
   },
   {
     "id": "clean-install-windows",
@@ -739,7 +805,17 @@ window.LEARN_MEDICAT_GUIDES = [
     "summary": "Prepare identity and data, boot the installer in the intended mode, select the physical target carefully, and verify the machine boots the new installation rather than the USB.",
     "risk": "high",
     "evidenceStatus": "concept-prototype-version-specific-prompts-pending",
-    "tags": ["install", "reinstall", "Windows", "partition", "format", "UEFI", "GPT", "drivers", "product key"],
+    "tags": [
+      "install",
+      "reinstall",
+      "Windows",
+      "partition",
+      "format",
+      "UEFI",
+      "GPT",
+      "drivers",
+      "product key"
+    ],
     "goalPrompt": "Create a clean, bootable Windows installation on the authorized target disk without erasing another device or overcomplicating the normal path.",
     "sections": [
       {
@@ -874,6 +950,753 @@ window.LEARN_MEDICAT_GUIDES = [
         "note": "Primary source for WinPE installation/deployment purpose and UEFI/Legacy relationship."
       }
     ],
-    "related": ["prepare-wipe", "windows-will-not-boot", "decide-backup"]
+    "related": [
+      "prepare-wipe",
+      "windows-will-not-boot",
+      "decide-backup"
+    ]
+  },
+  {
+    "id": "diagnose-unstable",
+    "category": "Diagnostics and malware triage",
+    "title": "The computer runs badly or may be infected",
+    "eyebrow": "Classify the symptom before choosing a tool",
+    "summary": "Separate a failing drive, memory or heat problem, Windows fault, and suspicious software before trying a repair or scan.",
+    "risk": "medium",
+    "evidenceStatus": "concept-verified-procedures-pending-installed-inventory",
+    "tags": [
+      "crash",
+      "freeze",
+      "slow",
+      "blue screen",
+      "hardware",
+      "memory",
+      "malware",
+      "virus"
+    ],
+    "goalPrompt": "Find a repeatable cause and protect required data before making the system harder to recover.",
+    "sections": [
+      {
+        "id": "recommended",
+        "kind": "recommended",
+        "label": "Recommended",
+        "title": "Capture the symptom and check the storage path first",
+        "paragraphs": [
+          "Record exactly when the failure occurs: before Windows, at sign-in, under load, or only in one application. Note any error text and whether the same problem appears from a live environment."
+        ],
+        "bullets": [
+          "If files disappear, the disk disconnects, or read errors appear, open the file-recovery route before running repair writes.",
+          "For repeatable crashes, distinguish a hardware signal from a Windows or application failure using a verified diagnostic appropriate to the installed build.",
+          "If suspicious software is suspected, preserve needed data and use a verified non-Defender scanner in report-only mode; review findings before any removal."
+        ]
+      },
+      {
+        "id": "explain",
+        "kind": "explain",
+        "label": "Why this action",
+        "title": "Slow and broken are symptoms, not diagnoses",
+        "paragraphs": [
+          "A slow computer can be caused by storage, memory, temperature, drivers, software, or malware. A scanner result by itself cannot identify every cause."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "skip",
+        "kind": "skip",
+        "label": "Safe to skip",
+        "title": "Skip broad changes until the failing layer is known",
+        "paragraphs": [
+          "Do not start with a reinstall, firmware update, registry cleaner, or every available diagnostic. Test the symptom that actually repeats."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "attention",
+        "kind": "attention",
+        "label": "Pay attention",
+        "title": "A diagnostic can still write or stress hardware",
+        "paragraphs": [
+          "Check the selected tool, test mode, target, and installed version. If the disk may be failing, protect data before stress tests or filesystem repair. Keep malware scans report-only."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "stop",
+        "kind": "stop",
+        "label": "Stop here",
+        "title": "Pause if continued testing threatens the data",
+        "paragraphs": [
+          "Stop write-heavy tests when the disk drops offline, reports read errors, or contains required files without a recovery copy. Stop automatic cleanup when the finding has not been reviewed."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "success",
+        "kind": "success",
+        "label": "How to know it worked",
+        "title": "You can name the failing layer and verify the outcome",
+        "paragraphs": [
+          "A useful result identifies a repeatable hardware, storage, operating-system, application, or suspicious-software path, and the next action has a testable success condition. A single clean scan does not prove the machine is healthy."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "failure",
+        "kind": "failure",
+        "label": "If it did not work",
+        "title": "Route by the evidence that appeared",
+        "paragraphs": [],
+        "bullets": [],
+        "failures": [
+          {
+            "when": "The disk reports errors or disappears",
+            "next": "Move to file recovery and evaluate imaging before repair."
+          },
+          {
+            "when": "A memory diagnostic reports errors",
+            "next": "Record the exact test result and investigate hardware before reinstalling Windows."
+          },
+          {
+            "when": "A scan is clean but the symptom repeats",
+            "next": "Continue hardware, driver, update, and application diagnosis rather than declaring the system clean."
+          },
+          {
+            "when": "A scanner finds something",
+            "next": "Preserve its report and verify the finding and removal method before changing files."
+          }
+        ]
+      },
+      {
+        "id": "understand",
+        "kind": "understand",
+        "label": "Understand why",
+        "title": "Test one hypothesis at a time",
+        "paragraphs": [
+          "The earliest repeatable failure is often more useful than the most dramatic later error. A bootable toolkit helps isolate a layer, but it does not diagnose automatically."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "advanced",
+        "kind": "advanced",
+        "label": "Advanced",
+        "title": "Exact diagnostic and cleaning steps wait for inventory",
+        "paragraphs": [
+          "The X10 MediCat image and included diagnostic and scanner versions have not been fully inventoried. Do not assume a named utility or an automatic-cleanup setting is safe on this build."
+        ],
+        "bullets": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "MediCat current tool index",
+        "url": "https://medicatusb.com/docs/",
+        "status": "verified-source-only",
+        "note": "Documents diagnostic and repair categories, not this drive’s exact contents."
+      },
+      {
+        "label": "MediCat v21.12 historical included tools",
+        "url": "https://docs.medicat.dev/usb/tools/",
+        "status": "verified-source-only",
+        "note": "Historical antivirus and diagnostic categories; current availability requires local verification."
+      }
+    ],
+    "related": [
+      "recover-files",
+      "windows-will-not-boot",
+      "choose-live-environment"
+    ]
+  },
+  {
+    "id": "recover-files",
+    "category": "Data recovery",
+    "title": "Files are missing or a drive may be failing",
+    "eyebrow": "Classify the symptom before choosing a tool",
+    "summary": "Find the safest recovery source and destination before a reset, repair, format, or recovery scan can overwrite the only copy.",
+    "risk": "high",
+    "evidenceStatus": "concept-verified-procedures-pending-installed-inventory",
+    "tags": [
+      "deleted files",
+      "missing files",
+      "data recovery",
+      "damaged drive",
+      "read error",
+      "disk image"
+    ],
+    "goalPrompt": "Recover the required files or establish a trustworthy recovery copy without writing over their source.",
+    "sections": [
+      {
+        "id": "recommended",
+        "kind": "recommended",
+        "label": "Recommended",
+        "title": "Check existing copies, then classify the source",
+        "paragraphs": [
+          "Ask which files are missing, when they were last seen, and whether a verified backup or cloud copy exists. Check the source drive’s identity and whether it reads reliably."
+        ],
+        "bullets": [
+          "If files were recently deleted from a healthy drive, minimize use of that drive and recover to a different destination.",
+          "If the drive reports errors, disconnects, or becomes very slow to read, consider a read-first image of the failing source before filesystem repair.",
+          "If encryption blocks access, find the matching recovery key or certificate; a file-recovery tool cannot replace it."
+        ]
+      },
+      {
+        "id": "explain",
+        "kind": "explain",
+        "label": "Why this action",
+        "title": "Recovery depends on what was lost",
+        "paragraphs": [
+          "Deleted-file recovery, a damaged filesystem, a failing physical drive, and an encrypted volume are different problems. The safe first action changes with the failure."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "skip",
+        "kind": "skip",
+        "label": "Safe to skip",
+        "title": "Skip repair writes on the source for now",
+        "paragraphs": [
+          "Do not run a broad filesystem repair, initialize, format, repartition, or reinstall just to see whether files reappear. Do not save recovered files back to the source."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "attention",
+        "kind": "attention",
+        "label": "Pay attention",
+        "title": "The destination matters as much as the source",
+        "paragraphs": [
+          "Identify source and destination by physical model and capacity. Ensure the destination has space and is on a separate physical device for a failing-drive image. Check a sample of recovered files by opening them."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "stop",
+        "kind": "stop",
+        "label": "Stop here",
+        "title": "Stop when the source is worsening or the target is uncertain",
+        "paragraphs": [
+          "Stop if the drive repeatedly disconnects, makes unusual mechanical noises, or the imaging/recovery destination could be confused with the source. Escalate irreplaceable data to a recovery specialist when further reads could reduce the chance of recovery."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "success",
+        "kind": "success",
+        "label": "How to know it worked",
+        "title": "Required files open from an independent location",
+        "paragraphs": [
+          "Verify the specific files the owner asked for, not just a success count. Record missing, damaged, encrypted, or untested items."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "failure",
+        "kind": "failure",
+        "label": "If it did not work",
+        "title": "Match the failure to the source",
+        "paragraphs": [],
+        "bullets": [],
+        "failures": [
+          {
+            "when": "A verified backup contains the files",
+            "next": "Restore a small sample and use the backup or restore guide before scanning the damaged source."
+          },
+          {
+            "when": "The disk is absent or unstable",
+            "next": "Stop repair writes; assess hardware and a controlled imaging or specialist path."
+          },
+          {
+            "when": "The volume is encrypted",
+            "next": "Use the owner’s matching key or certificate before attempting file recovery."
+          },
+          {
+            "when": "Recovered files are corrupt or incomplete",
+            "next": "Record which files failed and re-evaluate the source, backup versions, and image evidence."
+          }
+        ]
+      },
+      {
+        "id": "understand",
+        "kind": "understand",
+        "label": "Understand why",
+        "title": "Copy first when the source cannot be trusted",
+        "paragraphs": [
+          "Recovery tools need readable source data. Each write to a deleted-file source may overwrite remnants; repeated reads of a failing disk may also carry risk."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "advanced",
+        "kind": "advanced",
+        "label": "Advanced",
+        "title": "Version-specific recovery procedures are pending",
+        "paragraphs": [
+          "Exact steps for included recovery utilities and imaging tools require installed-version evidence, destination checks, and a tested rollback path."
+        ],
+        "bullets": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "Microsoft Windows File Recovery",
+        "url": "https://support.microsoft.com/en-us/windows/experience/backup-recovery/windows-file-recovery",
+        "status": "verified-source-only",
+        "note": "Explains why source use should be minimized and recovery should go to another drive."
+      },
+      {
+        "label": "GNU ddrescue manual",
+        "url": "https://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html",
+        "status": "verified-source-only",
+        "note": "Recommends copying a failing drive before trying repair on the copy."
+      },
+      {
+        "label": "MediCat backup and recovery tools",
+        "url": "https://medicatusb.com/docs/",
+        "status": "verified-source-only",
+        "note": "Lists recovery tools without proving the installed version."
+      }
+    ],
+    "related": [
+      "decide-backup",
+      "diagnose-unstable",
+      "choose-live-environment"
+    ]
+  },
+  {
+    "id": "disk-layout",
+    "category": "Partitions and disk layout",
+    "title": "A disk or partition layout needs attention",
+    "eyebrow": "Classify the symptom before choosing a tool",
+    "summary": "Distinguish a missing partition, an installation mismatch, a resize request, and a failing disk before changing the table.",
+    "risk": "high",
+    "evidenceStatus": "concept-verified-procedures-pending-installed-inventory",
+    "tags": [
+      "partition",
+      "GPT",
+      "MBR",
+      "resize",
+      "unallocated",
+      "format",
+      "Disk Management"
+    ],
+    "goalPrompt": "Identify the physical disk and desired final layout while preserving data and bootability required by the job.",
+    "sections": [
+      {
+        "id": "recommended",
+        "kind": "recommended",
+        "label": "Recommended",
+        "title": "Draw the current layout before changing it",
+        "paragraphs": [
+          "Identify the physical disk by model and capacity, then record its partition table, partitions, free space, encryption state, and boot mode. State the requested result in ordinary language."
+        ],
+        "bullets": [
+          "Confirm who authorized the layout change and whether the current data and bootability must survive.",
+          "Windows Setup says MBR/GPT: check installer boot mode and the intended Windows installation route before any conversion.",
+          "A partition vanished or became RAW: treat it as recovery first, especially if files must survive.",
+          "A healthy disk needs a new or resized partition: verify a backup and the exact affected space before choosing a tool."
+        ]
+      },
+      {
+        "id": "explain",
+        "kind": "explain",
+        "label": "Why this action",
+        "title": "Partition style is not the same as firmware mode",
+        "paragraphs": [
+          "GPT and MBR describe a disk’s partition map. UEFI and Legacy describe how the firmware starts software. A mismatch message does not itself prove data must be erased."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "skip",
+        "kind": "skip",
+        "label": "Safe to skip",
+        "title": "Skip conversion because a button exists",
+        "paragraphs": [
+          "Do not initialize, clean, convert, or format a disk to silence a warning before the target, purpose, backup, and boot path are clear."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "attention",
+        "kind": "attention",
+        "label": "Pay attention",
+        "title": "Many tools show several disks at once",
+        "paragraphs": [
+          "Match model and capacity, not a temporary drive letter or disk number. Check the preview of pending operations before applying anything; partition changes may affect existing data and boot files."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "stop",
+        "kind": "stop",
+        "label": "Stop here",
+        "title": "Do not rewrite an uncertain or damaged layout",
+        "paragraphs": [
+          "Stop if the disk is disappearing, important files have no recoverable copy, the selected disk is ambiguous, or the action would remove an EFI, recovery, or customer-data partition outside the approved scope."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "success",
+        "kind": "success",
+        "label": "How to know it worked",
+        "title": "The new layout and required data both check out",
+        "paragraphs": [
+          "Verify the intended partitions and capacity, access required files, and boot the intended operating system if bootability was part of the job."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "failure",
+        "kind": "failure",
+        "label": "If it did not work",
+        "title": "Use the exact failed stage",
+        "paragraphs": [],
+        "bullets": [],
+        "failures": [
+          {
+            "when": "Windows Setup still rejects the disk",
+            "next": "Recheck how the installer was booted and the intended partition style before changing the disk."
+          },
+          {
+            "when": "A partition is missing or RAW",
+            "next": "Return to file recovery and avoid formatting the source."
+          },
+          {
+            "when": "The resized system no longer boots",
+            "next": "Use the boot route and the recorded pre-change layout; do not make another blind conversion."
+          }
+        ]
+      },
+      {
+        "id": "understand",
+        "kind": "understand",
+        "label": "Understand why",
+        "title": "A partition map tells tools where data begins and ends",
+        "paragraphs": [
+          "Changing the map can hide or expose volumes without fixing the files inside them. Booting also depends on firmware entries and system partitions."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "advanced",
+        "kind": "advanced",
+        "label": "Advanced",
+        "title": "Exact operations wait for a confirmed disk and tool",
+        "paragraphs": [
+          "The current MediCat image’s partition utilities, versions, and safe rollback behavior are unverified; no button-by-button write procedure is supplied yet."
+        ],
+        "bullets": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "MediCat partition tools",
+        "url": "https://medicatusb.com/docs/",
+        "status": "verified-source-only",
+        "note": "Lists partition products; installed paths and versions remain unverified."
+      },
+      {
+        "label": "Microsoft Windows Setup MBR/GPT guidance",
+        "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-setup-installing-using-the-mbr-or-gpt-partition-style?view=windows-11",
+        "status": "verified-source-only",
+        "note": "Explains the boot-mode and partition-style relationship for Windows Setup."
+      }
+    ],
+    "related": [
+      "clean-install-windows",
+      "recover-files",
+      "windows-will-not-boot"
+    ]
+  },
+  {
+    "id": "medicat-not-working",
+    "category": "MediCat troubleshooting",
+    "title": "MediCat will not boot or a tool fails",
+    "eyebrow": "Classify the symptom before choosing a tool",
+    "summary": "Find whether the failure is USB detection, Ventoy, a selected image, a missing file, or one program.",
+    "risk": "low",
+    "evidenceStatus": "concept-verified-procedures-pending-installed-inventory",
+    "tags": [
+      "Medicat USB",
+      "Ventoy",
+      "USB boot",
+      "black screen",
+      "tool crash",
+      "missing tool"
+    ],
+    "goalPrompt": "Get the intended MediCat environment working, or identify the exact failed stage without rebuilding a healthy drive by guesswork.",
+    "sections": [
+      {
+        "id": "recommended",
+        "kind": "recommended",
+        "label": "Recommended",
+        "title": "Identify the first stage that fails",
+        "paragraphs": [
+          "Record the computer model, boot mode, MediCat version, selected menu item, and exact screen or error. Distinguish a USB that is not detected from Ventoy loading, an image starting, and an application failing inside that image."
+        ],
+        "bullets": [
+          "If the USB is not listed: check the physical connection and one-time boot menu before changing files.",
+          "If Ventoy appears but one image fails: record its exact name and try a different known-working image for comparison.",
+          "If one tool is missing or crashes: verify it belongs to this MediCat release and whether its files exist before reinstalling the whole drive."
+        ]
+      },
+      {
+        "id": "explain",
+        "kind": "explain",
+        "label": "Why this action",
+        "title": "Each stage has a different repair",
+        "paragraphs": [
+          "A host firmware setting, USB hardware issue, incomplete MediCat copy, incompatible boot image, and portable application dependency do not share one fix."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "skip",
+        "kind": "skip",
+        "label": "Safe to skip",
+        "title": "Skip a full reinstall until the scope is known",
+        "paragraphs": [
+          "Do not format or recreate the drive because a single image or application failed. Preserve existing data and any working boot paths."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "attention",
+        "kind": "attention",
+        "label": "Pay attention",
+        "title": "Verify the physical USB before any installer action",
+        "paragraphs": [
+          "A MediCat installer or Ventoy operation can change the selected disk. Reconfirm model, capacity, partitions, and backup before accepting a write."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "stop",
+        "kind": "stop",
+        "label": "Stop here",
+        "title": "Do not overwrite the wrong drive or lose the only copy",
+        "paragraphs": [
+          "Stop if the target USB identity is uncertain, the drive contains data not backed up elsewhere, or an apparent tool failure may actually be a failing USB device."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "success",
+        "kind": "success",
+        "label": "How to know it worked",
+        "title": "The same failing path now completes",
+        "paragraphs": [
+          "Boot the intended image or launch the intended tool on the target computer and verify it performs the needed basic function. A visible Ventoy menu alone is not proof the selected tool works."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "failure",
+        "kind": "failure",
+        "label": "If it did not work",
+        "title": "Narrow the support case",
+        "paragraphs": [],
+        "bullets": [],
+        "failures": [
+          {
+            "when": "The USB is never detected",
+            "next": "Compare another port and known-working computer, then investigate USB or firmware detection."
+          },
+          {
+            "when": "Ventoy loads but one image fails",
+            "next": "Record the exact image, boot mode, error, and whether another image works."
+          },
+          {
+            "when": "A tool is missing",
+            "next": "Check the installed release and file inventory before claiming it should be present."
+          },
+          {
+            "when": "A tool starts then crashes",
+            "next": "Record its version, dependencies, error, and host details for support."
+          }
+        ]
+      },
+      {
+        "id": "understand",
+        "kind": "understand",
+        "label": "Understand why",
+        "title": "The USB is a chain of components",
+        "paragraphs": [
+          "Firmware starts Ventoy; Ventoy loads an image; the image supplies an environment; the program runs inside it. Find the first broken link."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "advanced",
+        "kind": "advanced",
+        "label": "Advanced",
+        "title": "Avoid undocumented repair of this build",
+        "paragraphs": [
+          "Exact Ventoy configuration paths and installed image versions on the X10 copy require read-only inventory before a replacement or deployment instruction."
+        ],
+        "bullets": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "MediCat troubleshooting guide",
+        "url": "https://medicatusb.com/docs/medicat/support/troubleshooting/",
+        "status": "verified-source-only",
+        "note": "Documents USB boot, black screen, missing tools, and tool-crash categories."
+      },
+      {
+        "label": "MediCat included tools",
+        "url": "https://docs.medicat.dev/usb/tools/",
+        "status": "verified-source-only",
+        "note": "Historical tool catalog, not proof of exact current files."
+      }
+    ],
+    "related": [
+      "choose-live-environment",
+      "windows-will-not-boot"
+    ]
+  },
+  {
+    "id": "not-sure",
+    "category": "First diagnosis",
+    "title": "I am not sure what the problem is",
+    "eyebrow": "Classify the symptom before choosing a tool",
+    "summary": "Use one observable symptom and the requested outcome to reach a useful workflow without guessing a tool.",
+    "risk": "low",
+    "evidenceStatus": "concept-verified-procedures-pending-installed-inventory",
+    "tags": [
+      "start here",
+      "unsure",
+      "triage",
+      "diagnose",
+      "unknown"
+    ],
+    "goalPrompt": "Find the first repeatable symptom and choose a route that protects the requested outcome.",
+    "sections": [
+      {
+        "id": "recommended",
+        "kind": "recommended",
+        "label": "Recommended",
+        "title": "Describe what you can actually see",
+        "paragraphs": [
+          "Ask what the person wants to work at the end: files back, access restored, a bootable system, a clean device, or a trustworthy diagnosis. Then observe the first repeatable failure."
+        ],
+        "bullets": [
+          "No power or no firmware screen: start with the boot and hardware layer.",
+          "A password or key prompt: use the access route.",
+          "Missing files, read errors, or a disappearing disk: use file recovery.",
+          "Windows runs but fails or acts suspiciously: use the unstable-system route.",
+          "Only MediCat fails: use the MediCat troubleshooting route."
+        ]
+      },
+      {
+        "id": "explain",
+        "kind": "explain",
+        "label": "Why this action",
+        "title": "The first symptom narrows the layer",
+        "paragraphs": [
+          "The same later error can follow several different causes. Starting with observation avoids treating every failure as a Windows or partition problem."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "skip",
+        "kind": "skip",
+        "label": "Safe to skip",
+        "title": "Skip tool shopping",
+        "paragraphs": [
+          "You do not need to know which boot image or utility to open until the problem and preservation requirement are clear."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "attention",
+        "kind": "attention",
+        "label": "Pay attention",
+        "title": "Ask what must survive",
+        "paragraphs": [
+          "Before changing a disk, account, or installation, confirm the exact target, permission, required data, and acceptable fallback."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "stop",
+        "kind": "stop",
+        "label": "Stop here",
+        "title": "Stop before a write without a defined goal",
+        "paragraphs": [
+          "If there is no confirmed target or desired result, keep the work read-only and ask the owner what success looks like."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "success",
+        "kind": "success",
+        "label": "How to know it worked",
+        "title": "You have a specific route and testable outcome",
+        "paragraphs": [
+          "The next guide matches the observed symptom, says what to check first, and names an observable success condition."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "failure",
+        "kind": "failure",
+        "label": "If it did not work",
+        "title": "If no route fits, record the missing fact",
+        "paragraphs": [],
+        "bullets": [],
+        "failures": [
+          {
+            "when": "Symptoms change between attempts",
+            "next": "Record timing, exact screens, and hardware behavior before running another tool."
+          },
+          {
+            "when": "Several problems coexist",
+            "next": "Protect required data first, then address the earliest repeatable failure."
+          },
+          {
+            "when": "The owner cannot say what outcome matters",
+            "next": "Clarify whether preservation, access, clean reuse, or diagnosis is the priority."
+          }
+        ]
+      },
+      {
+        "id": "understand",
+        "kind": "understand",
+        "label": "Understand why",
+        "title": "A guide is a decision aid",
+        "paragraphs": [
+          "The aim is to rule out wrong tools and surface the next useful observation, not to promise one program will fix every problem."
+        ],
+        "bullets": []
+      },
+      {
+        "id": "advanced",
+        "kind": "advanced",
+        "label": "Advanced",
+        "title": "Tool selection comes after classification",
+        "paragraphs": [
+          "Open the live-environment guide only when a route calls for an image or utility with a verified capability."
+        ],
+        "bullets": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "MediCat overview",
+        "url": "https://medicatusb.com/docs/medicat/general/overview/",
+        "status": "verified-source-only",
+        "note": "Describes broad diagnostic, recovery, and system-tool categories, not job frequency."
+      }
+    ],
+    "related": [
+      "identify-password-problem",
+      "windows-will-not-boot",
+      "recover-files",
+      "diagnose-unstable",
+      "medicat-not-working"
+    ]
   }
 ];

@@ -15,6 +15,7 @@ if command -v node >/dev/null 2>&1; then
   node --check "$repo_root/src/guide-center/data/tools.js"
   node --check "$repo_root/src/guide-center/data/glossary.js"
   node --check "$repo_root/src/guide-center/data/intake.js"
+  node --check "$repo_root/src/guide-center/data/password.js"
 else
   printf '%s\n' 'WARNING: node is unavailable; JavaScript syntax checks were not run.' >&2
 fi

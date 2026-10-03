@@ -7,6 +7,16 @@ Record every source used to support shipped guidance. A URL alone is insufficien
 | MediCat installer | https://github.com/mon5termatt/medicat_installer | 2026-09-29 | Installer behavior, archive version, verification workflow, VHD support |
 | MediCat documentation | https://medicatusb.com/docs/ | 2026-09-29 | Project overview, tool index, legal notices, installation and troubleshooting; corroborate AI-assisted pages before relying on them |
 | Historical MediCat changelog | https://docs.medicat.dev/usb/changelog/ | 2026-09-29 | v21.12 contents, Ventoy 1.0.63, menu behavior, Lockpick historical state, and external Mini Windows startup feature |
+| User-supplied Lockpick photos | Private local evidence, reviewed 2026-10-03; photos are not distributed with this repository | 2026-10-03 | MInstAll launcher shows 14 entries and displayed version labels; Start-menu photos show a live desktop, Drivers_PE utilities, and a partial System Tools list. The title says Windows 10 x64, unlike the changelog's Windows 11 based description. No executable was inspected. |
+| PCUnlocker vendor reset guide | https://www.pcunlocker.com/reset-windows-password.html | 2026-10-03 | Local SAM and account selection, password reset effect, and reboot; photographed launcher labels PCUnlocker 5.6 |
+| Passcape Reset Windows Password screenshots | https://passcape.com/reset_windows_password_screenshots | 2026-10-03 | Local-account workflow; photographed version label begins 9.3.0 but is truncated, and vendor documentation may be newer |
+| Passcape Reset Windows Password overview | https://www.passcape.com/reset_windows_password | 2026-10-03 | DPAPI and EFS risk after offline password changes |
+| Active@ Password Changer guide | https://www.password-changer.com/guide.htm | 2026-10-03 | SAM/account selection, backup option, password and account-flag actions; photographed launcher labels v11.0 |
+| Active@ Password Changer download terms | https://www.password-changer.com/download.htm | 2026-10-03 | Demo limitation; the bundled license remains unverified |
+| O&O BlueCon 18 UserManager manual | https://docs.oo-software.com/en/oobluecon-18/oo-usermanager-oobc18 | 2026-10-03 | Local-account scope and encrypted-file warning; photographed UserManager label begins 1.0.1 and is not a BlueCon product version |
+| ntpwedit 0.7 source mirror | https://github.com/linuixtux/NTPWEdit-version-0.7-GPL | 2026-10-03 | Local SAM editing and scope limits; mirror is not verified provenance for the photographed binary |
+| Lazesoft password reset guide | https://www.lazesoft.com/how-to-reset-windows-password.html | 2026-10-03 | Windows volume and local-user selection, Reset/Unlock action; photographed launcher labels v4.0.0.1, while current vendor UI may differ |
+| SQL Server Password Changer vendor page | https://www.top-password.com/sql-server-password-recovery.html | 2026-10-03 | SQL Server login scope and demo limitation; photographed launcher labels 1.9, while vendor page may describe a newer release |
 | Ventoy plugin entrypoint | https://www.ventoy.net/en/plugin.html | 2026-09-29 | `ventoy.json` location and plugin structure |
 | Ventoy menu tips | https://www.ventoy.net/en/plugin_menutip.html | 2026-09-29 | Tooltip format and single-line limitation |
 | Ventoy tree view | https://www.ventoy.net/en/doc_treeview.html | 2026-09-29 | Tree navigation behavior |

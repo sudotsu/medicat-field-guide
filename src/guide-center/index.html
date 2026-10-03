@@ -55,7 +55,7 @@
         <div class="section-kicker">Current job</div>
         <div class="intake-heading">
           <h2 id="intake-title">No brief yet</h2>
-          <span id="intake-count" aria-live="polite">0/6</span>
+          <span id="intake-count" aria-live="polite">0/1</span>
         </div>
         <div class="intake-progress" aria-hidden="true">
           <span id="intake-progress-bar"></span>
@@ -84,16 +84,24 @@
           <span class="nav-index">01</span>
           <span>Guided intake</span>
         </button>
-        <button type="button" data-route="all-guides">
+        <button type="button" data-route="password">
           <span class="nav-index">02</span>
+          <span>Password and access</span>
+        </button>
+        <button type="button" data-route="lockpick">
+          <span class="nav-index">03</span>
+          <span>Lockpick programs</span>
+        </button>
+        <button type="button" data-route="all-guides">
+          <span class="nav-index">04</span>
           <span>All workflows</span>
         </button>
         <button type="button" data-route="tools">
-          <span class="nav-index">03</span>
+          <span class="nav-index">05</span>
           <span>Tool directory</span>
         </button>
         <button type="button" data-route="glossary">
-          <span class="nav-index">04</span>
+          <span class="nav-index">06</span>
           <span>Plain-English glossary</span>
         </button>
       </nav>
@@ -122,7 +130,7 @@
             type="search"
             autocomplete="off"
             spellcheck="false"
-            placeholder="Try “GPT”, “forgot password”, “backup”, or “live OS”"
+            placeholder="Try “missing files”, “won't boot”, “backup”, or “live OS”"
           >
           <kbd>Ctrl K</kbd>
         </div>
@@ -140,10 +148,11 @@
     </section>
   </noscript>
 
-  <script src="data/guides.js"></script>
+  <script src="data/guides.js?v=20261003-lockpick-photo"></script>
   <script src="data/tools.js"></script>
   <script src="data/glossary.js"></script>
-  <script src="data/intake.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="data/intake.js?v=20261003-lockpick-photo"></script>
+  <script src="data/password.js?v=20261003-lockpick-photo"></script>
+  <script src="assets/app.js?v=20261003-lockpick-photo"></script>
 </body>
 </html>
