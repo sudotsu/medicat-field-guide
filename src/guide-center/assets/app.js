@@ -20,6 +20,8 @@
   var intakeSidebarAction = document.getElementById("intake-sidebar-action");
   var jobSummaryFields = Array.prototype.slice.call(document.querySelectorAll("[data-job-summary]"));
   var jobState = loadJobState();
+  var toolCategory = "featured";
+  var toolFilter = "";
 
   var KIND_LABELS = {
     recommended: "Recommended",
@@ -166,6 +168,7 @@
       var buttonRoute = button.getAttribute("data-route");
       var active = buttonRoute === route ||
         (route.indexOf("guide=") === 0 && buttonRoute === "all-guides") ||
+        (route.indexOf("tool=") === 0 && buttonRoute === "tools") ||
         (route.indexOf("password=") === 0 && buttonRoute === "password") ||
         (route.indexOf("lockpick=") === 0 && buttonRoute === "lockpick");
       if (active) {
@@ -744,32 +747,65 @@
 
   function renderTools() {
     updateDocumentTitle("Tool directory");
-    var cards = tools.map(function (tool) {
-      var sources = (tool.sources || []).map(function (source) {
-        return "<a href=\"" + escapeHtml(source.url) + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + escapeHtml(source.label) + "</a>";
-      }).join(" · ");
-      return [
-        "<article class=\"catalog-card\">",
-        "  <span class=\"evidence-badge\">" + escapeHtml(tool.status) + "</span>",
-        "  <h2>" + escapeHtml(tool.name) + "</h2>",
-        "  <p>" + escapeHtml(tool.purpose) + "</p>",
-        tool.id === "jayros-lockpick" ? "  <button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">Open Lockpick program lessons →</button>" : "",
-        "  <div class=\"evidence-note\"><strong>Version evidence:</strong> " + escapeHtml(tool.versionEvidence) + "</div>",
-        "  <h3>Recommended for</h3>",
-        textList(tool.recommendedFor, false),
-        "  <h3>Not for</h3>",
-        textList(tool.notFor, false),
-        sources ? "  <div class=\"card-footer\">" + sources + "</div>" : "",
-        "</article>"
-      ].join("");
-    }).join("");
-
+    var categories = tools.map(function (tool) { return tool.category; }).filter(function (item, index, all) {
+      return all.indexOf(item) === index;
+    }).sort();
     view.innerHTML = pageHeader(
       "Tool directory",
-      "Evidence before capability",
-      "These are routing cards, not a promise that every historical component is present or compatible. Final cards require installed-version inventory and boot evidence.",
-      [{ label: tools.length + " prototype cards", className: "evidence-badge" }]
-    ) + "<section class=\"content-section\"><div class=\"catalog-grid\">" + cards + "</div></section>";
+      "What is on this MediCat drive",
+      "Find a program by name or job. Each entry explains its purpose and where it lives. The short lessons are useful starting points; the password section has its own deeper guide.",
+      [{ label: tools.length + " named tools", className: "evidence-badge" }]
+    ) + [
+      "<section class=\"content-section\">",
+      "  <div class=\"tool-finder\">",
+      "    <label for=\"tool-filter\">Find a program</label>",
+      "    <input id=\"tool-filter\" type=\"search\" autocomplete=\"off\" placeholder=\"Try ‘backup’, ‘memory’, or a program name\" value=\"" + escapeHtml(toolFilter) + "\">",
+      "    <label for=\"tool-category\">Browse by job</label>",
+      "    <select id=\"tool-category\"><option value=\"featured\">Good starting points</option><option value=\"all\">All programs</option>" + categories.map(function (category) {
+        return "<option value=\"" + escapeHtml(category) + "\"" + (category === toolCategory ? " selected" : "") + ">" + escapeHtml(category) + "</option>";
+      }).join("") + "</select>",
+      "  </div>",
+      "  <p class=\"tool-directory-note\">The list comes from program folders and boot images found on this F: copy. Repeated copies are combined. A file being present does not prove it boots or works.</p>",
+      "  <p id=\"tool-result-count\" class=\"section-kicker\" aria-live=\"polite\"></p>",
+      "  <div id=\"tool-results\" class=\"tool-results\"></div>",
+      "</section>"
+    ].join("");
+    updateToolResults();
+  }
+
+  function updateToolResults() {
+    var list = document.getElementById("tool-results");
+    if (!list) { return; }
+    var query = toolFilter.trim().toLowerCase();
+    var matches = tools.filter(function (tool) {
+      var categoryMatches = query && toolCategory === "featured" ? true :
+        toolCategory === "all" || (toolCategory === "featured" ? Boolean(tool.lesson) : tool.category === toolCategory);
+      var text = [tool.name, tool.purpose, tool.category].concat(tool.locations || [tool.location]).join(" ").toLowerCase();
+      return categoryMatches && (!query || query.split(/\s+/).every(function (term) { return text.indexOf(term) !== -1; }));
+    });
+    document.getElementById("tool-result-count").textContent = matches.length + " of " + tools.length + " entries shown";
+    list.innerHTML = matches.length ? matches.map(function (tool) {
+      return "<button class=\"tool-row\" type=\"button\" data-route=\"tool=" + escapeHtml(encodeURIComponent(tool.id)) + "\"><span><strong>" + escapeHtml(tool.name) + "</strong><small>" + escapeHtml(tool.category) + " · " + escapeHtml(tool.kind) + ((tool.locations || []).length > 1 ? " · " + tool.locations.length + " copies" : "") + (tool.lesson ? " · Short lesson" : "") + "</small></span><span>" + escapeHtml(tool.purpose) + "</span><span aria-hidden=\"true\">→</span></button>";
+    }).join("") : "<p>No matching program in this category. Try All programs or a different term.</p>";
+  }
+
+  function renderTool(id) {
+    var tool = tools.filter(function (item) { return item.id === id; })[0];
+    if (!tool) { renderNotFound(); return; }
+    updateDocumentTitle(tool.name);
+    var lesson = tool.lesson;
+    var sources = (tool.sources || []).map(function (source) {
+      return "<a href=\"" + escapeHtml(source.url) + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + escapeHtml(source.label) + "</a>";
+    }).join(" · ");
+    view.innerHTML = pageHeader(tool.name, tool.category, tool.purpose, [
+      { label: tool.kind, className: "evidence-badge" },
+      { label: lesson ? "Short lesson" : "Quick explanation", className: "evidence-badge" }
+    ]) + [
+      "<div class=\"action-row\"><button class=\"secondary-action\" type=\"button\" data-route=\"tools\">← Back to directory</button>" + (tool.category === "Password and access" ? "<button class=\"primary-action\" type=\"button\" data-route=\"password\">Open password guide →</button>" : "") + (tool.location === "Password_Removal/Jayro's_Lockpick" ? "<button class=\"secondary-action\" type=\"button\" data-route=\"lockpick\">See 14 Lockpick programs →</button>" : "") + "</div>",
+      "<section class=\"content-section tool-detail\"><h2>Where to find it</h2><ul>" + (tool.locations || [tool.location]).map(function (location) { return "<li>" + escapeHtml(tool.kind === "Boot menu image" ? "Boot menu → " : "Mini Windows → ") + escapeHtml(location.replace(/_/g, " ")) + "</li>"; }).join("") + "</ul>" + (tool.notice ? "<p class=\"tool-warning\">" + escapeHtml(tool.notice) + "</p>" : ""),
+      lesson ? "<h2>When this is useful</h2><p>" + escapeHtml(lesson.when) + "</p><h2>Start here</h2><p>" + escapeHtml(lesson.first) + "</p><ol>" + lesson.steps.map(function (step) { return "<li>" + escapeHtml(step) + "</li>"; }).join("") + "</ol><h2>When to stop</h2><p>" + escapeHtml(lesson.stop) + "</p><h2>How to check</h2><p>" + escapeHtml(lesson.verify) + "</p>" : "<h2>Before opening it</h2><p>Match the program to the problem, confirm the correct device, and protect files you need to keep. This copy has not been run to confirm its exact screens.</p>",
+      "<details class=\"tool-evidence\"><summary>What we checked</summary><p>" + escapeHtml(tool.status) + " " + escapeHtml(tool.versionEvidence) + "</p>" + (sources ? "<p>" + sources + "</p>" : "") + "</details></section>"
+    ].join("");
   }
 
   function renderGlossary() {
@@ -820,6 +856,8 @@
       renderLockpickProgram(route === "lockpick" ? "" : decodeURIComponent(route.substring(9)));
     } else if (route === "tools") {
       renderTools();
+    } else if (route.indexOf("tool=") === 0) {
+      renderTool(decodeURIComponent(route.substring(5)));
     } else if (route === "glossary") {
       renderGlossary();
     } else if (route.indexOf("guide=") === 0) {
@@ -915,7 +953,7 @@
           (tool.recommendedFor || []).join(" "),
           (tool.notFor || []).join(" ")
         ].join(" ").toLowerCase(),
-        route: "tools"
+        route: "tool=" + encodeURIComponent(tool.id)
       });
     });
 
@@ -1151,6 +1189,19 @@
 
     if (routeTarget) {
       routeTo(routeTarget.getAttribute("data-route"));
+    }
+  });
+
+  document.addEventListener("input", function (event) {
+    if (event.target.id === "tool-filter") {
+      toolFilter = event.target.value;
+      updateToolResults();
+    }
+  });
+  document.addEventListener("change", function (event) {
+    if (event.target.id === "tool-category") {
+      toolCategory = event.target.value;
+      updateToolResults();
     }
   });
 

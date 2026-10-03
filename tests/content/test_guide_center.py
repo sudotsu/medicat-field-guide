@@ -278,11 +278,24 @@ class GuideCenterTests(unittest.TestCase):
         terms = [entry["term"].casefold() for entry in self.glossary]
         self.assertEqual(len(tool_ids), len(set(tool_ids)))
         self.assertEqual(len(terms), len(set(terms)))
+        self.assertEqual(len(self.tools), 282)
+        self.assertEqual(sum(len(tool["locations"]) for tool in self.tools), 295)
+        self.assertEqual(sum(bool(tool.get("lesson")) for tool in self.tools), 12)
+        self.assertEqual(sum(tool["kind"] == "Boot menu image" for tool in self.tools), 38)
         for tool in self.tools:
+            self.assertTrue(tool["name"])
+            self.assertTrue(tool["purpose"])
+            self.assertTrue(tool["location"])
+            self.assertIn(tool["location"], tool["locations"])
+            self.assertIn(tool["kind"], {"Windows program", "Boot menu image"})
             self.assertTrue(tool["status"])
             self.assertTrue(tool["versionEvidence"])
-            self.assertTrue(tool["recommendedFor"])
-            self.assertTrue(tool["notFor"])
+            if tool.get("lesson"):
+                for key in ("when", "first", "steps", "stop", "verify", "source"):
+                    self.assertTrue(tool["lesson"][key], f"{tool['name']} missing {key}")
+        app = (GUIDE_ROOT / "assets" / "app.js").read_text(encoding="utf-8")
+        self.assertIn('route.indexOf("tool=")', app)
+        self.assertIn('id=\\"tool-results\\"', app)
 
     def test_no_defender_workflow_or_automatic_scanner_action(self):
         runtime_content = "\n".join(

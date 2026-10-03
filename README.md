@@ -22,7 +22,8 @@ It is designed to prevent common wrong-path decisions such as treating a Windows
 - Eleven searchable workflows covering access, boot, unstable systems, file recovery, backup, Windows installation, wiping, disk layout, MediCat failures, live environments, and first diagnosis.
 - Dedicated password and access module with eight prompt-specific paths.
 - Jayro's Lockpick guide that starts with the reader's problem, recommends a first tool for the common local-password case, and keeps all 14 launcher entries in a compact list. Each tool page explains when it fits; steps appear where product guidance supports them. Version notes and further reading are optional.
-- Search, related workflows, evidence-aware tool cards, and a plain-English glossary.
+- Searchable Tool Directory with plain-language explanations for 282 named tools at 295 observed locations, plus 12 short lessons covering the main repair areas.
+- Related workflows and a plain-English glossary.
 - Responsive, keyboard-usable, printable interface with reduced-motion support.
 - Static HTML, CSS, and classic JavaScript with no package manager, CDN, external font, analytics, account, or runtime network request.
 - Session-only categorical intake state. The guide does not request names, serial numbers, passwords, recovery keys, passkeys, or recovery codes.
@@ -38,6 +39,7 @@ python3 -m http.server 4173 --directory src/guide-center
 Then visit `http://127.0.0.1:4173/`.
 
 Open the Lockpick inventory directly at `http://127.0.0.1:4173/#lockpick`.
+Open the installed-tool directory at `http://127.0.0.1:4173/#tools`.
 
 Try two routes:
 
@@ -64,6 +66,7 @@ The following remain unresolved until the intended release and integration path 
 - supported external startup hook;
 - exact MediCat and Ventoy paths;
 - Lockpick executable builds and several program-specific procedures; the photo confirms launcher labels only, and the title's Windows 10 x64 label conflicts with a historical Windows 11 based changelog description;
+- actual boot behavior and bundled app versions for the 282 cataloged tools; the inventory establishes file presence only, and nested utilities in collections are not individually described;
 - production packaging, boot testing, update ownership, and rollback.
 
 Version-dependent procedures must be supported by installed-build evidence and current primary sources. See [`docs/SOURCES.md`](docs/SOURCES.md).
@@ -79,6 +82,7 @@ Import [`sudotsu/medicat-field-guide`](https://github.com/sudotsu/medicat-field-
 - `tests/` — focused content, integrity, and JavaScript parsing checks
 - `docs/ARCHITECTURE.md` — integration model and maintainer decisions still required
 - `docs/SOURCES.md` — primary-source registry and verification dates
+- `docs/INVENTORY.md` — read-only installed-tool scan, coverage, and known Ventoy alias mismatches
 - `CONTRIBUTING.md` — evidence and change requirements
 
 ## License

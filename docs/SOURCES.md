@@ -8,6 +8,17 @@ Record every source used to support shipped guidance. A URL alone is insufficien
 | MediCat documentation | https://medicatusb.com/docs/ | 2026-09-29 | Project overview, tool index, legal notices, installation and troubleshooting; corroborate AI-assisted pages before relying on them |
 | Historical MediCat changelog | https://docs.medicat.dev/usb/changelog/ | 2026-09-29 | v21.12 contents, Ventoy 1.0.63, menu behavior, Lockpick historical state, and external Mini Windows startup feature |
 | User-supplied Lockpick photos | Private local evidence, reviewed 2026-10-03; photos are not distributed with this repository | 2026-10-03 | MInstAll launcher shows 14 entries and displayed version labels; Start-menu photos show a live desktop, Drivers_PE utilities, and a partial System Tools list. The title says Windows 10 x64, unlike the changelog's Windows 11 based description. No executable was inspected. |
+| Installed-tool inventory | [Read-only scan record](INVENTORY.md) | 2026-10-03 | 282 named entries at 295 installed locations; file presence only, with no boot or behavior test. |
+| Malwarebytes | https://help.malwarebytes.com/hc/en-us/articles/31589496411291-Run-and-schedule-scans-in-Malwarebytes-for-Windows-and-Mac | 2026-10-03 | Current Windows product can quarantine scan detections; bundled bootable WIM behavior is unverified, so the lesson requires checking settings before scanning. |
+| Rescuezilla | https://rescuezilla.com/ | 2026-10-03 | Graphical backup and restore purpose; bundled ISO version and screens unverified. |
+| Boot-Repair-Disk | https://sourceforge.net/p/boot-repair-cd/home/Home/ | 2026-10-03 | Linux boot repair and Boot-Info purpose; bundled ISO version unverified. |
+| MemTest86+ | https://memtest.org/readme | 2026-10-03 | Test passes and error interpretation; bundled ISO version unverified. |
+| CrystalDiskInfo | https://crystalmark.info/en/software/crystaldiskinfo/crystaldiskinfo-general-information/ | 2026-10-03 | Drive identity and health display; bundled portable version unverified. |
+| TestDisk and PhotoRec | https://www.cgsecurity.org/testdisk_doc/photorec.html | 2026-10-03 | Recover files to another destination; folder is labeled 7.2-WIP but binary was not run. |
+| DiskGenius | https://www.diskgenius.com/manual/DiskGenius_User_Guide.pdf | 2026-10-03 | Partition inspection and recovery preview; bundled WIM version unverified. |
+| ShredOS | https://github.com/PartialVolume/shredos.x86_64 | 2026-10-03 | Whole-disk erasure and target selection; bundled IMG version unverified. |
+| Windows Recovery | https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-re-troubleshooting-features?view=windows-11 | 2026-10-03 | Startup Repair purpose; bundled Windows 11 recovery WIM contents unverified. |
+| Rufus | https://rufus.ie/en/ | 2026-10-03 | Bootable USB creation; bundled portable version unverified. |
 | PCUnlocker vendor reset guide | https://www.pcunlocker.com/reset-windows-password.html | 2026-10-03 | Local SAM and account selection, password reset effect, and reboot; photographed launcher labels PCUnlocker 5.6 |
 | Passcape Reset Windows Password screenshots | https://passcape.com/reset_windows_password_screenshots | 2026-10-03 | Local-account workflow; photographed version label begins 9.3.0 but is truncated, and vendor documentation may be newer |
 | Passcape Reset Windows Password overview | https://www.passcape.com/reset_windows_password | 2026-10-03 | DPAPI and EFS risk after offline password changes |
